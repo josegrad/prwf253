@@ -1,0 +1,83 @@
+#bloque_encuentros { margin: 2em 0;  }
+.cabecera_encuentros { position: relative; border-bottom: 1px solid #CCC;  border-top: 1px solid #CCC; background-color: #e7e7e7;}
+.cabecera_encuentros h1 { color: #546478; font-weight: normal; font-size: 2em; border-top: 1px solid #FFF; padding: 0.4em 0 0.3em 0.3em; text-shadow: 0px 1px 0px rgba(256, 256, 256, 1) }
+	
+.cuadro_proximos_encuentos{ padding:0; margin: 0; width: 100%; background-color:#FFFFFF; margin-top: -4px; padding-top: 5px; margin-bottom: -11px; }	
+	
+section.cuerpo_encuentros_proximos{ margin-bottom: 1.2em; }	
+.cuerpo_encuentros_proximos .foto_encuentros {float: left; max-width:35%; margin: 0 0.9em; padding-bottom: 10px;  }
+.foto_encuentros img {	width: 100%; border: 1px solid #ccc;}	
+
+h1.titulo_encuentro_destacado { margin: 0.5em 0 0 0.4em; padding: 0.4em 0 0 0;color:#045a8b; font-size: 1.5em;}
+
+.cuerpo_encuentros_proximos p.cuerpo_encuentro_destacado {color:#666; margin:0; padding:0.5em; font-size: 1.2em;}
+
+.separa_cuerpo_encuentros_proximos{clear:both; border-bottom: 1px solid #ccc; margin: 0.9em 0;}
+	
+section.listado_encuentros{ display:block;}
+	
+ul.listado-1 {
+    float: left;
+    padding: 5px 0 0;
+	width: 100%;	
+}
+.listado_encuentros li{border-bottom: 1px solid #CCC;  border-top: 1px solid #f0f0f0;  padding-bottom: 2em; padding: 1.2em;font-size: 1.1em; color: #045A8B; }
+
+
+.listado-1 p.lea{
+	padding: 2px 00px;
+	margin: 0 0.1em ;
+	width: 35%;
+	float: right;
+	text-align:center;
+	font-size: 1.2em;
+	margin-top: -0.4em;
+	background: url("../images/icoFlechaGris.png") no-repeat scroll 100% 50% transparent;
+	text-align:right;
+	padding-right: 20px;
+	
+}
+
+.listado-1 p.lea a {
+    color: #455054;
+    text-decoration: none;
+	font-size: 0.9em; 
+	
+}
+.listado-1 p.lea a:hover {color: #27A5C1;}
+
+/*///////////////// FICHA ENCUENTROS ////////////////////////*/
+
+#bloque_encuentros { margin: 2em 0;  }
+.cabecera_encuentros { position: relative; border-bottom: 1px solid #CCC;  border-top: 1px solid #CCC; background-color: #e7e7e7;}
+.cabecera_encuentros h1 { color: #546478; font-weight: normal; font-size: 2em; border-top: 1px solid #FFF; padding: 0.4em 0 0.3em 0.3em; text-shadow: 0px 1px 0px rgba(256, 256, 256, 1) }
+
+section.cuerpo_encuentros .foto_encuentros {1px solid #CCC; }
+.foto_encuentros img {	width: 100%; margin-top: 5px;}
+
+section.cuerpo_encuentros h2.titulo_encuentro { margin: 0.5em 0 0.1em 0.4em;color:#3f5465; font-size: 1em;}
+section.cuerpo_encuentros p.cuerpo_encuentro {color:#666; margin:0; padding:0.5em; font-size: 1.1em;}
+
+.botonera_encuentros {text-align:right; vertical-align:middle; padding: 0.8em 0.5em; border-top: 1px solid #FFFFFF;  border-bottom: 1px solid #CCC; background-color: #e7e7e7; overflow: hidden; clear:both; height:15px;}
+a.btn_proximo_encuentro{ color:#666; background: url(../images/icoFlechaGris.png) 90% 50% no-repeat; padding-right: 25px;}
+
+section.bloque_preguntas { margin: 2em 0;}
+.cuadro_pregunta{ background-color:#566d80; color:#FFFFFF; margin: 10px 5px; padding: 5px; border-radius: 4px; clear:both}
+.cuadro_respuesta{padding: 5px; color: #666; }
+
+.num_pregunta{font-size: 1.9em;}
+
+section.bloque_preguntas .user_registrado {padding: 0.7em 0 ; font-size: 0.8em; color:#f0f0f0; font-weight:bold}
+
+.cuadro_despedida{ padding:0.3em 0 0.1em 0.3em; font-size: 1.5em; color: #3f5465; border-bottom: 2px solid #CCC; border-top: 1px solid #fff;}
+.txt_despedida{padding:0.5em; font-size: 1em; color: #666; }
+
+
+section.bloque_preguntas dd{background-color:#566d80; color:#FFFFFF; margin: 5px 5px; padding: 5px; border-radius: 4px; clear:both }
+
+
+.alias{  padding: 0px 8px; margin-top: 10px}
+
+.entrevistado{ padding: 0px 8px;}
+
+dd.respondiendo{ background-color:#fff !important; border: 1px solid #566d80; border-radius: 4px; color:#666666 !important;}

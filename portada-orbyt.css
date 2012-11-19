@@ -1,0 +1,501 @@
+/*modulo de pago*/
+.reportaje_seccion.pago * {color:#444;}
+.reportaje_seccion.pago .contenido_noticia {
+background:none repeat scroll 0 0 #EEEEEE;
+padding:10px 20px 25px;
+width:340px;
+}
+.reportaje_seccion.pago .antetitulo a {font-family:Georgia, "Times New Roman", Times, serif;
+color:#7CBB03;
+}
+.reportaje_seccion.pago p.firma { color: #444; border:1px solid #eee;
+}
+.reportaje_seccion.pago p.firma .autor, .reportaje_seccion.pago p.firma .localizacion {
+color:#444;
+}
+.reportaje_seccion.pago .apoyos {
+clear:both;
+background:#ccc;
+}
+.reportaje_seccion.pago strong.label {
+background:#CCCCCC;
+}
+.reportaje_seccion.pago .foto p {
+background:none repeat scroll 0 0 #444;
+}
+.reportaje_seccion.pago .apoyos li a {
+color:#444;
+}
+.reportaje_seccion.pago .apoyos li a:hover {
+color:#666 !important;
+}
+.reportaje_seccion.pago .seccion {
+color:#555;
+}
+
+
+
+
+
+.modulo_orbyt {
+    background:url(http://estaticos.elmundo.es/includes_redaccion/genericos/orbyt/img/bg_v2.png) no-repeat center -64px!important;
+    height:183px!important;
+    clear:both!important;
+}
+.modulo_orbyt .contenido_modulo{top:0!important;}
+.bloque_noticias .col_02 .modulo_orbyt.ipad {
+    height:255px!important;
+    margin:0!important;
+    background:none!important;
+}
+.contenido_modulo_orbyt {
+    background:url(http://estaticos.elmundo.es/includes_redaccion/genericos/orbyt/img/bg_v2.png) no-repeat center top;
+    width:305px!important;
+    height:255px;
+    font:14px Palatino, "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    /*left:5px;*/
+}
+.modulo_orbyt a {
+    text-decoration:none;
+    outline:none;
+}
+.modulo_orbyt h4, .modulo_orbyt h5, .modulo_orbyt h6 {
+    letter-spacing:0!important;
+}
+.modulo_orbyt h4, .modulo_orbyt h5, .modulo_orbyt h6, .modulo_orbyt p {
+    margin:0;
+    padding:0;
+}
+.modulo_orbyt h4 em, .modulo_orbyt h5 em, .modulo_orbyt h6 em {
+    font-family:Palatino, "Palatino Linotype", Georgia, "Times New Roman", Times, serif !important;
+}
+.modulo_orbyt h4 {display:none;}
+.modulo_orbyt.ipad h4 {
+    display:block!important;
+    position:absolute!important;
+    top:0;
+    left:0;
+    width:120px;
+    height:55px;
+    text-align:left!important;
+    background:none!important;
+    text-indent:-9999px!important;
+}
+#contenido_principal .col_02 .modulo h4 {
+    left:0!important;
+    right:auto!important;
+}
+.modulo_orbyt h4 a {
+    display:block;
+    width:120px;
+    height:55px;
+}
+/*navegacion*/
+.modulo_orbyt.ipad #nav_modulo_orbyt {
+    display:block!important;
+}
+#nav_modulo_orbyt {
+    display:none;
+    background:url(http://estaticos.elmundo.es/includes_redaccion/genericos/orbyt/img/bg_navegacion.gif) no-repeat top left;
+    width:118px;
+    height:18px;
+    position:absolute;
+    top:34px;
+    right:10px;
+}
+#nav_modulo_orbyt li {
+    float:left;
+    width:20px;
+    height:20px;
+    margin:0 3px 0 0;
+}
+#nav_modulo_orbyt li a {
+    display:block;
+    text-indent:-9999px;
+    width:20px;
+    height:20px;
+}
+#nav_modulo_orbyt li a:hover {
+    background:url(http://estaticos.elmundo.es/includes_redaccion/genericos/orbyt/img/bg_navegacion.gif) no-repeat bottom left;
+}
+#nav_modulo_orbyt li#nav_item_orbyt a:hover {
+    background-position:0 -32px;
+}
+#nav_modulo_orbyt li#nav_item_quiosco a:hover {
+    background-position:-23px -32px;
+}
+#nav_modulo_orbyt li#nav_item_tumundo a:hover {
+    background-position:-46px -32px;
+}
+#nav_modulo_orbyt li#nav_item_documenta a:hover {
+    background-position:-69px -32px;
+}
+#nav_modulo_orbyt li#nav_item_dutyfree a:hover {
+    background-position:-92px -32px;
+}
+#nav_modulo_orbyt a, .acceso_ayuda a {
+    font-size:12px;
+    font-weight:bold;
+    color:#333;
+}
+#nav_modulo_orbyt a:hover, .acceso_ayuda a:hover {
+    color:#B7D0C7;
+}
+#nav_item_subscribe {
+    position:absolute;
+    top:-26px;
+    right:0;
+    width:auto!important;
+    text-align:right;
+}
+#nav_item_subscribe a {
+    color:#707880;
+    text-indent:0!important;
+    font-size:14px;
+    width:auto!important;
+}
+#nav_item_subscribe a:hover {
+    color:#000;
+    background:none!important;
+}
+
+/**/
+.contenido_modulo_orbyt .video {
+    position:absolute;
+    top:66px;
+    width:298px;
+    left:auto;
+    padding-left:7px;
+    background:url(http://estaticos.elmundo.es/includes_redaccion/2010/05/orbyt/extranjeros/img/bg_video.png) repeat-y center top;
+    height:auto;
+}
+.overlay {
+    position:absolute;
+    top:0;
+    /*left:5px;*/
+    width:300px;
+    height:250px;
+    z-index:100;
+    border:3px solid #E5E6E7;
+    background:#E5E6E7;
+}
+#orbyt_ipad_demo {
+    width:305px;
+    height:200px;
+    display:block;
+    text-indent:-9999px;
+    background:url(http://estaticos.elmundo.es/includes_redaccion/genericos/orbyt/img/ipad_2.jpg) no-repeat center bottom;
+}
+
+
+/* modulo deportes */
+
+.modulo.bloque-deportes-derecha-elmundoes {clear:both; float:left; margin:0 0 10px; padding:0; position:relative; /*width:320px;*/ width:100%; }
+#contenido_principal .col_01 .modulo.bloque-deportes-derecha-elmundoes { margin-top:-25px;}
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes h4{background: url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/tope_modulos_deportes_col02.gif) no-repeat scroll right 0 transparent;float: left; width:300px;}
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes h4 a,
+#contenido_principal .col_01 .modulo.bloque-deportes-derecha-elmundoes h4 a,
+#contenido_principal .col_01 .modulo.bloque-deportes-derecha-elmundoes h5 a,
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes h5 a {color:#044364;}
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes h5 a:hover, 
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes h5 a:active,
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes h5 a:focus {color:#d90000} 
+#contenido_principal .col_01 .modulo.bloque-deportes-derecha-elmundoes h5 {font-size:18px}
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .especial h5 {color:#900; font:bold 18px Arial, Helvetica, sans-serif; letter-spacing:-1px}
+#contenido_principal .col_01 .modulo.bloque-deportes-derecha-elmundoes .especial h5 {color:#900;}
+.modulo.bloque-deportes-derecha-elmundoes .noticia {border:0; margin-left:12px; width:300px;}
+.modulo.bloque-deportes-derecha-elmundoes .noticia + .noticia {border-top:1px solid #DDE1E5; padding-top:15px;}
+.modulo.bloque-deportes-derecha-elmundoes .noticia + .especial {padding-top:8px;}
+.modulo.bloque-deportes-derecha-elmundoes img {float:left; margin-right:15px;}
+.modulo.bloque-deportes-derecha-elmundoes h5 { font-size:20px}
+
+/* excepciones publicidad */
+.modulo.bloque-deportes-derecha-elmundoes .publicidad {margin: 10px 0 10px -10px !important;}
+.modulo.bloque-deportes-derecha-elmundoes .publicidad img {margin-right:0;}
+
+.modulo.bloque-deportes-derecha-elmundoes .modulo-especial.eurocopa .publicidad {margin:10px 0 10px -10px !important;}
+
+/* fin excepciones publicidad */
+.modulo.bloque-deportes-derecha-elmundoes img.destacada {margin:0 0 8px 0;}
+.modulo.bloque-deportes-derecha-elmundoes .antetitulo,
+.modulo.bloque-deportes-derecha-elmundoes .antetitulo .seccion, 
+.modulo.bloque-deportes-derecha-elmundoes .antetitulo a {color:#d90000;}
+.modulo.bloque-deportes-derecha-elmundoes .antetitulo a:hover,
+.modulo.bloque-deportes-derecha-elmundoes .antetitulo a:active,
+.modulo.bloque-deportes-derecha-elmundoes .antetitulo a:focus {color:#9BAAB9}
+.modulo.bloque-deportes-derecha-elmundoes .apoyos {margin:8px 0 0 0; padding:0;}
+.modulo.bloque-deportes-derecha-elmundoes .apoyos li {padding: 0 10px 0 20px; background-position:0 1px; margin:0!important;}
+
+#contenido_principal .col_01 .modulo.bloque-deportes-derecha-elmundoes .noticia {margin:0; width:93%;}
+
+.modulo.bloque-deportes-derecha-elmundoes .noticia.especial ul {width:100%; margin:0; padding:0}
+.modulo.bloque-deportes-derecha-elmundoes .noticia.especial ul li {width:47%; margin-right:5px; padding:0; float:left; clear:none}
+.modulo.bloque-deportes-derecha-elmundoes .noticia.especial ul li a {color:#3C81A2; font-size:11px}
+.modulo.bloque-deportes-derecha-elmundoes .noticia.especial ul li a:hover, 
+.modulo.bloque-deportes-derecha-elmundoes .noticia.especial ul li a:active,
+.modulo.bloque-deportes-derecha-elmundoes .noticia.especial ul li a:focus {color:#900} 
+
+/* modulo resultados liga dentro de bloque deportes */
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .modulo_resultados h4.tit_modulo_resultados {width:288px}
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .modulo_resultados p.antetitulo a{color:#fff}
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .modulo_resultados .apoyos li {padding:0}
+
+
+/* Estilos especiales eurocopa */
+/*.noticia.eurocopa .antetitulo,
+.noticia.eurocopa .antetitulo .seccion { 
+border-radius: 5px; padding: 2px 3px 2px 0px !important; background: #eee; color:#a30001; margin-bottom:5px; margin-left: -7px; *margin-left: -5px; }
+.noticia.eurocopa .antetitulo strong a { color:#fff;  }
+.noticia.eurocopa .antetitulo strong a:hover { color:#ccc; }
+.noticia.eurocopa .antetitulo .seccion { border-radius: 5px; padding: 2px 4px !important; background: #a30001; color:#fff; margin-right:5px; }	 
+.noticia.eurocopa, .modulo.bloque-deportes-derecha-elmundoes .noticia.eurocopa {border: 1px solid #CCCCCC; border-radius: 10px; padding: 10px; }
+.bloque-deportes-derecha-elmundoes .noticia.eurocopa { width: 280px; }
+.modulo.bloque-deportes-derecha-elmundoes .noticia.eurocopa .foto, .modulo.bloque-deportes-derecha-elmundoes .noticia.eurocopa .foto img { width:280px !important; }
+.modulo.modulo_noticias_02  .noticia.eurocopa .foto, .modulo.modulo_noticias_02  .noticia.eurocopa .foto img { width:208px !important; height:auto !important; }
+.modulo.modulo_noticias_01  .noticia.eurocopa .foto, .modulo.modulo_noticias_01  .noticia.eurocopa .foto img { width:368px !important; height:auto !important; }
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .eurocopa  h5 a:hover, 
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .eurocopa  h5 a:active,
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .eurocopa  h5 a:focus {color:#A30001} 
+.noticia.eurocopa .antetitulo a { color: #A30001; }
+.noticia.eurocopa .antetitulo a:hover { color: #333; }
+.modulo.modulo_noticias_02  .noticia.eurocopa { width:208px; }
+.modulo.modulo_noticias_01  .noticia.eurocopa { width:368px; }
+.noticia.eurocopa + .noticia.eurocopa, .modulo.bloque-deportes-derecha-elmundoes .noticia.eurocopa + .noticia.eurocopa  { border-top:0; border-radius: 0 0 10px 10px; margin-top: -15px; padding-top: 20px; background:#fff; }
+.noticia.eurocopa + .noticia.eurocopa .antetitulo .seccion, .modulo.bloque-deportes-derecha-elmundoes .noticia.eurocopa + .noticia.eurocopa .antetitulo .seccion { display:none; }
+.noticia.eurocopa + .noticia.eurocopa .antetitulo, .modulo.bloque-deportes-derecha-elmundoes .noticia.eurocopa + .noticia.eurocopa .antetitulo  { 
+    margin-left: 0;
+    padding: 2px 3px 2px 6px !important; }*/
+	
+/* nuevos estilos modulo eurocopa */
+
+	#nav_principal #nav_eurocopa a {
+    background: #A30001;
+    border-bottom: 1px solid #1A1919;
+    border-radius: 5px 5px 5px 5px;
+    border-top: 1px solid #B47A7A;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 2px 0;
+    padding: 3px 6px 2px;
+}
+#nav_principal #nav_eurocopa a:hover {
+    background: #333;
+    border-top: 1px solid #1A1919;
+    border-radius: 5px 5px 5px 5px;
+    border-bottom: 1px solid #858585;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 2px 0;
+    padding: 3px 6px 2px;
+}
+
+
+.modulo-especial.eurocopa { float:left; width:100%; }
+.modulo-especial.eurocopa .antetitulo,
+.modulo-especial.eurocopa .antetitulo .seccion { 
+border-radius: 5px; padding: 2px 3px 2px 0px !important; background: #eee; color:#a30001; margin-bottom:5px; /*margin-left: -7px; *margin-left: -5px;*/ }
+.modulo-especial.eurocopa .antetitulo strong a { color:#fff;  }
+.modulo-especial.eurocopa .antetitulo strong a:hover { color:#ccc; }
+.modulo-especial.eurocopa .antetitulo .seccion { border-radius: 5px; padding: 2px 4px !important; /*background: #a30001; color:#fff;*/ margin-right:5px; }	 
+.modulo-especial.eurocopa, .modulo.bloque-deportes-derecha-elmundoes .modulo-especial.eurocopa {border: 1px solid #A30001; border-radius: 10px; padding: 10px; }
+.bloque-deportes-derecha-elmundoes .modulo-especial.eurocopa { width: 280px; }
+.modulo.bloque-deportes-derecha-elmundoes .modulo-especial.eurocopa .foto, .modulo.bloque-deportes-derecha-elmundoes .modulo-especial.eurocopa .foto img { width:280px !important; }
+.modulo.modulo_noticias_02  .modulo-especial.eurocopa .foto, .modulo.modulo_noticias_02  .modulo-especial.eurocopa .foto img { width:208px !important; height:auto !important; }
+.modulo.modulo_noticias_01  .modulo-especial.eurocopa .foto, .modulo.modulo_noticias_01  .modulo-especial.eurocopa .foto img { width:368px !important; height:auto !important; }
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .eurocopa  h5 a:hover, 
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .eurocopa  h5 a:active,
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .eurocopa  h5 a:focus {color:#A30001;;} 
+.modulo-especial.eurocopa .antetitulo a { color: #A30001; }
+.modulo-especial.eurocopa .antetitulo a:hover { color: #333; }
+.modulo.modulo_noticias_02  .modulo-especial.eurocopa { width:208px; margin-bottom:15px; }
+.modulo.modulo_noticias_01  .modulo-especial.eurocopa { width:368px; }
+.modulo-especial.eurocopa li.noticia-especial { float:left; width:100%; }
+.modulo-especial.eurocopa li.noticia-especial + li.noticia-especial { margin-top:10px; padding-top:10px; border-top:1px dotted #ccc; }
+/*.modulo-especial.eurocopa  li.noticia-especial + li.noticia-especial .antetitulo .seccion { display:none; }*/
+/*.modulo-especial.eurocopa  li.noticia-especial + li.noticia-especial .antetitulo  { 
+    margin-left: 0;
+    padding: 2px 3px 2px 6px !important; }*/
+
+.modulo-especial.eurocopa .patrocinio { width:100%; text-align:left; margin-bottom:10px; max-height:25px; float:left; }
+
+.modulo-especial.eurocopa h3 { border-bottom: 3px solid #A30001;
+    float: left;
+    font: bold 130% Arial,Helvetica,sans-serif;
+    letter-spacing: 0;
+    width: 100%;
+    text-transform: uppercase; }
+
+
+/* sección destacada Orbyt */
+
+.seccion_destacada.orbyt {text-align:center; padding:10px 0 0 0; background:#ecedef; border-color:#d6d7d9; border-bottom:3px solid #d6d7d9!important; width:230px}
+
+.seccion_destacada.orbyt .logo {display:inline}
+.seccion_destacada.orbyt .noticia img { border-top:5px solid #77bc00;} 
+.seccion_destacada.orbyt .foto {width:100%;} 
+.seccion_destacada.orbyt .foto p{width:96%;padding: 4px 2.1% 4px;} 
+.seccion_destacada.orbyt .noticia {text-align:left}
+.seccion_destacada.orbyt .noticia h4 a{font-family:Georgia, "Times New Roman", Times, serif; color:#444; margin:8px 0 4px; float:left; width:98%;}
+.seccion_destacada.orbyt .noticia h4.defecto {font-size:22px; font-weight:normal;}
+.seccion_destacada.orbyt .noticia .antetitulo, .seccion_destacada.orbyt .noticia .antetitulo a { font-family:Georgia, "Times New Roman", Times, serif; color:#7CBB03; font-size:12px; font-weight:normal; float:left; line-height:12px}
+.seccion_destacada.orbyt .noticia .antetitulo a {border-right:1px solid #77bc00; padding-right:5px; font-weight:bold}
+.seccion_destacada.orbyt .firma { background: url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/contenido-orbyt.gif") no-repeat right; padding-right:20px }
+.seccion_destacada.orbyt .mas-noticias {text-align:left}
+.seccion_destacada.orbyt .mas-noticias {width:98%}
+.seccion_destacada.orbyt .mas-noticias ul {clear:left; width:98%}
+.seccion_destacada.orbyt .mas-noticias p {font:bold 12px/14px Georgia, "Times New Roman", Times, serif; color:#444; margin-bottom:15px}
+.seccion_destacada.orbyt .mas-noticias h5 a {font:12px/14px Georgia, "Times New Roman", Times, serif; color:#444; margin-left:20px; float:left; }
+.seccion_destacada.orbyt .mas-noticias h5 {background: url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/contenido-orbyt.gif") no-repeat 0 3px; float:left;}
+.seccion_destacada.orbyt .mas-noticias li {float:left; width:98%;}
+.seccion_destacada.orbyt .mas-noticias li + li {border-top:1px dotted #bebfc1; padding-top:8px;}
+.seccion_destacada.orbyt h4 a:hover, .seccion_destacada.orbyt .antetitulo a:hover, .seccion_destacada.orbyt h5 a:hover {color:#b6c4cb}
+.seccion_destacada.orbyt .abonese { font:italic 12px/14px Georgia, "Times New Roman", Times, serif; color:#444;  background: url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_abonese_orbyt.gif") no-repeat top center; padding-top:10px; margin-bottom:15px; float:left; width:100%;}
+.seccion_destacada.orbyt .abonese strong {font-style:normal; font-weight:normal; text-transform:uppercase}
+.seccion_destacada.orbyt p {float:left;}
+
+.seccion_destacada.orbyt .noticia-engatillada {text-align:left; border-bottom:1px dotted #ccc; margin:1px 3%;
+overflow:hidden; padding:0 0 10px; text-align:left; width:94%; margin-bottom:10px; position:relative}
+.seccion_destacada.orbyt .noticia-engatillada .foto {width:100%}
+.seccion_destacada.orbyt .noticia-engatillada h4 a{font:bold 16px/18px Georgia, "Times New Roman", Times, serif; color:#444; margin:8px 2px 4px 0; width:auto;}
+.seccion_destacada.orbyt .noticia-engatillada .foto p {display:block}
+.seccion_destacada.orbyt .noticia-engatillada h4, .seccion_destacada.orbyt .noticia-engatillada h4 a, .seccion_destacada.orbyt .noticia-engatillada p {display:inline}
+.seccion_destacada.orbyt .noticia-engatillada p {float:none; padding-right:8px;}
+.seccion_destacada.orbyt .noticia-engatillada h4 a:hover {color:#b6c4cb}
+.seccion_destacada.orbyt .noticia-engatillada img { border-top:5px solid #77bc00;} 
+
+
+.seccion_destacada.orbyt ul.abonese {margin:0px; padding:5px 2% 2px; list-style-type:none; background:#DDE1E5; width:96%}
+.seccion_destacada.orbyt .abonese li {
+	border:1px solid #ccc; -moz-border-radius: 5px; border-radius:5px; 
+	float:left; width:48%; padding:4px 0 9px;}
+.seccion_destacada.orbyt .abonese li {
+	background: #76bb00;
+	background: -moz-linear-gradient(100% 100% 90deg, #375701, #76bb00);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#375701), to(#76bb00));
+  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#375701', endColorstr='#76bb00');
+}
+
+.seccion_destacada.orbyt .abonese .formato-1 + .formato-1 { float:right}
+.seccion_destacada.orbyt .abonese .formato-1 + .formato-1 + .formato-1 { float:left}
+.seccion_destacada.orbyt .abonese .formato-1 + .formato-1 + .formato-1 + .formato-1 {float:right}
+.seccion_destacada.orbyt .abonese .formato-2 {clear:left; width:99%; margin-top:2px;}
+.seccion_destacada.orbyt .abonese li a { color:#fff; font-style:normal; text-transform:uppercase; font-size:11px;letter-spacing:-0.03em;}
+.seccion_destacada.orbyt .abonese .formato-2 a {font-style:normal; text-transform:none; font-weight:bold; font-size:16px; letter-spacing:-0.03em;}
+.seccion_destacada.orbyt .abonese li a strong { display:block; font-size:18px; text-transform:none}
+.seccion_destacada.orbyt .publicidad {margin:0px 8px 10px; float:right}
+.seccion_destacada.orbyt .publicidad img {width:214px; height:60px} 
+.seccion_destacada.orbyt .abonese li a:hover{color:#d5efa9}
+
+
+
+/*excepción columnas portada doble*/
+.portada_doble .seccion_destacada.orbyt {width:308px}
+.portada_doble .seccion_destacada.orbyt .noticia {width: 286px;}
+.portada_doble .seccion_destacada .noticia .foto, 
+.portada_doble .seccion_destacada .noticia .video, 
+.portada_doble .seccion_destacada .noticia .reproductor{margin-right: auto;left: 0;}
+
+
+
+
+
+
+
+/* nuevos estilos modulo JJOO */
+
+	#nav_principal #nav_jjoo a {
+    background: #A30001;
+    border-bottom: 1px solid #1A1919;
+    border-radius: 5px 5px 5px 5px;
+    border-top: 1px solid #B47A7A;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 2px 0;
+    padding: 3px 6px 2px;
+}
+#nav_principal #nav_jjoo a:hover {
+    background: #333;
+    border-top: 1px solid #1A1919;
+    border-radius: 5px 5px 5px 5px;
+    border-bottom: 1px solid #858585;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 2px 0;
+    padding: 3px 6px 2px;
+}
+
+
+.modulo-especial.jjoo { float:left; width:100%; }
+.modulo-especial.jjoo .antetitulo,
+.modulo-especial.jjoo .antetitulo .seccion { 
+border-radius: 5px; padding: 2px 3px 2px 0px !important; background: #eee; color:#a30001; margin-bottom:5px; }
+.modulo-especial.jjoo .antetitulo strong a { color:#fff;  }
+.modulo-especial.jjoo .antetitulo strong a:hover { color:#ccc; }
+.modulo-especial.jjoo .antetitulo .seccion { border-radius: 5px; padding: 2px 4px !important;  margin-right:5px; }	 
+.modulo-especial.jjoo, .modulo.bloque-deportes-derecha-elmundoes .modulo-especial.jjoo {border: 1px solid #A30001; border-radius: 10px; padding: 10px; }
+.bloque-deportes-derecha-elmundoes .modulo-especial.jjoo { width: 280px; }
+.modulo.bloque-deportes-derecha-elmundoes .modulo-especial.jjoo .foto, .modulo.bloque-deportes-derecha-elmundoes .modulo-especial.jjoo .foto img { width:280px !important; }
+.modulo.modulo_noticias_02  .modulo-especial.jjoo .foto, .modulo.modulo_noticias_02  .modulo-especial.jjoo .foto img { width:208px !important; height:auto !important; }
+.modulo.modulo_noticias_01  .modulo-especial.jjoo .foto, .modulo.modulo_noticias_01  .modulo-especial.jjoo .foto img { width:368px !important; height:auto !important; }
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .jjoo  h5 a:hover, 
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .jjoo  h5 a:active,
+#contenido_principal .col_02 .modulo.bloque-deportes-derecha-elmundoes .jjoo  h5 a:focus {color:#A30001;;} 
+.modulo-especial.jjoo .antetitulo a { color: #A30001; }
+.modulo-especial.jjoo .antetitulo a:hover { color: #333; }
+.modulo.modulo_noticias_02  .modulo-especial.jjoo { width:208px; margin-bottom:15px; }
+.modulo.modulo_noticias_01  .modulo-especial.jjoo { width:368px; }
+.modulo-especial.jjoo li.noticia-especial { float:left; width:100%; }
+.modulo-especial.jjoo li.noticia-especial + li.noticia-especial { margin-top:10px; padding-top:10px; border-top:1px dotted #ccc; }
+
+
+.modulo-especial.jjoo .patrocinio { width:100%; text-align:left; margin-bottom:10px; max-height:25px; float:left; }
+
+.modulo-especial.jjoo h3 { border-bottom: 3px solid #A30001;
+    float: left;
+    font: bold 130% Arial,Helvetica,sans-serif;
+    letter-spacing: 0;
+    width: 100%;
+    text-transform: uppercase; }
+
+
+.modulo-especial.jjoo, .modulo.bloque-deportes-derecha-elmundoes .modulo-especial.jjoo { border:1px solid #b42027; border-bottom:3px solid #b42027; border-radius:0; margin-top:10px;}
+.modulo-especial.jjoo h3 {font-size:200%; font-weight:normal; width:auto; text-transform:none; border:0; background: url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.05/jjoo/logo.png) no-repeat top left; padding:20px 5px 5px 55px; position:relative; top:-25px; left:-5px; margin-bottom:-20px;}
+.modulo-especial.jjoo a {color:#006699}
+.modulo-especial.jjoo .enlaces { padding:4px; background:#232323; display:block; color:#fff; -moz-border-radius: 3px; -webkit-border-radius: 3px;	border-radius: 3px;	-khtml-border-radius: 3px; text-align:center; float:left; width:98%;}
+.modulo-especial.jjoo .enlaces li { display:inline-block; *float:left; width:32%; text-align:center;}
+.modulo-especial.jjoo .enlaces li + li {border-left:1px solid #777;}
+.modulo-especial.jjoo .enlaces a {color:#fff;}
+.modulo-especial.jjoo .enlaces a:hover {color:#ccc;}
+.modulo_noticias_02 .modulo-especial.jjoo .enlaces li { width:auto;}
+.modulo_noticias_02 .modulo-especial.jjoo .enlaces li + li { padding:0 4px;}
+
+.modulo.modulo_noticias_01 .modulo-especial.jjoo {margin-bottom:10px;}
+.modulo-especial.jjoo .antetitulo, .modulo-especial.jjoo .antetitulo .seccion {
+    background: none;
+    border-radius: 0;
+	color:#904; 
+	padding:2px 0!important;
+	display:
+ }
+
+.cabecera-noticia.jjoo { background: url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.05/jjoo/logo.png) no-repeat top left; width:910px; padding-left:55px; float:left; margin-bottom:5px;}
+.cabecera-noticia.jjoo h3 {font-size:200%; font-weight:normal; text-transform:none; border-bottom:1px solid #b42027; }
+.cabecera-noticia.jjoo a {color:#006699}
+.cabecera-noticia.jjoo a:hover {color:#b42027;}
+.cabecera-noticia.jjoo .enlaces { padding:4px 20px; background:#232323; display:block; color:#fff; -moz-border-radius: 3px; -webkit-border-radius: 3px;	border-radius: 3px;	-khtml-border-radius: 3px;  float:left; width:870px}
+.cabecera-noticia.jjoo .enlaces li { display:inline-block; text-align:center;  *float:left;}
+.cabecera-noticia.jjoo .enlaces li + li {border-left:1px solid #777; padding:0 5px 0 10px; margin-left:5px;}
+.cabecera-noticia.jjoo .enlaces a {color:#fff;}
+.cabecera-noticia.jjoo .enlaces a:hover {color:#ccc;}
+
+.col_01 .cabecera-noticia.jjoo {width:585px;}
+.col_01 .cabecera-noticia.jjoo .enlaces  {width:545px;}
+
+
+
+
+
+

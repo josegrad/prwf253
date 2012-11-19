@@ -1,0 +1,122 @@
+#bloque_marcadores_deportes {margin-top: 2em; }
+.cabecera_deportes { position: relative; border-bottom: 1px solid #ccc;  border-top: 1px solid #CCC; background-color: #e7e7e7; }
+.cabecera_deportes h1 { color: #cc0000; font-weight: normal; font-size: 1.2em; border-top: 1px solid #FFF; padding: 0.3em 0 0.2em 0.3em; text-shadow: 0px 1px 0px rgba(256, 256, 256, 1) }
+
+#bloque_marcadores_deportes ul{ margin: 1.3em;}
+#bloque_marcadores_deportes li { margin:  0.8em 0; padding-bottom: 4px;}
+#bloque_marcadores_deportes li a{ color:#333;}
+
+
+#content-body-marcadores { display:table; border-collapse:collapse;width: 100%; margin-top: 10px;} 
+.content-marcadores {  display:table-row;  font-size: 0.9em; } 
+
+.content-marcadores a{ color: #333}
+.content-marcadores .result_directo a{ color:#CC3300;}
+.content-marcadores  strong{ color: #333; font-size: 1.1em;}
+
+
+.detalle_marcadores_col_one, .detalle_marcadores_col_two, .detalle_marcadores_col_tree{ display:table-cell; padding: 10px 5px 6px 5px; border: 0px solid #ccc;} 
+.detalle_marcadores_col_one { width: 10%; font-size: 0.9em;;  color:#035A89;  border-bottom: 1px solid #ccc; }  
+.detalle_marcadores_col_two {width: 37%;  color:#666; border-bottom: 1px solid #ccc;} 
+.detalle_marcadores_col_tree {width: 16%;  color:#666; border-bottom: 1px solid #ccc; text-align:center;} 
+.detalle_marcadores_col_one strong{ display:block; color:#333; font-weight:normal; font-size: 0.9em;} 
+
+/*.detalle_marcadores_col_two img { float:right; margin: -6px 0 0 0; padding: 0 3px;} */
+
+.result_directo { color:#FF0000;}  
+.result_directo_final { color:#6ca105;} 
+
+.fondo_blanco_resultados{background-color:#fff; !important; color: #666666;}
+
+.fondo_blanco_resultados a{ !important; color: #333;}
+
+.resul_ajuste_derecha{ text-align:right;  !important;}
+.resul_ajuste_centro{ text-align:center;  !important;}
+.resul_ajuste_iquierda{ text-align:left;  !important;}
+
+.img_der{float:right; margin: -6px 0 0 0; padding: 0 3px;}
+.img_izq{float:left; margin: -6px 0 0 0; padding: 0 3px;}
+
+#content-body-clasificacion { display:table; border-collapse:collapse;width: 100%; margin-top: 10px;} 
+.content-clasificacion {  display:table-row;  font-size: 0.9em; border: 1px solid #ccc; } 
+.content-clasificacion strong{ color: #333; font-size: 1.1em;}
+
+#content-clasificacion-grupo {  display:table-row;  font-size: 0.8em; border: 0px solid #ccc; } 
+
+
+.detalle_clasificacion_col_one, .detalle_clasificacion_col_two{ display:table-cell; padding: 6px 5px 6px 5px; border: 0px solid #ccc; } 
+.detalle_clasificacion_col_one { width: 40%;  color:#035A89; font-size: 1.2em;}  
+.detalle_clasificacion_col_two { width: 10%; color:#666;} 
+
+
+#content-body-marcadores-jornada { display:table; border-collapse:collapse;width: 100%; margin-top: 10px;} 
+#content-marcadores-jornada {  display:table-row;  font-size: 0.8em; line-height: 20px; } 
+.detalle_marcadores-jornada, .detalle_marcadores-numero-jornada{ display:table-cell;  border: 1px solid #ccc; padding:0; margin:0; text-align:center !important; padding-top: 5px; } 
+
+.detalle_marcadores-jornada a {text-align:center !important; padding:3px 5px; color:#035A89; font-size: 1.8em; margin-top: 3px; }
+
+.detalle_marcadores-numero-jornada{ width: 75%; color:#035A89; font-size: 1.5em; padding-bottom: 5px;}  
+
+.nombre_grupo{color:#035A89; font-size: 1.4em; border-bottom: 1px dotted #999;}
+
+
+/*^////////////////////// ACB ///////////////////////////*/
+
+
+.detalle_clasificacion-acb_col_one, .detalle_clasificacion-acb_col_two{ display:table-cell; padding: 6px 5px 6px 5px; border: 0px solid #ccc; } 
+.detalle_clasificacion-acb_col_one { width: 40%;  color:#035A89; font-size: 1.2em;}  
+.detalle_clasificacion-acb_col_two {  width: 10%; color:#666;}  
+
+
+/*^////////////////////// NBA ///////////////////////////*/
+
+
+.detalle_clasificacion-nba_col_one, .detalle_clasificacion-nba_col_two, ..detalle_clasificacion_col_grupo{ display:table-cell; padding: 6px 5px 6px 5px; border: 0px solid #ccc; } 
+.detalle_clasificacion-nba_col_one { width: 20%;  color:#035A89; font-size: 1.2em;}  
+.detalle_clasificacion-nba_col_two {  width: 10%; color:#666;}  
+
+.detalle_clasificacion_col_grupo{width: 100%; margin: 0.8em 0.1em;}
+/*^////////////////////// EN VIVO ///////////////////////////*/
+
+
+#bloque_envivo_deportes{margin-top: 2em; }
+
+
+#content-body-envivo { display:table; border-collapse:collapse;width: 100%; margin-top: 10px;} 
+.content-envivo {  display:table-row;  font-size: 0.9em; border: 1px solid #ccc; } 
+
+.img_der_gr{float:right; margin: -9px 0 0 0; padding: 0 3px; width: 35px;}
+.img_izq_gr{float:left; margin: -9px 0 0 0; padding: 0 3px; width: 35px;}
+
+
+.detalle_envivo_col_local{ width: 40%;  color:#333; font-size: 1.1em; display:table-cell;   padding:0; margin:0; text-align:right !important; padding-top: 5px; padding-right: 10px; } 
+.detalle_envivo_col_resultado{ width: 20%;  display:table-cell;   padding:0; margin:0; text-align:center !important; padding-top: 5px; } 
+.detalle_envivo_col_visitante{ width: 40%;  color:#333; font-size: 1.1em; display:table-cell;   padding:0; margin:0; text-align:center !important; padding-top: 5px;  padding-left: 10px; } 
+
+.cuadro_marcador{font-size: 2em; color:#FFFFFF;}
+
+.color_fondo_marcador{background-color:#333333;}
+
+.linea_arbitro{border-bottom: 1px solid #ccc; text-align:center; padding: 5px 0; font-size: 0.8em; background-color:#cc0000; color:#FFFFFF;}
+
+
+#content-body-goles { display:table; border-collapse:collapse;width: 100%;} 
+.content-goles {  display:table-row;  font-size: 0.9em; background-color:#FFFFFF; border-bottom: 1px solid #ccc; } 
+
+.detalle_gol_local{width: 50%;  color:#333; font-size: 1em; display:table-cell; margin:0; text-align:right !important; padding: 10px; border-right: 1px solid #ccc; } 
+
+.detalle_gol_visitante{width: 50%;  color:#333; font-size: 1em; display:table-cell; margin:0; text-align:left !important; padding: 10px; border-left: 1px solid #ccc; } 
+
+.nom_periodista{border-bottom: 1px solid #ccc; padding-bottom: 5px; color:#333333; font-size: 0.7em; margin-top: 5px; color:#035A89; padding-left: 5px;}
+
+.alminuto{border-bottom: 1px solid #ccc; padding: 10px; font-size: 0.9em; color:#666; padding-left: 25%; position:relative;}
+
+.cuadro_alminuto{ position:absolute; top: 10px; left: 5px; width: 20%; border: 1px solid #999; color:#035A89; text-align:center; font-size: 0.9em; padding: 5px 0;}
+
+
+
+.narracion_envivo{}
+.narracion_envivo li ul{ margin: 10px 0;}
+.narracion_envivo li{ width: 100%; clear:both; padding-bottom: 10px; background-color:#FFFFFF; border-bottom: 1px solid #ccc; }
+.narracion_envivo p{ margin: 5px 10px 5px 5px; padding: 5px 0; color:#035A89; }
+.destacado{ float:left; width: 20%; border: 1px solid #999; color:#CC0000 !important; text-align:center; font-size: 0.9em;}

@@ -1,0 +1,123 @@
+html {
+	background-color: black;
+	width: device-width;
+}
+
+section#nom_seccion {
+	margin-bottom: 0px;
+}
+
+#gallery {
+	padding: 10px 0;	
+}
+
+#gallery > div {
+border: solid 1px rgba(0, 0, 0, 0.1);
+width: 95px;
+height: 63px;
+margin: 2px;
+float: left;
+background-color: black;
+background-image: url(http://estaticos.elmundo.es/multimedia/html5/loading2.gif);
+-webkit-box-sizing: border-box;
+background-position: center center;
+background-repeat: no-repeat;
+-webkit-background-origin: border-box;
+}
+#gallery > div:hover {
+cursor: pointer;
+}
+#gallery > div.portrait {
+background-position: center top;
+-webkit-background-size: 100% auto;
+}
+#gallery > div.landscape {
+background-position: center top;
+-webkit-background-size: auto 100%;
+}
+#link_more_images {
+clear: both;
+font-weight: bold;
+display: none;
+color: #f0f0f0;;
+font-weight: bold;
+}
+#link_more_images:hover {
+cursor: pointer;
+}
+#photo {
+/*padding: 10px 0;*/
+background-color: black;
+width: device-width;
+height: 200px;
+margin: 2px;
+/*vertical-align: middle;*/
+display: none;
+background-image: url(http://estaticos.elmundo.es/multimedia/html5/loading2.gif);
+background-position: center center;
+background-repeat: no-repeat;
+}
+#photo > img {
+top: 4px;
+clear: both;
+position: relative;
+max-width: 100%;
+margin-bottom: 4px;
+
+
+display: auto;
+font-size: auto;
+}
+#photo #title_selected_photo {
+margin-left: 2px;
+color: #f0f0f0;
+font-size: 1em ;
+font-family:  Helvetica,  Arial, sans-serif; 
+text-transform: uppercase;
+font-size: .9em;
+width: 95%;
+}
+#photo #foot_selected_photo {
+padding: 2px 5px;
+color: #999;
+font-size: 0.6em ;
+font-family:  Helvetica,  Arial, sans-serif; 
+background-color:#1b1b1b;
+}
+#photo #subtitle_selected_photo {
+padding: 5px;
+color: #f0f0f0;
+font-size: 0.9em ;
+font-family:  Helvetica,  Arial, sans-serif;
+background-color:#1b1b1b;
+}
+#photo #order_selected_photo {
+margin-left: 2px;
+color: #f0f0f0;;
+font-weight: bold;
+font-size: 0.8em;
+}
+#photo #corner_selected_photo {
+border: 1px solid #f0f0f0;
+float: right;
+color: #333333;
+background-color:#f0f0f0;
+border-radius: 3px;
+padding: 0px 5px;
+display:block;
+margin: 2px 2px 2px 5px;
+}
+#photo #corner_selected_photo:hover {
+cursor: pointer;
+}
+.prev_btn_navigation, .next_btn_navigation {
+text-decoration: none;
+color: #f0f0f0;;
+font-weight: bold;
+float:left;
+margin: 10px;
+}
+
+.next_btn_navigation {
+	float: right; 
+}

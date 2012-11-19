@@ -1,0 +1,66 @@
+/*	Galeria de imagenes	*/
+#rollover li {
+	width: 100px;
+	height: 60px;
+	z-index: 10;
+}
+			
+.cuerpo_galerias {
+	height: 80px;
+	padding-top: 5px;
+}
+			
+div.back, div.forward {
+	z-index: 1000;
+	height: 100%;
+}
+			
+div.back:hover, div.forward:hover {
+	cursor: default;
+}
+			
+.galeria {
+	position: relative;
+	left:0px;
+	height: 60px;
+	width: device-width;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+			
+.tira_imagenes {
+	position:absolute;
+	left: 0px;
+	overflow: visible;
+	height: 60px;
+}
+			
+.tira_imagenes > .imagen_galeria {
+	background-image: url(http://estaticos.elmundo.es/multimedia/html5/loading2.gif);
+	background-position: center center;
+	position: absolute;
+	height: 60px;
+	width: 100px;
+	background-repeat: no-repeat;
+	background-color: black;
+}
+			
+.imagen_galeria.portrait {
+	background-size: auto 100%;
+	background-position: center top;
+}
+			
+.imagen_galeria.landscape {
+	background-size: 100% auto;
+	background-position: center center;
+}
+						
+.enlace_galeria_extendida a {
+	padding-left: 8px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	text-decoration: none;
+	background-color: silver;
+	padding-right: 5px;
+}

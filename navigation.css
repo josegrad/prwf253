@@ -1,0 +1,16 @@
+#navigation {
+	margin-bottom: 5px;
+}
+
+.prev_btn_navigation {
+	float: left;
+}
+
+.next_btn_navigation {
+	float: right;
+}
+
+#navigation p {
+	clear: both;
+	height: 2px;
+}

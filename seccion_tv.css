@@ -1,0 +1,57 @@
+#bloque_programacion { margin: 2em 0; position:relative;  }
+.cabecera_programacion { position: relative; border-bottom: 1px solid #CCC;  border-top: 1px solid #CCC; background-color: #e7e7e7;}
+.cabecera_programacion h1 { color: #546478; font-weight: normal; font-size: 1.6em; border-top: 1px solid #FFF; padding: 0.3em 0 0.2em 0.3em; text-shadow: 0px 1px 0px rgba(256, 256, 256, 1) }
+
+		
+.botonera_programacion { text-align: left;  border-bottom: 1px solid #CCC; background-color: #e7e7e7; overflow: hidden;}
+.botonera_programacion ul.menu_programacion {display:table; width: 100%;}
+.botonera_programacion ul.menu_programacion li {display:table-cell; font-size: 1.1em; color: #999; line-height: 0.8em;  padding: 0.6em 0 0.5em 0.5em; margin:0; border-left: 1px solid  #FFF; border-right: 1px solid #CCC; border-top: 1px solid #FFF; background: url(../images/icoFlechaGris.png) 95% 50% no-repeat;  }
+.botonera_programacion ul.menu_programacion li a { color: #3d82a3; display: block;  }
+.botonera_programacion li a span {  padding-right: 15px;  }
+
+
+
+	
+section.cuerpo_programacio{ display:block; width: 100%; padding-top: 0.8em; background-color:#fff; }
+
+#lista_programacion { max-width: 100%; overflow: hidden;}
+#lista_programacion li { float: left; margin: 0 0 3px 0; padding-left: 30px;  color: #666;}
+
+#lista_programacion li strong { color: #990044; padding: 0 4px;}
+
+div.forward_programacio,div.back_programacio {  position: absolute; top: 35px; 
+background:  rgba(231,231,231,0.8) ; }
+div.back_programacio {  left: 0; 
+-webkit-box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.2);
+-moz-box-shadow:    2px 0 4px 0 rgba(0, 0, 0, 0.2);
+box-shadow:         2px 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+div.forward_programacio { right: 0; 
+-webkit-box-shadow: -2px 0 4px 0 rgba(0, 0, 0, 0.2);
+-moz-box-shadow:   -2px 0 4px 0 rgba(0, 0, 0, 0.2);
+box-shadow:         -2px 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+div.forward_programacio a,div.back_programacio a {text-indent: -9999px;width: 20px; height: 194px; display: block;}
+div.forward_programacio a { background: url(../images/ico_flecha_siguiente.png) 50% 50% no-repeat;}
+div.back_programacio a { background: url(../images/ico_flecha_anterior.png) 50% 50% no-repeat;}
+
+
+a.btn_mas_fotos{ color:#666; background: url(../images/icoFlechaGris.png) 90% 50% no-repeat; padding-right: 25px;}
+
+
+#bloque_audiencias { margin: 2em 0; position:relative;  }
+.cabecera_audiencias { position: relative; border-bottom: 1px solid #CCC;  border-top: 1px solid #CCC; background-color: #e7e7e7;}
+.cabecera_audiencias h1 { color: #546478; font-weight: normal; font-size: 1.6em; border-top: 1px solid #FFF; padding: 0.3em 0 0.2em 0.3em; text-shadow: 0px 1px 0px rgba(256, 256, 256, 1) }
+
+.dia_audiencias{border-bottom: 1px solid #ccc;}
+.dia_audiencias h2{color: #546478; font-weight: bold; font-size: 1.1em; padding: 0 5px; }
+
+.dia_audiencias span{color: #333; font-weight:normal;  padding-left:15px; font-size: 0.8em;}
+	
+#lista_audiencias { max-width: 100%; overflow: hidden;}
+#lista_audiencias li { color: #666; background-color:#FFFFFF; border-bottom: 1px solid #ccc; padding: 5px; padding-top: 7px;}
+#lista_audiencias li img{float: left; padding: 1px 10px; border:1px solid #ccc;  margin-right: 10px; border-radius: 5px; 
+-webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+-moz-box-shadow:   0 0 4px 1px rgba(0, 0, 0, 0.2);
+box-shadow:        0 0 4px 1px  rgba(0, 0, 0, 0.2); }
+#lista_audiencias li strong { color: #990044; padding: 0 4px; display:block;}

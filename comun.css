@@ -1,0 +1,5889 @@
+/*
+elmundo.es 2008, Archivo comun de estilos.
+(c) Unidad Editorial Internet S.L. 2008. Todos los derechos reservados.
+*/
+
+/* TABLA DE CONTENIDOS CSS/
+=RESET
+=LAYOUT
+=GENERAL
+=CLASES COMUNES
+> bloque
+> col
+> fila
+> modulo
+> noticia
+=APOYOS
+=CABECERA
+=NAVEGACION
+> Principal
+> Subnavegacion
+> Mostrar subnavegacion
+> Secundaria
+=MISCELANEA Y HERRAMIENTAS
+> edicion impresa
+> busqueda
+> el tiempo
+=PESTANAS EN MODULOS
+=CONTENIDO
+> contenido principal
+> contenido secundario
+> contenido suplementario
+=RANKING NOTICIAS
+=ALERTAS
+=PUBLICIDAD
+=TAMAÑOS DE LETRA
+=PORTADILLAS
+=CONTENIDO CORPORATIVO
+
+= Estilos forzando portada... 
+
+/..........................*/
+
+/* 
+Se han añadido estilos que fuerzan la portada
+para devolver, a pesar de los buenos resultados,
+la publicidad sobre la cabecera.
+
+*/
+
+
+/* =RESET */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, form {
+	margin: 0;
+	padding: 0;
+}
+ul, ol, li {
+	list-style: none;
+}
+a img {
+	border: 0;
+}
+abbr, acronym {
+	text-decoration:none;
+	border:0;
+}
+/* =LAYOUT */
+html {
+	background: #f7f7f7 url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_body.png) repeat-x top left;
+}
+body {
+	font: 12px/16px Arial, Helvetica, sans-serif;
+	position:relative;
+}
+#contenedor {
+	position:relative;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 32px 0 0;
+	overflow: visible;
+	clear:both;
+	z-index:1;
+}
+#cabecera {
+	position:relative;
+	height:85px;
+	margin:0 auto;
+	background: #fff url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_cabecera.png) repeat-x bottom left;
+	border: 1px solid #D0D0D0;
+	border-width: 0 1px;
+	width: 992px !important;
+}
+#navegacion {
+	margin:0 auto;
+	padding-bottom:10px;
+	float:left;
+	display:inline;
+	width:1000px !important;
+	padding: 0;
+	margin: 0;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_bloque_02.png) repeat -13px 0;
+}
+#contenido {
+	clear:both;
+	float:left;
+	width:100%;
+	position:relative;
+	padding:10px 0 0;
+}
+#index #contenido, .portadilla #contenido {
+	padding-top: 0px;
+}
+#cabecera, #navegacion {
+	width:992px;
+}
+#contenido_principal, #contenido_secundario, #contenido_suplementario, #info_site {
+	clear:both;
+}
+/* =GENERAL */
+img {
+	font-size:11px;
+	display:block;
+}
+a, a:focus, a:active {
+	text-decoration: none;
+	color: #035A89;
+	outline: none;
+}
+a:hover {
+	text-decoration:none;
+	color:#770035;
+}
+table, th, td {
+	border-collapse: collapse;
+	background-color: ccc;
+	color:#fff;
+}
+input, select {
+	font:11px Arial, Helvetica, sans-serif;
+}
+.accesskey {
+	border:0;
+	text-decoration:none;
+}
+h2, h3, h4, h5, h6 {
+	margin-bottom:8px;
+	line-height:normal;
+	padding-right:0px;
+	color:#3F5974;
+}
+h2 em, h3 em, h4 em, h5 em, h6 em {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-size:1.05em;
+}
+h2 {
+	font-size:32px;
+	letter-spacing:-1px;
+}
+h3 {
+	font-size:22px;
+	letter-spacing:-1px;
+}
+h2 {
+	line-height:1.1em;
+}
+h4 {
+	font-size:18px;
+	letter-spacing:-1px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_esquinas.png) no-repeat -1016px 0;
+	position:relative;
+	top:-11px;
+	left:-15px;
+	margin-right:-26px;
+	padding:11px 15px 0;
+	width:1025px;/*llevan la imagen de fondo que pinta el borde y las esquinas superiores de los bloques*/
+}
+h5 {
+	font-size:16px;
+}
+h6 {
+	font-size:14px;
+}
+h2 a, h3 a, h4 a, h5 a, h6 a {
+	color:/*#035A89*/#044364;
+	border:0;
+}
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	color:#770035;
+}
+#contenido_principal h4 {
+	width:auto;
+	margin-right:0;/*	padding-right: 6px;*/
+}
+p {
+	color:#555;
+}
+p a {
+	 border-bottom:1px dotted #ddd;
+}
+#tamano p a {
+	border-bottom:none;
+	text-decoration:underline;
+}
+li a:hover {
+	text-decoration:none;
+}
+/* =CLASES COMUNES */
+.wrap {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_bloque_02.png) repeat -13px 0;
+	padding:0 15px 10px;
+	float:left;
+	width:970px;
+}
+.bloque {
+	clear:both;
+	padding:11px 0;
+	background:#fff url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_esquinas.png) no-repeat -4px 100%;
+	float:left;
+}
+.col_01 {
+	width:640px;
+	float:left;
+}
+.col_02 {
+	width:315px;
+	float:right;
+}
+.fila {
+	clear:both;
+	position:relative;
+}
+.modulo {
+	clear:both;
+	margin-bottom:12px;
+}
+.clear {
+	display:block;
+	clear:both;
+	line-height:1px;
+}
+.txt_centro {
+	text-align:center;
+}
+.include {
+	background: #0F0;
+	clear:both;
+	color:#999;
+	font-size: 10px;
+	margin-bottom:5px;
+}
+.include pre {
+	padding:0;
+	margin:0;
+}
+.include p {
+	color:#fff;
+}
+/* APOYOS */
+.apoyos {
+	overflow:hidden;
+	margin-top:8px;
+}
+.apoyos li, .bloque_secciones_suplementos .apoyos {
+	width:auto !important;
+	/*float:left;*/
+	clear:left;
+	padding-left:20px;
+	margin-bottom:2px !important;
+	margin-left:15px !important;
+	line-height: 18px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/bolillo.gif) no-repeat 0px 1px;
+	color: #888;
+}
+.apoyos li a, .bloque_secciones_suplementos .apoyos a {
+	display:inline;
+	color:/*#418BAF*/#3C81A2;
+}
+.apoyos a:hover {
+	color:#904;
+}
+
+/* carmen 20121023: adaptacion estilos nueva portadilla gentes */
+.listado-pie.gentes01-b .apoyos li {
+    clear:none;
+}
+
+/* tipos de apoyo */
+.apoyos li.audio {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/audio.gif);
+}
+.apoyos li.video {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/video.gif);
+}
+.apoyos li.foto, .apoyos li.album {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/album.gif);
+}
+.apoyos li.debate, .apoyos li.foro {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/opinion.gif);
+}
+.apoyos li.especial {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/documento.gif);
+}
+.apoyos li.grafico {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/grafico.gif);
+}
+.apoyos li.blog {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/blog.gif);
+}
+.apoyos li.euro {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/pago.gif);
+}
+.apoyos li.enlared {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/enlared.gif);
+}
+.apoyos li.pdf {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/pdf.gif);
+}
+.apoyos li.orbyt {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/orbyt.gif);
+}
+
+
+/*fotos*/
+.foto {
+	background:#fff;
+	position:relative;
+	overflow:hidden;
+	margin:0 auto 6px;
+}
+/*pies de foto*/
+.foto p {
+	position:absolute;
+	bottom:0;
+	left:0;
+	background:#334457;
+	color:#fff;
+	margin-right:-30px;
+	width:100%;
+	padding:4px 0 4px 8px;
+	font-size:11px!important;
+	line-height:14px;
+	filter:alpha(opacity=80);
+	-moz-opacity:.8;
+	opacity:.8;
+}
+.foto a:hover img {
+	filter:alpha(opacity=90);
+	-moz-opacity:.9;
+	opacity:.9;
+}
+.foto p.ampliar {
+	position:absolute;
+	top:3px;
+	right:3px;
+	left:auto;
+	width:17px!important;
+	height:17px;
+	background:#334457;
+	text-indent:-9999px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	margin-right:auto;
+}
+.foto p.ampliar a {
+	display:block;
+	background:#334457 url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/icon_ampliar.gif) no-repeat top left;
+	border:0;
+	width:17px;
+	height:17px;
+	border:0!important;
+}
+.foto p a {
+	color:#fff;
+	border:0;
+}
+.foto p.ampliar a:hover {
+	filter:alpha(opacity=80);
+	-moz-opacity:.8;
+	opacity:.8;
+	border:0!important;
+}
+.video {
+	margin:0 auto 9px;
+}
+.video p {
+	border-bottom:1px dashed #E3E7EA;
+	color:#8093A1;
+	font-size:11px;
+	padding:1px 2px;
+}
+.reproductor {
+	border-bottom:1px dashed #DDD;
+	margin-bottom:6px;
+}
+.reproductor.izquierda, .reproductor.derecha {
+	border:0;
+	margin-bottom:5px;
+}
+.izquierda {
+	float:left!important;
+	margin:5px 15px 5px 0;
+}
+.derecha {
+	float:right!important;
+	margin:5px 0 5px 15px;
+}
+.mas {
+	display:block;
+	text-align:right;
+	font-size:11px;
+	color:#035A89;
+	clear:both;
+}
+.mas strong {
+	text-transform:uppercase;
+}
+.mas:hover, .mas a:hover, .mas:hover strong, .mas a:hover strong {
+	color:#770044!important;
+}
+/*noticias*/
+.antetitulo {
+	padding-bottom:0px;
+}
+.antetitulo img {
+	display:inline;
+	position:relative;
+	top:2px;
+}
+.antetitulo, .antetitulo a {
+	color:#904;/* magenta */
+	border:0;
+}
+.antetitulo a:hover {
+	color:#9BAAB9;
+}
+.seccion {
+	text-transform:uppercase;
+	font-style:normal;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-right:5px;
+}
+.antetitulo .seccion img {
+	display:inline;
+	line-height:0;
+	position:relative;
+	top:2px;
+}
+.antetitulo span {
+	color:#C7CFD8;
+}
+/* =CABECERA */
+#cabecera h1 {
+	text-indent:-9999px;
+	top:12px;
+	position:relative;
+	left:11px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_h1.png) no-repeat top left;
+	width:700px;
+}
+
+
+#cabecera.macdonals h1 {background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.04/macdonals/bg_h1.png) no-repeat top left;}
+
+#cabecera_info {
+	position:absolute;
+	top:57px;
+	left:12px;
+}
+#cabecera #mundo_girando {
+	float:left;
+	left:81px;
+	position:absolute;
+	text-indent:0;
+	top:11px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bola_azul.jpg) no-repeat 0 0;
+	z-index:2;
+}
+/*#navegante #cabecera #mundo_girando {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bola_verde.jpg);
+}*/
+p.tagline {
+	color:#717477;
+	font-size:11px;
+	display:inline;
+	padding:0 6px 0 0;
+}
+p.tagline em, p.update em {
+	font-style:normal;
+}
+p.update {
+	font-size:11px;
+	margin-bottom:6px;
+	display:inline;
+	color:#333;
+	border-left:1px solid #B6B8BA;
+	padding:0 0 0 7px;
+}
+p.update em {
+	color:#666!important;
+}
+#cabecera .update {
+	text-transform:none;
+}
+#cabecera h1 a {
+	display:block;
+	width:349px;
+	height:49px;
+}
+#saltar_nav {
+	display:none;
+}
+/*------------------------INICIO estilos NAVEGACION-------------------------*/
+
+/* Cabeceras de seccion */
+#cabecera h1 span {
+	display:none;
+}
+#cabecera h1 .seccion {
+	text-indent:0;
+	position:absolute;
+	top:10px;
+	left:370px;
+	text-transform:none;
+	color:#52575A;
+	font-size:32px;
+	padding-left:20px;
+	border-left:1px solid #B1B1B2;
+	height:auto;
+	width:auto;
+	white-space:nowrap;
+	line-height:32px;
+}
+#cabecera h1 em, #cabecera h1 a.subseccion {
+	display:block;
+	font-size:16px;
+	font-style:normal;
+	font-weight:bold;
+	line-height:16px;
+}
+#cabecera h1 a.subseccion {
+	position:absolute;
+	top:43px;
+	left:375px;
+	width:140px;
+	padding-left:15px;
+	text-indent:0;
+	text-transform:none;
+	color:#52575A;
+}
+#cabecera h1 a.seccion:hover, #cabecera h1 a.subseccion:hover {
+	color:#B2B2B2;
+}
+#cabecera .tag {
+	position:absolute;
+	bottom:12px;
+	left:405px;
+	font-size:16px;
+	font-weight:bold;
+}
+/* Cabecera NAVEGANTE */
+#navegante #cabecera h1 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/bg_h1.png) no-repeat top left;
+}
+/* De las secciones */
+/*#navegante #cabecera, 
+#navegante #nav_miscelanea{border-color:#46760D;}
+#navegante #cabecera h1 a.seccion,
+#navegante.portadilla #cabecera h1 a.seccion{background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_seccion_cabecera_navegante.gif) no-repeat top left !important;}
+#navegante #cabecera h1 a.seccion:hover,
+#navegante.portadilla #cabecera h1 a.seccion:hover{	color: #D7E3C7 !important;}*/
+
+
+/* =NAVEGACION */
+.nav {
+	float:left;
+	width:100%;
+	clear:both;/*temporal*/
+}
+.nav li {
+	float:left;
+}
+.nav li a {
+	display:block;
+	padding:4px 10px;
+	font-weight:bold;
+}
+.nav li a:hover {
+	color:#5995B1;
+}
+.nav li.last_child {
+	border-bottom:0!important;
+}
+.nav_sub li, .nav_secundaria li {
+	font-size:11px;
+}
+/* principal general */
+#nav_principal {
+	position:relative;
+	background:#11547F url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navprincipal.gif) repeat-x 0 0;
+	border-bottom:1px solid #0A4666;
+	left:4px;
+}
+#nav_principal a {
+	color:#fff;
+	font-size:12px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/separador_nav_principal.png) no-repeat center right;
+	padding:4px 6px 6px;
+}
+#nav_principal #nav_index a {
+    background: url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navprincipal.gif") repeat-x scroll left bottom #DBDEE0;
+}
+
+#nav_principal a:hover {
+	background:#536372 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navprincipal.gif) repeat-x center left;
+	text-decoration:none;
+}
+#nav_principal .nav_sub li a {
+	text-transform:none;
+	border:0;
+	font-size:11px;
+}
+#nav_mimundo {
+	position:absolute;
+	border:0;
+	top:0;/*luis*//*right:2px;*/
+	right:0;
+}
+#nav_mimundo a {
+	border:0;
+	padding-right:35px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/icono_mimundo.gif) no-repeat 100% 0;
+}
+#nav_mimundo a:hover {
+	border:0;
+	padding-right:35px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/icono_mimundo.gif) no-repeat 100% -52px;
+}
+/* principal navegante */
+#navegante #nav_principal {
+	background:#2C6E0B url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/bg_navprincipal.gif) repeat-x 0 0;
+	border-bottom:1px solid #275704;
+}
+#navegante #nav_principal a {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/separador_nav_principal.png) no-repeat center right;
+}
+#navegante #nav_principal a:hover {
+	background:#536372 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/bg_navprincipal.gif) repeat-x bottom left;
+}
+#navegante #nav_mimundo a {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/icono_mimundo.gif) no-repeat 100% 0;
+}
+#navegante #nav_mimundo a:hover {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/icono_mimundo.gif) no-repeat 100% -52px;
+}
+/* subnavegacion */
+.nav_sub {
+	display:none;
+	background:#97B6C9 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navsub.png) repeat-x top left;
+	position:absolute;
+	left:0;
+	top:27px;
+	height:23px;
+	float:left;
+	width:100%;
+}
+#nav_principal .first_child a {
+	border-left:0;
+	padding-left:12px;
+}
+#nav_principal .nav_sub {
+	padding-left:5px;
+	width:987px;
+}
+#nav_principal #nav_index a {background:url("http://estaticos01.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navprincipal.gif") repeat-x scroll left bottom #DBDEE0}
+
+#nav_principal #nav_index.first_child a {background:url("http://estaticos01.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navprincipal.gif") repeat-x scroll left top #DBDEE0; color:#fff}
+
+#nav_principal .nav_sub li {
+	line-height:23px;
+	font-size:11px;
+}
+.castillayleon #nav_principal .nav_sub li {
+	line-height:24px;
+	font-size:11px;
+}
+#nav_principal .nav_sub a {
+	color:#fff!important;
+	padding:0 9px;
+	font-weight:normal;
+	font-size:11px;
+}
+.nav_sub_b {
+	display:none;
+}
+/* subnavegacion NAVEGANTE*/
+#navegante #nav_espana .nav_sub {
+	background:#95C072 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/bg_navsub.png) repeat-x top left;
+	border-bottom:1px solid #7DA956;
+}
+#navegante #nav_espana .nav_sub a:hover {
+	background:#58912e none !important;
+}
+/*DELEGACIONES con subsecciones*/
+.castillayleon #nav_principal .nav_sub li#nav_castillayleon, .andalucia #nav_principal .nav_sub li#nav_andalucia, .cvalenciana #nav_principal .nav_sub li#nav_cvalenciana {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/mostrar_navsub_b.png) no-repeat scroll 0 bottom!important;
+	padding-left:22px;
+	position:relative;
+	height:24px;
+}
+.castillayleon #nav_principal .nav_sub li#nav_castillayleon a, .andalucia #nav_principal .nav_sub li#nav_andalucia a, .cvalenciana #nav_principal .nav_sub li#nav_cvalenciana a {
+	position:relative;
+	z-index:3;
+}
+.castillayleon #nav_principal .nav_sub #nav_castillayleon .nav_sub_b.desplegado, .andalucia #nav_principal .nav_sub #nav_andalucia .nav_sub_b.desplegado, .cvalenciana #nav_principal .nav_sub #nav_cvalenciana .nav_sub_b.desplegado {
+	display:block;
+}
+.castillayleon #nav_principal .nav_sub .nav_sub_b {
+	width:111px;
+}
+.cvalenciana #nav_principal .nav_sub .nav_sub_b {
+	width:104px;
+}
+/*Andalucia y C. Valenciana*/
+#nav_principal .nav_sub .nav_sub_b {
+	display:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	bottom:0;
+	left:0;
+	top:auto;
+	width:84px;
+	z-index:2;
+	padding-top:1px;
+	background:#93ABBC url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/mostrar_navsub_b.png) no-repeat -277px bottom;
+	padding-bottom:23px;
+}
+html>body #nav_principal .nav_sub .nav_sub_b {
+	bottom:0;
+}
+#nav_principal .nav_sub .nav_sub_b a {
+	border-right:0!important;
+}
+#nav_principal .nav_sub .nav_sub_b a:hover {
+	background:#63859D;
+}
+#nav_principal .nav_sub .nav_sub_b li {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bullet_nav_sub.gif) no-repeat 9px 50%;
+	text-align:left;
+	line-height:18px;
+padding:;
+	border-bottom:1px solid #63859D;
+	display:block;
+	float:none;
+}
+/* activos de navegacion principal */
+#index #nav_index a, #index #nav_index.first_child a, #espana #nav_espana a, #madrid #nav_espana a, #barcelona #nav_espana a, #baleares #nav_espana a, .cvalenciana #nav_espana a, .castillayleon #nav_espana a, .andalucia #nav_espana a, #internacional #nav_mundo a, #deportes #nav_deportes a, #economia #nav_economia a, #vivienda #nav_vivienda a, #suvivienda #nav_vivienda a, #cultura #nav_cultura a, #ciencia #nav_ciencia a, #natura #nav_ciencia a, #nanotecnologia #nav_ciencia a, #salud #nav_salud a, #navegante #nav_tecnologia a, #comunicacion #nav_comunicacion a, #television #nav_tv a, #solidaridad #nav_solidaridad a, #toros #nav_toros a, #opinion #nav_opinion a, #union_europea #nav_europa a {
+	background:#DBDEE0 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navprincipal.gif) repeat-x bottom left;
+	color:#323537;
+	cursor:default;
+}
+
+#nav_principal li .nav_sub a {
+	background:none!important;
+	cursor:pointer!important
+}
+#nav_principal .nav_sub a:hover {
+	background:#5B85A4!important;
+}
+#madrid #nav_madrid a, #barcelona #nav_barcelona a, #baleares #nav_baleares a, .cvalenciana #nav_principal #nav_cvalenciana a, .castillayleon #nav_castillayleon a, #paisvasco #nav_paisvasco a, .andalucia #nav_principal #nav_andalucia a, #galicia #nav_galicia a {
+	background:#7694A9 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navsub_hover.png) repeat-x bottom left!important;
+	border-top:1px solid #63859D;
+	color:#0F4F77!important;
+	font-weight:bold;
+}
+.castillayleon #nav_principal #nav_castillayleon a, .cvalenciana #nav_principal #nav_cvalenciana a, .andalucia #nav_principal #nav_andalucia a {
+	padding-left:0!important;
+	background:#7694A9 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navsub_hover.png) repeat-x bottom left!important;
+}
+.castillayleon #nav_principal #nav_castillayleon .nav_sub_b li a, .cvalenciana #nav_principal #nav_cvalenciana .nav_sub_b li a, .andalucia #nav_principal #nav_andalucia .nav_sub_b li a {
+	color:#fff!important;
+	background:none!important;
+	padding-left:23px!important;
+}
+.castillayleon #nav_principal #nav_castillayleon .nav_sub_b li a:hover, .cvalenciana #nav_principal #nav_cvalenciana .nav_sub_b li a:hover, .andalucia #nav_principal #nav_andalucia .nav_sub_b li a:hover {
+	color:#fff!important;
+	background:#B6C6D1!important;
+}
+#nav_principal .nav_sub .nav_sub_b li a {
+	border-bottom:1px solid #B6C6D1;
+	border-top:0!important;
+}
+
+/* especiales */
+#nav_principal #nav_loteria a {
+    background: url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.04/bg_nav_loteria.gif") repeat-x scroll left center transparent;
+}
+
+#nav_principal #nav_loteria a:hover {
+    background: url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.04/bg_nav_loteria.gif") repeat-x scroll left top transparent;
+}
+
+/* submenu ciencia */
+#ciencia #nav_ciencia .nav_sub, #natura #nav_ciencia .nav_sub, #nanotecnologia #nav_ciencia .nav_sub {
+    display: block;
+}
+#ciencia #nav_edicion_espana p.label, #natura #nav_edicion_espana p.label, #nanotecnologia #nav_edicion_espana p.label {display:none }   
+/* secundaria */
+#nav_secundaria {
+	position:absolute;
+	top:7px;
+	right:4px;
+	width:auto;
+	float:right;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navsecundaria.png) repeat-x bottom left;
+	z-index:100;
+	border-bottom:1px solid #DBDDDE;
+}
+#nav_secundaria li {
+	position:relative;
+	bottom:-1px;
+	margin-top:-1px;
+}
+#nav_secundaria li a {
+	padding:3px 10px;
+	color:#357798;
+	border-left:1px solid #DADCDE;
+}
+#nav_secundaria li.first_child {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navsecundaria_02.png) no-repeat bottom left;/*padding:1px 0 0 11px;*/
+	padding-left:20px;
+}
+#nav_secundaria li.first_child a {
+	border:0;
+}
+/* =MISCELANEA Y HERRAMIENTAS */
+#nav_herramientas, #nav_miscelanea {
+	position:absolute;
+	top:6px;
+	width:989px;
+	background:#fff url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_cabecera.png) repeat-x top left;
+	padding:5px 0 4px;
+	border:1px solid #D0D0D0;
+	border-width:1px 1px 0;
+}
+#nav_herramientas li a, #nav_miscelanea li a {
+	padding:0;
+}
+/*miscelanea*/
+#nav_miscelanea {
+	padding-left:10px;
+	width: 982px;
+	left:3px;
+}
+#nav_miscelanea li {
+	font-size:11px;
+	line-height:12px;
+	padding:5px 0 0;
+	position:relative;
+	z-index:3;
+}
+#nav_miscelanea a {
+	color:#3C81A2;
+	font-size:11px;
+	font-weight:normal;
+	border-right:1px solid #DADADA;
+}
+#nav_miscelanea li.last_child a {
+	border:0;
+}
+#nav_miscelanea li.last_child {
+	display:none;
+}
+#nav_clasificados {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_comentarios.gif) no-repeat 0 0;
+}
+#nav_secundaria li a:hover, #nav_miscelanea li a:hover {
+	color:#B2B2B2;
+}
+/*herramientas*/
+#nav_herramientas {
+	left:auto;
+	right:12px;
+	top: 7px !important;
+	float:left;
+	width:auto;
+	border:0;
+}
+#nav_herramientas li {
+	border-left:1px solid #4083A9;
+}
+#nav_herramientas li a {
+	color:#A5C8DB;
+	font-weight:normal;
+}
+#nav_herramientas li a:hover, #nav_herramientas #nav_hemeroteca a:hover {
+	color:#fff;
+}
+#nav_herramientas li.first_child {
+	border:0;
+}
+#nav_rss a {
+	padding-left:25px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/rss.gif) no-repeat 8px center;
+	float:left;
+	font-weight:bold;
+}
+#nav_herramientas li#nav_ed_impresa, #nav_herramientas li#nav_busqueda {
+	background:none;
+	border:0!important;
+}
+#nav_herramientas #nav_hemeroteca a {
+	color:#CEE1EC;
+	font-weight:bold;
+}
+/* edicion impresa */
+li#nav_ed_impresa {
+	text-indent:-9999px;
+}
+li#nav_ed_impresa a {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_em_premium.png) no-repeat top left;
+	width:163px;
+	height:12px;
+	padding:0;
+}
+
+/* nueva navegación secundaria */
+
+#nav-2 {
+	position:absolute; top:8px; margin:0; padding:3px 10px;
+	float:left;	z-index:2;
+	border-bottom:1px solid #DBDDDE;
+	border:1px solid #DADADA;
+	padding-left:10px; width: 972px; left:3px;
+	background: #f7f7f7;
+}
+  
+#nav-2 li {float:left;}
+#nav-2 li a {padding:5px 6px; color:#357798; font-weight:normal;}
+#nav-2 li a:hover {color:#666}
+#nav-2 li.orbyt a {float:left; padding:3px 0 0 5px}
+#nav-2 #tienda {padding-left:5px}
+#nav-2 #tienda a{ font-weight:bold; background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.03/clasificados/carrito.png) no-repeat left center; padding-left:17px; color:#40516a;}
+#nav-2 #suplementos li a{ font-weight:bold}
+#nav-2 #suplementos li + li {border-left:1px solid #DADCDE;}
+#nav-2 #suplementos li.verano a{color:#EE7D44;}
+#nav-2 #suplementos li.verano a:hover{color:#E0425F;}
+#nav-2 #clasificados{ float:left; margin:-2px 5px -2px 15px; background:#eeeeef; border:2px solid #dadcde; border-bottom:0px; border-top:0; padding:2px 5px 2px 10px}
+#nav-2 #clasificados li + li {border-left:1px solid #DADCDE; padding-left:5px}
+#nav-2 .clasificados a {color:#666; padding-left:16px}
+#nav-2 .clasificados a:hover {color:#357798;}
+#nav-2 .clasificados.vivienda a{background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.03/clasificados/vivienda.png) no-repeat left center;}
+#nav-2 .clasificados.empleo a{background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.03/clasificados/empleo.png) no-repeat left center;}
+#nav-2 .clasificados.motor a{background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.03/clasificados/motor.png) no-repeat left center;}
+#nav-2 .clasificados.tienda a{background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.03/clasificados/carrito.png) no-repeat left center;}
+#nav-2 .clasificados.tienda a:hover {color:#990000}
+
+
+/* busqueda */
+#nav_busqueda {
+	position:absolute;
+	top:78px;
+	right:5px;
+	padding:0;
+	width:350px;
+	font-size:12px;
+	text-align:right;
+	white-space:nowrap;
+}
+#nav_busqueda label {
+	display:none;
+}
+#nav_busqueda li label {
+	display:inline;
+	color:#666;
+}
+#nav_busqueda ul {
+	display:inline;
+	float:right;
+	padding-right:135px;
+}
+#nav_busqueda li {
+	border:0!important;
+	line-height:22px;
+	height:22px;
+	position:relative;
+}
+#nav_busqueda li input.botonradio {
+	height:15px;
+	width:15px;
+	padding:0;
+	margin:0;
+}
+#nav_busqueda li input.botonradio, #nav_busqueda li label {
+	vertical-align: middle;
+	font-weight:bold;
+}
+*html #nav_busqueda li {
+	top:4px;
+}
+#nav_busqueda li.buscar_google {
+	position:relative;
+	background:none;
+	padding:0!important;
+}
+#nav_busqueda li.buscar_google input.botonradio {
+	margin-right:50px;
+}
+#nav_busqueda li.buscar_google span {
+	display:none;
+}
+#nav_busqueda li.buscar_google label {
+	position:absolute;
+	top:0;
+	left:18px;
+	width:50px;
+	height:18px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/buscador_google.png) no-repeat 0 0;
+}
+#nav_busqueda .submit, #nav_busqueda .text {
+	position:absolute;
+	top:0;
+	right:0;
+}
+#nav_busqueda .submit {
+	text-indent:-9999px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/btn_buscar.gif) no-repeat top left;
+	height:19px;
+	border:0;
+	padding-left:18px;
+	width:18px;
+	overflow:hidden;
+	display:block;
+	right:0;
+}
+#nav_busqueda .text {
+	width:90px;
+	border:1px solid #e0e0e0;
+	border-color:#ccc #e0e0e0 #e0e0e0 #ccc;
+	color:#444;
+	padding:0 5px;
+	margin-right:25px;
+	top:3px;
+}
+#nav_herramientas #nav_busqueda ul, #nav_herramientas #nav_busqueda li {
+	float:none;
+	display:inline;
+}
+/* el tiempo */
+#nav_meteo {
+	position:absolute;
+	right:10px;
+	top:35px;
+	height:19px;
+	border:0!important;
+	width:90px;
+}
+#nav_meteo p {
+	height:19px;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navmeteo.png) no-repeat top right;
+	padding-right:120px;
+	float:right;
+	position:absolute;
+	right:0;
+}
+#nav_meteo p a {
+	visibility:visible;
+	display:block;
+	text-indent:-9999px;
+	border:0;
+	height:19px;
+	width:90px;
+	position:absolute;
+	right:5px;
+}
+#nav_meteo p a span {
+	visibility:visible;
+	text-indent:0;
+	position:absolute;
+	right:0;
+	top:1px;
+	display:block;
+	font-weight:bold;
+}
+#nav_meteo p a, #nav_meteo p span.meteo_prediccion {
+	text-indent:-9999px;
+}
+#nav_meteo p a span.label {
+	left:8px;
+	right:auto;
+	font-weight:normal!important;
+	display:none;
+}
+#nav_meteo p a span.localizacion {
+	white-space:nowrap;
+	color:#333;
+	font-weight:normal;
+	visibility:visible;
+	line-height:18px;
+	position:absolute;
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navmeteo.png) no-repeat top left;
+	top:0;
+	right:115px;
+	padding-left:15px;
+	height:20px;
+}
+#nav_meteo p a:hover {
+	border-color:#cc0;
+	cursor:pointer;
+}
+#nav_meteo p a span.meteo_prediccion {
+	text-indent:-9999px;
+	width:40px;
+	height:40px;
+	right:40px;
+	top:-12px;
+	z-index:2;
+}
+#nav_meteo p a span.meteo_max {
+	text-align:left;
+	color:#DD6E0A;
+	padding:0 0 4px 0px;
+}
+#nav_meteo p a span.meteo_min {
+	right:80px;
+	text-align:right!important;
+	color:#3EA6D2;
+	padding:0 0 4px 0;
+}
+#nav_meteo p a span.meteo_min, #nav_meteo p a span.meteo_max {
+	z-index:1;
+	white-space:nowrap;
+	width:35px;
+}
+/*patrocinio el tiempo*/
+#nav_meteo p.con-patrocinio a img.logo-patrocinio {
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    text-indent: 0;
+    top: 1px;
+    visibility: visible;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+#nav_meteo p.con-patrocinio a {
+    background: url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_navmeteo.png") no-repeat scroll left top transparent;
+    width: 195px;
+    right: 1px;
+}
+#nav_meteo p.con-patrocinio a span.localizacion {
+    right: 200px;
+}
+#nav_meteo p.con-patrocinio a span.localizacion {
+    right: 200px;
+}
+#nav_meteo p.con-patrocinio a span.meteo_min {
+    right: 165px;
+}
+#nav_meteo p.con-patrocinio a span.meteo_max {
+    right: 85px;
+}
+#nav_meteo p.con-patrocinio a span.meteo_prediccion {
+    right: 125px;
+}
+/**/
+
+/* ESTILOS DEL TIEMPO ANTIGUO */
+.sol, .solvariable, .nubesaltas, .neblina, .niebla, .algunasnubes, .variable, .lluvia, .solylluvia, .llovizna, .indeterminado, .llovizna, .tormenta, .vbletormenta, .nieveconnubes, .lluvia {
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+html>body .sol {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/sol.png);
+}
+html>body .solvariable, html>body .variable {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/sol_y_nube_clara.png);
+}
+html>body .nubesaltas {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/sol_y_nube_clara.png);
+}
+html>body .neblina, html>body .niebla {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/niebla.png);
+}
+html>body .algunasnubes {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/sol_y_nube_oscura.png);
+}
+html>body .llovizna {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/llovizna.png);
+}
+html>body .solylluvia, html>body .lluvia {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/lluvia.png);
+}
+html>body .tormenta, html>body .vbletormenta {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/tormenta.png);
+}
+html>body .nieveconnubes, html>body .variablenieve {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/nieve.png);
+}
+html>body .indeterminado {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/nose.png);
+}
+/* el tiempo nuevo */
+.despejado, .nubes_claros, .nublado, .cubierto, .nuboso, .tormentas, .chubasco, .chubasco_debil, .granizo, .lluvia_moderada, .nubes_altas, .ventoso, .aguanieve, .nieve, .granizo, .niebla {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+html>body .despejado {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/sol.png);
+}
+html>body .nubes_claros {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/sol_y_nube_clara.png);
+}
+html>body .nubes_altas {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/sol_y_nube_clara.png);
+}
+html>body .niebla {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/niebla.png);
+}
+html>body .nublado, html>body .cubierto, html>body .nuboso {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/cubierto.png);
+}
+html>body .chubasco {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/chubasco.png);
+}
+html>body .chubasco_debil {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/chubasco_debil.png);
+}
+html>body .lluvia_moderada {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/lluvia_moderada.png);
+}
+html>body .tormentas {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/tormentas.png);
+}
+html>body .nieve {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/nieve.png);
+}
+html>body .ventoso {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/viento.png);
+}
+html>body .granizo {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/granizo.png);
+}
+html>body .aguanieve {
+	background-image:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/tiempo/iconos_peq/aguanieve.png);
+}
+html>body .despejado, html>body .nubes_claros, html>body .nubes_altas, html>body .niebla, html>body .nublado, html>body .cubierto, html>body .nuboso, html>body .chubasco, html>body .chubasco_debil, html>body .lluvia_moderada, html>body .tormentas, html>body .nieve, html>body .ventoso, html>body .granizo, html>body .aguanieve {
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader()!important;
+}
+/* ***nuevos estilos nav*** */
+#nav_espana .nav_sub {
+	padding-left:115px;
+	width:877px;
+	float:none!important;
+	display:block!important;
+	clear:both;
+	border-bottom:1px solid #709CB2;
+}/*coincide con #nav_america */
+#nav_edicion_espana p.label, #nav_edicion_espana p.edicion {
+	top:144px;
+}
+/* **************navegacion seccion***************** */
+#nav_edicion_espana {
+	position:static!important;
+	width:992px;
+	/*padding-bottom:24px;*/
+	height: 50px;
+	top:1px;
+}
+html>body #nav_edicion_espana {
+	float:left;
+}
+/* visibilidad */
+#nav_edicion_america {
+	display:none;
+}
+.nav_edicion p {
+	position:absolute;
+	top:0;
+	z-index:300;
+	padding:0 0 0 12px;
+	color:#357195;
+	font-size:11px;
+}
+.nav_edicion p.label {
+	left:4px;
+	color:#BDD9E7;
+	font-weight:normal;
+}
+.nav_edicion p.edicion {
+	right:4px;
+	padding:0 0 0 32px;
+	font-weight:bold;
+	background:#507ca0 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/pestana_america.gif) no-repeat left top !important;
+}
+.nav_edicion p.edicion strong {
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#fff;
+}
+.nav_edicion p.label strong {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_edicion_activa.png) no-repeat right center;
+	height:23px;
+	padding:4px 17px 4px 0;
+	line-height:23px;
+	text-transform:uppercase;
+	color:#fff;
+}
+.nav_edicion p.label, .nav_edicion p.edicion {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/bg_edicion.png) repeat-x bottom left;
+	line-height:23px;
+}
+.nav_edicion p.label, .nav_edicion p.nav_edicion {
+	color:#BDD9E7;
+	border:0;
+}
+#nav_edicion_espana p.edicion {
+	border:0 none;
+	height:23px;
+	line-height:normal;
+	float:left;
+	display:inline;
+}
+#nav_edicion_espana p.edicion a {
+	background:#507CA0 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/pestana_america.gif) no-repeat scroll right top !important;
+	border:medium none;
+	float:left;
+	height:18px;
+	padding:5px 11px 0 3px;
+}
+#nav_edicion_espana p.edicion a, #nav_edicion_espana p.edicion a:visited, #nav_edicion_espana p.edicion a:active {
+	color:#5E8CAA;
+}
+#nav_edicion_espana p.edicion a strong {
+	color:#11547F;
+}
+#nav_edicion_espana p.edicion a:hover, #nav_edicion_espana p.edicion a:hover strong {
+	color:#939393;
+}
+#nav_edicion_america .edicion a:hover, .nav_edicion p.edicion a:hover {
+	color:#fff;
+}
+#nav_edicion_espana {
+	font-size:11px;
+	font-weight:bold;
+	position:absolute;
+	right:0;/*top:141px;*/
+	top:0;
+	z-index:10;
+	clear:both;
+}
+/*navegante*/
+#navegante p.label, #navegante p.edicion, #navegante p.edicion a {
+	background:#58912E;
+	color:#CEE1B0;
+}
+#navegante .nav_edicion p.label strong {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/bg_edicion_activa.png) no-repeat center right;
+}
+/* =PESTANAS EN MODULOS */
+.modulo .pestana_GDP {
+	display:none;
+	clear:both;
+	overflow:hidden;
+}
+.modulo .pestana_GDP.activa_GDP, .modulo .pestana_GDP.activaJs_GDP {
+	display:block;
+}
+.modulo .el_js_esta_activo_GDP .modulo .pestana_GDP.activa_GDP {
+	display:none;
+}
+.modulo li.numero_activa a {
+	cursor:default;
+}
+/* =CONTENIDO */
+.modulo .nav {
+	position:absolute;
+	top:-24px;
+	left:0;
+	z-index:10;
+	clear:both;
+}
+.modulo_suvivienda .nav {
+	position:static;
+}
+/* contenido principal */
+.bloque_noticias {
+	padding-top:0;
+}
+/* contenido secundario */
+#contenido_secundario h3 {
+	display:none;
+}
+/* =RANKING NOTICIAS */ 
+#modulo_ranking {
+	width:305px;
+	margin-top:30px;
+	position:relative;
+	clear:both;
+	float:left;
+}
+#modulo_ranking .pestana_GDP {
+	border:1px solid #DDE1E5;
+	font:12px/18px Arial, Helvetica, sans-serif;
+	padding:4px 4px 10px;
+	position:relative;
+	z-index:1;
+}
+#modulo_ranking_noticias ol {
+	clear:both;
+}
+#modulo_ranking ul li {
+	bottom:-1px;
+	font-size:11px;
+	margin:0 2px 0 0;
+	position:relative;
+	font-weight:normal;
+	border:1px solid #DDE1E5;
+	display:inline!important;
+}
+#modulo_ranking ol li {
+	color: #999 !important;
+	font-size: 11px;
+}
+#modulo_ranking ul li.numero_activa {
+	border-bottom:1px solid #fff;
+}
+#modulo_ranking li a {
+	background:#fff url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/multimedia/bg_noticia.png) repeat-x scroll left center;
+	padding:3px 6px;
+	font-weight:normal;
+}
+#modulo_ranking ul li.numero_activa a {
+	background:#fff;
+	color:#6D7D92;
+}
+/* noticias ranking */
+
+#modulo_ranking ol, #modulo_ranking ol li {
+	list-style:decimal outside;
+	color:#035A89;
+}
+#modulo_ranking ol li a {
+	background:none;
+	padding:0;
+}
+#modulo_ranking ol li a:hover {
+	color:#990044;
+}
+#modulo_ranking .mas {
+	border:0;
+	border-top:1px dotted #e0e0e0;
+	margin:8px 0 -5px !important;
+}
+#modulo_ranking .mas a {
+	font-weight:bold;
+	border:0;
+}
+/* =ALERTAS */
+.alerta {
+	clear:both;
+	margin:11px 0 10px;
+	padding: 0;
+}
+.alerta .tickerv2 {
+	width: 970px !important;
+	height: 20px;
+	top: 0 !important;
+	left: 0 !important;
+	margin: 0;
+	padding: 0;
+	border:none !important;
+}
+.alerta table.urgentev2 {
+	width: 970px !important;
+	height: 20px;
+	top: 0 !important;
+	left: 0 !important;
+	margin: 0;
+	padding: 0;
+	border:none !important;
+}
+.alerta table.urgentev2 {
+	background: url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/alertas/v1.2/bg_urgente.png) no-repeat top left !important;
+}
+.alerta strong {
+	margin:0;
+	padding: 4px 5px 0px 10px !important;
+	width: 165px;
+	height: 20px;
+	position: relative;
+	top: -3px;
+	display: inline;
+	float: left;
+	background: none !important;
+}
+#ticker #todas a {color:#fff}
+.alerta .tickerv2, .alerta .tickerv2.alerta_ultima, .alerta .tickerv2.alerta_urgente {
+	background: url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/alertas/v1.2/bg_urgente.png) no-repeat top left;
+}
+.alerta .tickerv2.alerta_azul {
+	background: url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/alertas/v1.2/bg_alerta_azul.png) no-repeat top left;
+}
+.alerta .tickerv2.alerta_deporte {
+	background: transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/alertas/v1.2/bg_alerta_deportes.png) no-repeat top left;
+}
+.alerta .tickerv2.alerta_encuentros {
+	background: transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/alertas/v1.2/bg_encuentros.png) no-repeat top left;
+}
+.alerta p {
+	margin:2px 0 0;
+	padding: 0;
+	color: #444 !important;
+	display: inline;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 12px !important;
+}
+.alerta a {
+	color: #444 !important;
+	border-bottom: none;
+}
+.alerta a:hover {
+	color: #369 !important;
+	border-bottom: none;
+}
+/*eliminar desde aqui*/
+.alerta table, .alerta th, .alerta td {
+	background:none!important;
+	border:0!important;
+	margin:0!important;
+	text-align:left!important;
+}
+.alerta th {
+	width:130px!important;
+}
+.alerta th, .alerta td {
+	padding:5px 10px!important;
+}
+.alerta th {
+	color:#fff!important;
+	font-weight:bold!important;
+	font-size:14px!important;
+	width: 165px !important;
+}
+.alerta h1/* h1???? :( Nooooo! */ {
+	color:#444!important;
+	font-size: 12px !important;
+	font-weight: bold;
+}
+.alerta * {
+	color:#fff!important;
+}
+/*hasta aqui, cuando cambiemos, si cmabiamos, el código de la alerta*/
+.alerta .alerta_noticia {
+	padding:5px 10px;
+}
+.alerta .alerta_urgente {
+	background: url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/alertas/bg_urgente.png) no-repeat top left;
+	margin-top:10px;
+}
+.alerta .alerta_noticia ul {
+	width:100%;
+}
+.alerta .alerta_noticia ul li {
+	display:inline;
+	margin:0;
+	padding:3px;
+}
+.alerta .alerta_noticia .first_child {
+	background-color:none;
+	font-weight:bold;
+	color:#fff;
+	margin:0 20px 0 0;
+}
+/* ALERTA URGENTE ESPECIAL */
+.alerta table.urgente-especial {
+	width: 970px !important;
+	height: 60px;
+	top: 0 !important;
+	left: 0 !important;
+	margin: 0;
+	padding: 0;
+	border:none !important;
+}
+.alerta table.urgente-especial {
+	background: url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/alertas/urgente-especial.png) no-repeat top left !important;
+*/
+}
+.alerta table.urgente-especial th, .alerta table.urgente-especial td {
+	padding:5px 10px !important;
+}
+.alerta table.urgente-especial th {
+	color:#fff!important;
+	width: 165px !important;
+}
+.alerta table.urgente-especial h1 {
+	color:#044364 !important;
+	font: bold 20px/20px Arial, Helvetica, sans-serif !important;
+	letter-spacing: -1px;
+}
+.alerta table.urgente-especial th {
+	/*background:#ccc !important;*/
+border:0 none !important;
+	margin:0 !important;
+	text-align:left !important;
+	font:bold 22px Arial, Helvetica, sans-serif !important;
+}
+/* =PUBLICIDAD */
+.bloque_publicidad {
+	padding:0;
+	clear:both;
+	margin:0 auto;
+	float:none!important;
+	width: 990px;
+	background:none;
+}
+#publicidad_principal.wrap {
+	margin:0 auto;
+	padding:0!important;
+	width:990px!important;
+	background:none!important;
+}
+#publicidad_principal iframe {
+	margin:0 auto;
+}
+
+.publicidad {
+	clear:both;
+	margin:0 auto;
+}
+.publicidad_730 {
+	width:730px;
+	float:left;
+	clear:none;
+}
+.publicidad_300 {
+	width:305px;
+	clear:both;
+	float:left;
+	margin:0 0 12px;
+}
+.publicidad_280 {
+	border:1px solid #DDE1E5;
+	border-width:0 1px 1px;
+	text-align:center;
+	padding-bottom:10px;
+}
+.publicidad_280 {
+	padding:10px;
+}
+.publicidad_280 a {
+	display:block;
+	margin:0 auto;
+	width:280px;
+}
+.publicidad_234 {
+	width:234px;
+	float:right;
+	clear:none;
+	padding-right:5px;
+}
+.publicidad_150 {
+	width:150px;
+	clear:both;
+	overflow:hidden;
+	margin:0 0 10px;
+	float:none;
+}
+.publicidad.publicidad_300x30 { margin-bottom:15px; }
+.modulo_ranking .publicidad_280 {
+	width:311px;
+}
+.publicidad td {
+	background:#DDD;
+}
+.publicidad embed {
+	display:block;
+}
+.publicidad_120x30 {
+	width:130px;
+	height: 30px;
+	position: absolute;
+	left: 860px;
+	top: 14px;
+}
+.publicidad_730.centrada {
+	float:none;
+	clear:none;
+	margin: 0 auto;
+	margin: 15px auto 0px !important;
+}
+.publicidad td.luto_publi_ana img {
+	display: none;
+}
+.publicidad td.luto_publi {
+	height:0;
+	margin:0;
+	padding:0;
+	border:0;
+}
+.publicidad td.cintillo_publi_ana {
+	background:#CCC;
+	vertical-align: top;
+}
+.publicidad td.contenedor_publi_ana {
+	background:#FFF;
+}
+.google_ads {
+	clear:both;
+}
+/*.publicidad object, .publicidad embed{display:block;}*/
+.publicidad object, .publicidad embed {
+	display:inline;
+}
+.publicidad_120x30 {
+	width:130px;
+	height: 30px;
+	position: absolute;
+	left:  
+860px;
+	top: 14px;
+}
+.publicidad_lateral_a, .publicidad_lateral_b {
+	position:absolute;
+	top:5px;
+	z-index:1;
+}
+.publicidad_lateral_a {
+	right:1005px;
+}
+.publicidad_lateral_b {
+	left:1005px;
+}
+.publicidad_entre_bloques {
+	width:985px;
+	margin:0 auto;
+}
+
+.top-skys {top:-90px}
+
+/*publicidad en cuerpo de noticias*/
+#contenido .bloque_publicidad {
+	float:left!important;
+	width:1000px;
+	background:none!important;z-index: 1000;
+}
+#contenido .bloque_publicidad + .bloque_publicidad {z-index: 999;
+}
+#contenido .contenidos + .bloque_publicidad {margin:10px 0}
+#contenido .bloque_publicidad #publicidad_principal.wrap {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_bloque_02.png) repeat -13px 0!important;
+	padding:8px 5px 0!important;
+	float:left;
+	width:990px!important;
+}
+#contenido .bloque_publicidad #publicidad_principal.wrap .publicidad_730 {
+	/*float:none;
+	width:990px;*/
+	text-align:center;
+}
+#contenido .bloque_publicidad #publicidad_principal.wrap .publicidad_730 table {
+	margin:0 auto;
+}
+/*publicidad en servicios*/
+.publicidad_patrocinio_servicios {
+	bottom:6px;
+	float:left;
+	left:14px;
+	position:absolute;
+	width:280px;
+}
+.modulo_servicios .servicios .diccionario .publicidad_patrocinio_servicios a {
+	height:auto;
+	background:none;
+	width:auto;
+}
+.modulo_servicios .servicios .diccionario .publicidad_patrocinio_servicios p {
+	padding:0;
+	margin:0;
+}
+/*publicidad en suplementos */
+.publi-suplemento-200 {float:left; clear:left; margin:5px 0; }
+.publi-suplemento-310 {float:left; clear:left; margin:5px 0; }
+/* =MENSAJES DE APLICACION */
+.app_msg {
+	background:#E7EBEC;
+}
+.app_msg a {
+	font-weight:bold;
+	color:#035A89;
+}
+.modulo_multimedia .app_msg {
+	width:260px;
+	text-align:center;
+	padding:50px 20px 10px;
+	height:170px;
+}
+.bloque_noticias .modulo_multimedia .app_msg p {
+	padding:0;
+}
+/* desarrollo */
+.mensaje_desarrollo {
+	color:#c00;
+	font-weight:bold;
+	font-size:18px;
+	font-weight:normal;
+	border:1px solid #c00;
+	padding:10px;
+	margin:0 0 10px;
+}
+/* =TAMAÑOS DE LETRA */
+.tamano14 {
+	font-size: 14px !important;
+}
+.tamano15 {
+	font-size: 15px !important;
+}
+.tamano16 {
+	font-size: 16px !important;
+}
+.tamano17 {
+	font-size: 17px !important;
+}
+.tamano18 {
+	font-size: 18px !important;
+	letter-spacing:-1px;
+}
+.tamano19 {
+	font-size: 19px !important;
+	letter-spacing:-1px;
+}
+.tamano20 {
+	font-size: 20px !important;
+	letter-spacing:-1px;
+}
+.tamano21 {
+	font-size: 21px !important;
+	letter-spacing:-1px;
+}
+.tamano22 {
+	font-size: 22px !important;
+	letter-spacing:-1px;
+}
+.tamano23 {
+	font-size: 23px !important;
+	letter-spacing:-1px;
+}
+.tamano24 {
+	font-size: 24px !important;
+	letter-spacing:-1px;
+}
+.tamano25 {
+	font-size: 25px !important;
+	letter-spacing:-1px;
+}
+.tamano26 {
+	font-size: 26px !important;
+	letter-spacing:-1px;
+}
+.tamano27 {
+	font-size: 27px !important;
+	letter-spacing:-1px;
+}
+.tamano28 {
+	font-size: 28px !important;
+	letter-spacing:-1px;
+}
+.tamano29 {
+	font-size: 29px !important;
+	letter-spacing:-1px;
+}
+.tamano30 {
+	font-size: 30px !important;
+	letter-spacing:-1px;
+}
+.tamano31 {
+	font-size: 31px !important;
+	letter-spacing:-1px;
+}
+.tamano32 {
+	font-size: 32px !important;
+	letter-spacing:-1px;
+}
+.tamano33 {
+	font-size: 33px !important;
+	letter-spacing:-1px;
+}
+.tamano34 {
+	font-size: 34px !important;
+	letter-spacing:-1px;
+}
+.tamano35 {
+	font-size: 35px !important;
+	letter-spacing:-1px;
+}
+.tamano36 {
+	font-size: 36px !important;
+	letter-spacing:-2px;
+}
+.tamano37 {
+	font-size: 37px !important;
+	letter-spacing:-2px;
+}
+.tamano38 {
+	font-size: 38px !important;
+	letter-spacing:-2px;
+}
+.tamano39 {
+	font-size: 39px !important;
+	letter-spacing:-2px;
+}
+.tamano40 {
+	font-size: 40px !important;
+	letter-spacing:-2px;
+}
+.tamano41 {
+	font-size: 41px !important;
+	letter-spacing:-2px;
+}
+.tamano42 {
+	font-size: 42px !important;
+	letter-spacing:-2px;
+}
+.tamano43 {
+	font-size: 43px !important;
+	letter-spacing:-2px;
+}
+.tamano44 {
+	font-size: 44px !important;
+	letter-spacing:-2px;
+}
+.tamano45 {
+	font-size: 45px !important;
+	letter-spacing:-2px;
+}
+.tamano46 {
+	font-size: 46px !important;
+	letter-spacing:-2px;
+}
+.tamano47 {
+	font-size: 47px !important;
+	letter-spacing:-2px;
+}
+.tamano48 {
+	font-size: 48px !important;
+	letter-spacing:-2px;
+}
+.tamano49 {
+	font-size: 49px !important;
+	letter-spacing:-2px;
+}
+.tamano50 {
+	font-size: 50px !important;
+	letter-spacing:-2px;
+}
+.tamano51 {
+	font-size: 51px !important;
+	letter-spacing:-2px;
+}
+.tamano52 {
+	font-size: 52px !important;
+	letter-spacing:-2px;
+}
+.tamano53 {
+	font-size: 53px !important;
+	letter-spacing:-2px;
+}
+.tamano54 {
+	font-size: 54px !important;
+	letter-spacing:-2px;
+}
+.tamano55 {
+	font-size: 55px !important;
+	letter-spacing:-2px;
+}
+.tamano56 {
+	font-size: 56px !important;
+	letter-spacing:-2px;
+}
+.tamano57 {
+	font-size: 57px !important;
+	letter-spacing:-2px;
+}
+.tamano58 {
+	font-size: 58px !important;
+	letter-spacing:-2px;
+}
+.tamano59 {
+	font-size: 59px !important;
+	letter-spacing:-2px;
+}
+.tamano60 {
+	font-size: 60px !important;
+	letter-spacing:-2px;
+}
+.tamano61 {
+	font-size: 61px !important;
+	letter-spacing:-2px;
+}
+.tamano62 {
+	font-size: 62px !important;
+	letter-spacing:-2px;
+}
+.tamano63 {
+	font-size: 63px !important;
+	letter-spacing:-2px;
+}
+.tamano64 {
+	font-size: 64px !important;
+	letter-spacing:-2px;
+}
+.tamano65 {
+	font-size: 65px !important;
+	letter-spacing:-2px;
+}
+.tamano66 {
+	font-size: 66px !important;
+	letter-spacing:-2px;
+}
+.tamano67 {
+	font-size: 67px !important;
+	letter-spacing:-2px;
+}
+.tamano68 {
+	font-size: 68px !important;
+	letter-spacing:-2px;
+}
+.tamano69 {
+	font-size: 69px !important;
+	letter-spacing:-2px;
+}
+.tamano70 {
+	font-size: 70px !important;
+	letter-spacing:-2px;
+}
+/* =EDITORES - recuadros editor grafico */
+.recuadro_editor {
+	border:10px solid #000;
+	border-width:5px 0;
+	position:relative;
+	margin:30px 0 15px;
+	padding:10px 0;
+}
+.recuadro_editor table {
+	margin:0 0 15px;
+}
+#recuadro_a {
+	border-color:#FF0000;
+	background:#FFEBEB;
+}
+#recuadro_b {
+	border-color:#FF6600;
+	background:#FFF3EB;
+}
+#recuadro_c {
+	border-color:#FFCC00;
+	background:#FFF9E0;
+}
+#recuadro_d {
+	border-color:#FF6699;
+	background:#FFF4F9;
+}
+#recuadro_e {
+	border-color:#FF66FF;
+	background:#FFEAFF;
+}
+#recuadro_f {
+	border-color:#66CC00;
+	background:#ECF9E0;
+}
+#recuadro_g {
+	border-color:#66CCFF;
+	background:#ECF9FF;
+}
+.recuadro_editor .label_recuadro, .recuadro_editor .tipo_noticia {
+	position:absolute;
+	top:-26px;
+	left:0;
+	z-index:10;
+	display:block;
+	padding:5px 10px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-align:center;
+	font-size:14px;
+	float:right;
+}
+.recuadro_editor .tipo_noticia {
+	position:static;
+	padding:5px 8px;
+	line-height:18px;
+	float:none;
+	font-size:12px;
+	text-align:left;
+	margin:15px 5px 0;
+	line-height:12px;
+	border:1px dashed #666;
+	color:#666;
+}
+/* labels nombre recuadro */
+#recuadro_a .label_recuadro {
+	background:#FF0000;
+}
+#recuadro_b .label_recuadro {
+	background:#FF6600;
+}
+#recuadro_c .label_recuadro {
+	background:#FFCC00;
+}
+#recuadro_d .label_recuadro {
+	background:#FF6699;
+}
+#recuadro_e .label_recuadro {
+	background:#FF66FF;
+}
+#recuadro_f .label_recuadro {
+	background:#66CC00;
+}
+#recuadro_g .label_recuadro {
+	background:#66CCFF;
+}
+/* tipo noticia */
+#recuadro_a .tipo_noticia {
+	border-color:#FF0000;
+}
+#recuadro_b .tipo_noticia {
+	border-color:#FF6600;
+}
+#recuadro_c .tipo_noticia {
+	border-color:#FFCC00;
+}
+#recuadro_d .tipo_noticia {
+	border-color:#FF6699;
+}
+#recuadro_e .tipo_noticia {
+	border-color:#FF66FF;
+}
+#recuadro_f .tipo_noticia {
+	border-color:#66CC00;
+}
+#recuadro_g .tipo_noticia {
+	border-color:#66CCFF;
+}
+/* PORTADILLAS */
+
+/* Cabeceras secciones */
+
+/*contenido*/
+#navegante .bloque_noticia_destacada a, #navegante .bloque_noticias a {
+	color:#035a89;
+}
+#navegante .bloque_noticia_destacada a:hover, #navegante .bloque_noticias a:hover {
+	color:#66A802;
+}
+/* agregado por luis */
+#navegante .nav_multimedia li.item_pestana a:hover {
+	background:#2C6E0B url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/bg_navprincipal.gif) repeat-x scroll 0 bottom !important;
+	color:#FFFFFF !important;
+}
+#navegante .nav_multimedia li.activaJs a, #navegante .nav_multimedia li.activaJs a:hover {
+	background:#2C6E0B url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.01/navegante/bg_navprincipal.gif) repeat-x scroll 0 0 !important;
+	color:#FFFFFF !important;
+}
+#navegante .reportaje_seccion img {
+	border-top:5px solid #66A802;
+}
+#navegante .nav_edicion p.edicion {
+	background-position:left bottom !important;
+}
+#navegante #nav_edicion_espana p.edicion a {
+	background-position: right bottom !important;
+}
+/* fin agregado por luis */
+
+#navegante .bloque_noticia_destacada h2 a, #navegante .bloque_noticias h2 a, #navegante .bloque_noticias h3 a, #navegante .bloque_noticias h4 a, #navegante .bloque_noticias h5 a, #navegante .bloque_noticias h6 a {
+	color:#044364 !important;
+}
+#navegante .bloque_noticias .dia_hoy h5 a {
+	color:#fff !important;
+}
+#navegante .bloque_noticias .dia_hoy h5 a:hover {
+	color:#fff !important;
+}
+#navegante .col_02 .modulo_especiales_encuentros .first_child .noticia a {
+	color:#fff !important;
+}
+#navegante .bloque_noticia_destacada h2 a:hover, #navegante .bloque_noticias h2 a:hover, #navegante .bloque_noticias h3 a:hover, #navegante .bloque_noticias h4 a:hover, #navegante .bloque_noticias h5 a:hover, #navegante .bloque_noticias h6 a:hover {
+	color:#46760D !important;
+}
+#navegante .bloque_noticia_destacada .antetitulo, #navegante .bloque_noticias .antetitulo, #navegante .bloque_noticias .antetitulo strong.seccion a {
+	color:#66A802;
+}
+#navegante .reportaje_seccion h2 a, #navegante .reportaje_seccion h3 a, #navegante .reportaje_seccion h4 a {
+	color: #FFF !important;
+}
+#navegante .reportaje_seccion h2 a:hover, #navegante .reportaje_seccion h3 a:hover, #navegante .reportaje_seccion h4 a:hover {
+	color: #D7E3C7 !important;
+}
+#navegante .reportaje_seccion .antetitulo, #navegante .reportaje_seccion .antetitulo a {
+	color:#D7E3C7 !important;
+}
+#navegante .reportaje_seccion .apoyos li a {
+	color:#fff;
+}
+/* Site Info */
+#info_site {
+	position:relative;
+	padding:5px 5px 15px;
+	color:#777;
+	font-size: 11px;
+}
+#info_site strong {
+	font-size: 11px;
+	font-weight: normal;
+	margin-left: 10px;
+	top:-3px;
+}
+#info_site img {
+	display:inline;
+}
+#info_site .avisos {
+	position:absolute;
+	top:15px;
+	right:15px;
+}
+#info_site .avisos li {
+	float:left;
+	border-right:1px solid #e0e0e0;
+	padding:0 5px;
+	line-height:12px;
+}
+#info_site .avisos li#nav_rss {
+	border:0;
+	padding:0;
+}
+#contenido_corporativo {
+}
+#cabecera h1 em {
+	display:block;
+	font-size:16px;
+	font-style:normal;
+	font-weight:bold;
+	line-height:16px;
+}
+/* debates */
+.debates.derecha {
+	float:left !important;
+	margin:0;
+}
+.debates .debate {
+	margin:0;
+	padding:0 0 20px;
+	clear:both;
+	float:none;
+	position:relative;
+}
+.debates .debate {
+	overflow:hidden;
+}
+.debates h5 {
+	border-bottom:1px solid #DDE1E5;
+	clear:both;
+	color:#3F5974;
+	font-size:14px;
+	margin:0 auto 3px;
+	padding:3px 0;
+	width:275px;
+	font-weight:bold;
+}
+.debates h5 a {
+	color:#97A6AA;
+}
+.debates .pregunta {
+	margin:0 0 10px 0;
+	padding:5px 5px 8px;
+	font-weight:bold;
+	overflow:visible;
+	z-index:20;
+	font:bold 12px/16px Georgia, "Times New Roman", Times, serif;
+	color:#394756;
+	border-bottom:1px solid #D7DBDF;
+}
+.debates form {
+	font-weight:normal;
+	line-height:16px;
+	float:right;
+	width:130px;
+}
+.debates form .resultados {
+	font-weight:bold;
+	font-size:11px;
+	adding:0 0 0 8px;
+	display:block;
+	text-align:center;
+	position:absolute;
+	bottom:5px;
+	right:5px;
+}
+.debates form label {
+	padding-right:5px;
+	font-weight:normal;
+}
+.debates .grafica_resultados {
+	width:145px;
+	float:left;
+	margin-bottom:-15px;
+}
+.debates .debate_opciones {
+	padding:4px;
+}
+.debates .debate_opciones li {
+	margin:0 0 3px 0;
+	padding:2px 0 1px 37px;
+	position:relative;
+	font-size:11px;
+	border:1px solid #E0E5E7;
+	background-color:#fff;
+}
+*html .debates .debate_opciones li {
+	height:1%;
+}
+.debates .debate_opciones li label {
+	border:0;
+}
+.debates .debate_opciones li input.botonradio {
+	position:absolute;
+	left:3px;
+	top:1px;
+	width:15px;
+	margin:0;
+	padding:0;
+	height:15px;
+}
+.debates .boton {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/btn_debate.gif) no-repeat top center;
+	border:0;
+	width:60px;
+	height:21px;
+	font-size:11px;
+	font-weight:bold;
+	color:#fff;
+	text-transform:uppercase;
+	padding-bottom:2px;
+	clear:both;
+	display:block;
+	margin:5px 0 5px auto;
+}
+.deb_opcion_0, .deb_opcion_10 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_0.gif) no-repeat 0 0;
+}
+.deb_opcion_1, .deb_opcion_11 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_1.gif) no-repeat 0 0;
+}
+.deb_opcion_2, .deb_opcion_12 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_2.gif) no-repeat 0 0;
+}
+.deb_opcion_3, .deb_opcion_13 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_3.gif) no-repeat 0 0;
+}
+.deb_opcion_4, .deb_opcion_14 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_4.gif) no-repeat 0 0;
+}
+.deb_opcion_5, .deb_opcion_15 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_5.gif) no-repeat 0 0;
+}
+.deb_opcion_6, .deb_opcion_16 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_6.gif) no-repeat 0 0;
+}
+.deb_opcion_7, .deb_opcion_17 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_7.gif) no-repeat 0 0;
+}
+.deb_opcion_8, .deb_opcion_18 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_8.gif) no-repeat 0 0;
+}
+.deb_opcion_9, .deb_opcion_19 {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/debates/deb_opcion_9.gif) no-repeat 0 0;
+}
+/* reproductores de video */
+.cubre_reproductor {
+	position:relative;
+	overflow:hidden;
+}
+.cubre_reproductor a.boton_play {
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/play.png) no-repeat scroll right bottom;
+	text-indent:-9000px;
+}
+.cubre_reproductor a.boton_play:hover {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/play_hover.png) no-repeat scroll right bottom;
+}
+.cubre_reproductor a.actualice_flash:hover, .cubre_reproductor a.actualice_flash.activo {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/aviso_actualice_flash.png) no-repeat 50% 70%;
+}
+.cubre_reproductor a.no_flash:hover, .cubre_reproductor a.no_flash.activo {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/aviso_instale_flash.png) no-repeat 50% 70%;
+}
+.cuadroimpresora {
+	display:none;
+}
+/* ============  REDISEÑO BLOQUES DE PORTADA 25/02/2010 ==================== */
+
+/* suplementos */
+#bloque_suplementos {
+	display:inline;
+	float:left;
+	margin:0;
+	padding:0 7px;
+	width:661px;
+}
+#bloque_suplementos ul {
+	display:inline;
+	float:left;
+	margin:0;
+	padding:0;
+	width:658px;
+}
+#bloque_suplementos ul li {
+	display:inline;
+	float:left;
+	height:243px;
+	margin:8px 8px 16px;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	width:203px;
+}
+
+#bloque_suplementos ul li.primero {width:310px;  margin-right:13px; margin-bottom:0; margin-top:16px;}
+#bloque_suplementos ul li.segundo {width:310px; margin-bottom:0; margin-top:16px;}
+
+#bloque_suplementos ul li a {
+	background-color:#000;
+	clear:both;
+	height:188px;
+	display:inline;
+	float:left;
+	margin:0;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	text-decoration:none;
+	width:203px;
+}
+
+#bloque_suplementos li.primero a, #bloque_suplementos li.segundo a {width:310px; height:180px;}
+#bloque_suplementos img {
+	border:none;
+	position:relative;
+	z-index:1;
+	margin:0;
+	padding:0;
+	border-top:8px solid #ccddee;
+}
+#bloque_suplementos strong.titular {
+	background-color:#E4E6E8;
+	bottom:0;
+	color:#50606E;
+	cursor:pointer;
+	float:left;
+	font-size:16px;
+	font-weight:bold;
+	height:38px;
+	line-height:18px;
+	margin:0;
+	opacity:0.9;
+	padding:4px 7px;
+	position:absolute;
+	width:189px;
+	z-index:2;
+}
+#bloque_suplementos li.primero strong.titular, #bloque_suplementos ul li.segundo strong.titular {height:20px}
+#bloque_suplementos ul li .publi-suplemento-200 a, #bloque_suplementos ul li .publi-suplemento-200 a img { height:auto; margin:0; padding:0; bakground:transparent; border:0; width:200px }
+#bloque_suplementos ul li .publi-suplemento-310 a, #bloque_suplementos ul li .publi-suplemento-310 a img { height:auto; margin:0; padding:0; bakground:transparent; border:0; width:310px }
+#bloque_suplementos .motor .publi-suplemento-200 img, #bloque_suplementos .gentes .publi-suplemento-200 img, #bloque_suplementos .ocholeguas .publi-suplemento-200 img,
+#bloque_suplementos .yodona .publi-suplemento-200 img, #bloque_suplementos .vino .publi-suplemento-200 img, #bloque_suplementos .america .publi-suplemento-200 img, 
+#bloque_suplementos .cultural .publi-suplemento-200 img, #bloque_suplementos .metropoli .publi-suplemento-200 img, #bloque_suplementos .tendencias .publi-suplemento-200 img,
+#bloque_suplementos .nauta360 .publi-suplemento-200 img, #bloque_suplementos .especiales .publi-suplemento-200 img {border:0}
+
+#bloque_suplementos .motor .publi-suplemento-310 img, #bloque_suplementos .gentes .publi-suplemento-310 img, #bloque_suplementos .ocholeguas .publi-suplemento-310 img,
+#bloque_suplementos .yodona .publi-suplemento-310 img, #bloque_suplementos .vino .publi-suplemento-310 img, #bloque_suplementos .america .publi-suplemento-310 img, 
+#bloque_suplementos .cultural .publi-suplemento-310 img, #bloque_suplementos .metropoli .publi-suplemento-310 img, #bloque_suplementos .tendencias .publi-suplemento-310 img,
+#bloque_suplementos .nauta360 .publi-suplemento-310 img, #bloque_suplementos .especiales .publi-suplemento-310 img {border:0}
+
+
+#bloque_suplementos li.primero strong.titular, #bloque_suplementos li.segundo strong.titular,
+#bloque_suplementos li.primero p.apoyos, #bloque_suplementos li.segundo p.apoyos { width:296px !important;}
+#bloque_suplementos h5 {
+	clear:none;
+	float:none;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	font-style:normal;
+	font-weight:normal;
+	height:26px;
+	line-height:22px;
+	margin:6px 1px 0;
+	padding:0;
+	width:202px;
+}
+#bloque_suplementos p.apoyos {
+	background:#EDEFF0 none repeat scroll 0 0;
+	clear:both;
+	float:left;
+	height:16px;
+	margin:0 !important;
+	padding:3px 10px 5px;
+	width:183px !important;
+	z-index:1;
+}
+#bloque_suplementos p.apoyos a, #bloque_suplementos p.apoyos a:visited, #bloque_suplementos p.apoyos a:active {
+	border:none;
+	background:none!important;
+	color:#6d818f;
+	height:auto!important;
+	width:auto!important;
+}
+#bloque_suplementos h5 a, #bloque_suplementos h5 a:visited, #bloque_suplementos h5 a:active {
+	background:none!important;
+	color:#7B7B7B;
+	height:26px !important;
+}
+#bloque_suplementos .yodona img {
+	border-color:#a81e7a;
+}
+#bloque_suplementos .metropoli img {
+	border-color:#96a509;
+}
+#bloque_suplementos .america img {
+	border-color:#11537D;
+}
+#bloque_suplementos .cultural img {
+	border-color:#5f6052;
+}
+#bloque_suplementos .ocholeguas img {
+	border-color:#418ac4;
+}
+#bloque_suplementos .motor img {
+	border-color:#e65e00;
+}
+#bloque_suplementos .vino img {
+	border-color:#7f1cb1;
+}
+#bloque_suplementos .tendencias img {
+	border-color:#ffcd00;
+}
+#bloque_suplementos .nauta360 img {
+	border-color:#8FB9CB;
+}
+#bloque_suplementos .especiales img {
+	border-color:#900;
+}
+#bloque_suplementos .metropoli img {
+	border-color:#d4c189;
+}
+#bloque_suplementos .primero img, #bloque_suplementos .segundo img {
+	width:310px; height:auto;
+}
+
+#bloque_suplementos .primero td img, #bloque_suplementos .segundo td img {
+	width:auto;
+}
+
+
+#bloque_suplementos li a:hover img {
+	opacity:0.9;
+	filter: alpha(opacity = 90);
+}
+#bloque_suplementos li a:hover strong {
+	opacity:0.35;
+	filter: alpha(opacity = 35);
+	/*height:46px;*/
+	padding:0;
+	width:189px;
+	padding:4px 7px 0;
+	margin:0;
+	line-height:18px;
+	height:42px;
+}
+#bloque_suplementos li.primero a:hover strong, #bloque_suplementos li.segundo a:hover strong {height:24px}
+.bloque_secciones_suplementos .col_01 {
+	float:left;
+	margin:0;
+	width:675px;
+	padding:0;
+	display:inline;
+}
+.bloque_secciones_suplementos .col_02 {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_hemeroteca.jpg) no-repeat scroll 0 -20px;
+	border:medium none;
+	display:inline;
+	float:right;
+	margin:0;
+	padding:0;
+	width:317px;
+}
+.bloque_secciones_suplementos .wrap {
+	padding:0 4px 10px;
+	width:992px;
+}
+/* fin suplementos */
+
+/* noticias externas suplementos */
+#bloque_noticias_externas {
+	display:inline;
+	float:left;
+	margin:47px 0 0 1px;
+	overflow:hidden;
+	width:305px;
+}
+#bloque_noticias_externas div.externa {
+	display:inline;
+	float:right;
+	margin-left:1px;
+	overflow:hidden;
+	width:300px;
+}
+#bloque_noticias_externas div.externa h5 {
+	background:#586471 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/lomejor_marca.gif) no-repeat scroll center 5px;
+	border-bottom:2px solid #73808B;
+	clear:both;
+	float:left;
+	height:30px;
+	margin:0;
+	padding:0;
+	position:relative;
+	text-indent:-9999px;
+	width:300px;
+}
+#bloque_noticias_externas div.externa.expansion h5 {
+	background:#586471 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/lomejor_expansion.gif) no-repeat center 5px;
+}
+#bloque_noticias_externas div.externa h5 a {
+	float:left;
+	height:23px;
+	left:27px;
+	position:absolute;
+	top:3px;
+	width:239px;
+}
+#bloque_noticias_externas ol {
+	float:left;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+#bloque_noticias_externas li {
+	background-color:#EEEEEE;
+	color:#999999;
+	font-size:11px;
+	list-style-type:decimal;
+	margin-left:25px;
+	padding:2px 0;
+}
+#bloque_noticias_externas li.color1 {
+	background: transparent;
+}
+/* fin noticias externas suplementos */
+
+/* modulos columna derecha */
+.bloque_noticias .col_02 .modulo {
+	clear:both;
+	float:left;
+	margin:0 0 10px!important;
+	padding:0;
+	position:relative;
+	width:320px;
+	display:inline;
+}
+.col_02 .modulo.size_1 {
+	height:100px;
+}
+.col_02 .modulo.size_4 {
+	height:400px;
+}
+.col_02 .modulo.size_5 {
+	height:500px;
+}
+/* fin modulos columna derecha */
+
+/* patrocinio ancho completo */
+#modulo_publicidad_anchocompleto {
+	clear:both;
+	display:block;
+	float:left;
+	height:60px;
+	width:970px;
+}
+#modulo_publicidad_anchocompleto .publicidad {
+	float:left;
+	margin:0;
+	padding:0;
+	clear:none;
+}
+#modulo_publicidad_anchocompleto .publicidad_640x50 {
+	padding-left:11px;
+}
+#modulo_publicidad_anchocompleto .publicidad_305x50 {
+	float:right;
+	height:50px;
+	overflow:hidden;
+}
+/* fin patricinio */
+
+/* servicios 980px */
+.bloque_servicios {
+	margin-top:-8px;
+}
+.bloque_servicios h4 {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/titulo_servicios.gif) no-repeat scroll 0 0;
+	font-family:georgia;
+	font-size:22px;
+	font-weight:normal;
+	margin-bottom:-20px;
+	padding:6px 0 0;
+	text-align:center;
+	text-indent:0;
+	width:1000px;
+	z-index:4;
+}
+.bloque_servicios .modulo.modulo_servicios {
+	clear:none;
+	float:left;
+	margin:0;
+	overflow:hidden;
+	position:relative;
+	width:980px;
+	height:80px;
+}
+.bloque_servicios .modulo_servicios ul.servicios {
+	background-color:#FFFFFF;
+	clear:both;
+	display:inline;
+	float:left;
+	height:70px;
+	margin:0;
+	padding:10px 0 0;
+	width:970px;
+}
+.bloque_servicios .modulo_servicios .servicios .diccionario {
+	margin-bottom:0;
+	position:relative;
+	width:68px;
+	clear:none;
+	border-top:0px;
+	padding-top:0px;
+}
+.bloque_servicios .modulo_servicios .servicios .diccionario a {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/servicios/icono_diccionario_v2.png) no-repeat 10px 0;
+	color:#84909B;
+	display:block;
+	float:left;
+	font-size:11px;
+	line-height:12px;
+	padding:47px 0 0;
+	text-align:center;
+	width:68px;
+	height:0px;
+}
+.bloque_servicios .modulo_servicios .servicios .diccionario a:hover {
+	background-position: 10px -65px;
+	color:#5995b1;
+}
+#contenido .bloque_servicios .wrap {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/wrap_servicios.gif) repeat-y scroll -13px 0;
+	height:94px;
+	padding-bottom:7px;
+}
+/* fin servicios 980px */
+
+/* especiales - encuentros */
+.modulo_especiales_encuentros {
+	position:relative;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/bajo_modulos_col02.gif) no-repeat scroll right bottom;
+	height:auto;
+}
+.modulo_especiales_encuentros .contenido {
+	display:inline;
+	float:left;
+	margin:0;
+	padding-bottom:15px;
+	top:0;
+	width:154px;
+}
+.modulo_especiales_encuentros .encuentros {
+	margin-left:4px;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/separa_especiales_encuentros.gif) no-repeat scroll right top;
+}
+.modulo_especiales_encuentros .contenido a.mas {
+	clear:none;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/link_mas_info.gif) no-repeat scroll 0 bottom;
+	bottom:0;
+	float:none;
+	height:25px;
+	position:absolute;
+	right:162px;
+	text-align:left;
+	text-indent:-9999px;
+	width:21px;
+}
+.modulo_especiales_encuentros .especiales a.mas {
+	right:0;
+}
+.modulo_especiales_encuentros .contenido h4 {
+	color:#7B7B7B;
+	float:left;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:16px;
+	left:0;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:5px;
+	width:138px !important;
+	background-position:right -95px !important;
+	right:0!important;
+}
+.modulo_especiales_encuentros .contenido h4 a {
+	color:#7B7B7B;
+}
+.modulo_especiales_encuentros div.noticia {
+	border:medium none;
+	clear:both;
+	float:left;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:135px;
+}
+.modulo_especiales_encuentros li {
+	float:left;
+	margin:0;
+	width:135px;
+	display:inline;
+}
+.modulo_especiales_encuentros li.first_child {
+	background-color:#EFEFEF;
+	display:inline;
+	float:left;
+	height:175px;
+	margin-bottom:6px;
+	overflow:hidden;
+	position:relative;
+}
+.modulo_especiales_encuentros li.first_child p {
+	padding:4px 6px;
+	line-height:15px;
+}
+.modulo_especiales_encuentros li.first_child img {
+	z-index:1;
+}
+.modulo_especiales_encuentros div.noticia {
+	padding:3px 6px;
+	width:123px;
+}
+.modulo_especiales_encuentros div.noticia p.antetitulo {
+	color:#ACB1B4 !important;
+	padding:0;
+}
+.modulo_especiales_encuentros div.noticia p.fecha {
+	color:#ACB1B4;
+	font-size:11px;
+	margin:0;
+	padding:0;
+}
+.modulo_especiales_encuentros div.noticia h5, .modulo_especiales_encuentros div.noticia h6 {
+	margin:0;
+}
+.modulo_especiales_encuentros div.noticia h5 a {
+	color:#fff;
+}
+.modulo_especiales_encuentros div.noticia h6 {
+	font-size:12px;
+}
+.modulo_especiales_encuentros ul {
+	display:inline;
+	float:left;
+	margin:0 0 0 11px;
+}
+.modulo_especiales_encuentros li.first_child a:hover img {
+	opacity:0.8;
+}
+.modulo_especiales_encuentros .especiales {
+	float:right;
+	padding-right:4px;
+	right:0;
+}
+.modulo_especiales_encuentros li.first_child div.noticia {
+	background-color:#233241;
+	bottom:54px;
+	opacity:0.9;
+	position:absolute;
+	z-index:2;
+}
+/* fin especiales - encuentros */
+
+/* encuentros */
+.modulo_individual {
+	position:relative;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/bajo_modulos_col02.gif) no-repeat scroll right bottom;
+	clear:none;
+}
+.modulo_individual .contenido {
+	display:inline;
+	float:left;
+	margin:0;
+	position:relative;
+	top:0;
+	width:320px;
+}
+.modulo_individual .contenido h4 {
+	float:right;
+	width:300px !important;
+}
+.modulo_individual .contenido a.mas {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/link_mas_info.gif) no-repeat scroll 0 bottom;
+	bottom:0;
+	clear:none;
+	float:none;
+	height:25px;
+	position:absolute;
+	right:0;
+	text-align:left;
+	text-indent:-9999px;
+	width:21px;
+}
+.modulo_individual .contenido h4 a {
+	color:#7B7B7B;
+}
+.modulo_individual div.noticia {
+	border:medium none;
+	clear:both;
+	float:left;
+	margin:0;
+	padding:2px 6px;
+	position:relative;
+	width:282px;
+}
+.modulo_individual li {
+	/*	border-top:1px solid #afbac7;*/
+	display:inline;
+	float:left;
+	margin:0;
+	padding:4px 0;
+	width:295px;
+}
+.modulo_individual li.first_child {
+/*	background-color:#EFEFEF;*/
+	border:medium none;
+	display:inline;
+	float:left;
+/*	height:120px;*/
+	margin:0;
+	overflow:hidden;
+	position:relative;
+	width:295px;
+	padding:0;
+}
+.modulo_individual li.first_child p {
+	float:left !important;
+	line-height:15px;
+	padding:3px 10px 0;
+	width:140px;
+}
+.modulo_individual li.first_child img {
+	z-index:1;
+}
+.modulo_individual li.first_child a {
+	color:#FFFFFF;
+	float:left;
+	position:relative;
+}
+.modulo_individual div.noticia p.antetitulo {
+	color:#ACB1B4;
+	float:right;
+	padding:0;
+}
+.modulo_individual div.noticia p.fecha {
+	color:#ccc;
+	float:right;
+	font-size:11px;
+	margin:0;
+	padding:0;
+	width:auto;
+}
+.modulo_individual div.noticia h5, .modulo_individual div.noticia h6 {
+	margin:0;
+}
+.modulo_individual div.noticia h6 {
+	background:#EEEEEE;
+	border:1px solid #CCCCCC;
+	display:block;
+	float:left;
+	font-size:12px;
+	margin:0 0 5px -6px;
+	padding:3px;
+	width:287px;
+}
+.modulo_individual div.noticia h6 a {
+	background:url("http://estaticos.elmundo.es/elmundo/iconos/v3.0/bolillos/bolillo.gif") no-repeat scroll 0 1px transparent;
+	border:0 none;
+	color:#044364;
+	padding:0 0 0 18px;
+}
+.modulo_individual ul {
+	display:inline;
+	float:left;
+	margin:0 0 0 11px;
+	padding-bottom:8px;
+}
+.modulo_individual li.first_child a:hover img {
+	opacity:0.8;
+}
+.modulo_individual li.first_child div.noticia {
+	background:#233241 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulares_individual.gif) repeat-x scroll left center;
+	bottom:0;
+	color:#233241;
+	float:right;
+	opacity:0.9;
+	padding:6px 1px 6px 11px;
+	position:relative;
+	width:148px;
+	z-index:2;
+}
+.modulo_individual .especiales {
+	padding-bottom:12px;
+}
+.modulo_individual .encuentros .first_child h5 {
+	float:left;
+	width:142px;
+}
+/* fin encuentros */
+
+
+/* La bolsa */
+#modulo_economia {
+	padding-left:5px;
+	position:relative;
+	width:315px;
+}
+#modulo_economia h4 {
+	margin:9px 9px 3px 0;
+}
+#modulo_economia .nav_economia {
+	left:auto;
+	position:absolute;
+	right:0;
+	top:0;
+	width:auto;
+}
+#modulo_economia .nav_economia li {
+	bottom:-1px;
+	font-size:11px;
+	margin:0 0 0 1px;
+	position:relative;
+	text-transform:uppercase;
+	border:1px solid #DDE1E5;
+}
+#modulo_economia li.max {
+	border-width:0 0 1px 1px;
+	bottom:0;
+	color:#666666;
+	float:left;
+	height:22px;
+	position:absolute;
+	right:10px;
+}
+#modulo_economia li.min {
+	bottom:21px;
+	float:left;
+	font-family:Times, serif;
+	font-size:20px;
+	font-weight:bold;
+	height:22px;
+	line-height:normal;
+	position:absolute;
+	right:10px;
+}
+#modulo_economia li.ultimo {
+	border:none;
+	clear:both;
+	color:#3A78A0;
+	font-family:"Times New Roman", Times, serif;
+	font-size:30px;
+	font-weight:bold;
+	margin:0;
+	overflow:hidden;
+	padding:0 0 5px;
+	width:100%;
+}
+#modulo_economia .contenido_modulo_economia {
+	border:1px solid #DDE1E5;
+	margin:0;
+}
+#modulo_economia .contenido {
+	clear:none;
+	display:inline;
+	float:left;
+	height:auto;
+	margin:1px 2px;
+	overflow:visible;
+	position:relative;
+	width:300px;
+}
+#modulo_economia.opcion_a .bolsas {
+	margin-bottom:4px;
+	padding-top:26px;
+}
+#modulo_economia.opcion_a .publicidad {
+	background-color:#000000;
+	float:left;
+	height:90px;
+}
+#modulo_economia .nav_economia li.numero_activa {
+	border-color:#DDE1E5 #DDE1E5 #FFFFFF;
+	border-style:solid;
+	border-width:1px;
+	height:24px;
+}
+.nav_economia li a {
+	background:#7c9eb3 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/pestanas_lomas_normal.gif) repeat-x scroll left center;
+	color:#fff;
+	font-weight:normal;
+	padding:3px 6px;
+}
+.nav_economia li.numero_activa a {
+	background:#fff;
+	border-bottom:1px solid #FFFFFF!important;
+	color:#990044;
+}
+#modulo_economia .pestana_GDP form {
+	margin:5px 0;
+	padding:8px;
+}
+.modulo_indice {
+	float:left;
+	width:290px;
+	padding:0;
+}
+.modulo_indice .capaGrafica {
+	text-align:center;
+	width:305px;
+}
+.modulo_indice img {
+	margin:0 auto 15px auto;
+	display:block;
+	clear:both;
+	border:1px solid #DDE1E5;
+	padding:5px 8px;
+	background:#fff;
+}
+.modulo_indice .par th, .modulo_indice .par td {
+	background-color:none!important;
+}
+.modulo_indice h1 {
+	margin:2px 10px 0 0;
+	padding:0;
+	color:#DA9208;
+	text-transform:uppercase;
+	text-indent:0;
+	height:auto;
+	overflow:visible;
+	font:bold 14px Arial, Helvetica, sans-serif;
+}
+.modulo_indice h1 a {
+	font-weight:bold;
+	color:#DA9208!important;
+	font-size:14px;
+	text-decoration:none;
+	float:none;
+}
+.modulo_indice h1 a:hover, .modulo_indice h1 a:visited {
+	color:#DA9208;
+}
+.modulo_indice ul {
+	float:left;
+	padding:5px 10px 0;
+	position:relative;
+	width:280px;
+}
+.modulo_indice li {
+	padding:0;
+}
+.modulo_indice li.max {
+	border-width:0 0 1px 1px;
+	height:22px;
+	float:left;
+	color:#666;
+}
+.modulo_indice li.min {
+	border-width:0 0 1px 1px;
+	height:22px;
+	float:left;
+	color:#666;
+	position:absolute;
+	bottom:45px;
+	right:10px;
+	font:bold 20px Times, serif;
+}
+.modulo_indice li.min strong {
+	display:none;
+}
+.modulo_indice li.ultimo {
+	float:none;
+	width:100%;
+	border:1px solid #e0e0e0;
+	border-width:0 0 1px;
+	font:bold 30px "Times New Roman", Times, serif;
+	color:#3A78A0;
+	padding:0 0 5px;
+	margin:0;
+	clear:both;
+	width:100%;
+	overflow:hidden;
+}
+.modulo_indice li.ultimo h2 {
+	float:left;
+	padding:0 25px 0 0;
+	color:#3A78A0;
+	font:bold 30px "Times New Roman", Times, serif;
+	margin:0;
+}
+.modulo_indice li.ultimo h2 a, .modulo_indice li.ultimo h2 a:link, .modulo_indice li.ultimo h2 a:visited {
+	font:bold 30px "Times New Roman", Times, serif;
+	text-decoration:none;
+}
+.modulo_indice li.ultimo h2 a:hover {
+	text-decoration:underline;
+}
+.modulo_indice li.ultimo h2, .modulo_divisa li.ultimo h2, .modulo_tipo li.ultimo h2 {
+	background:url(http://estaticos.elmundo.es/mundodinero/iconos/v3.0/bullet_estable.gif) no-repeat center right;
+	padding-right:25px;
+}
+.modulo_indice li.ultimo .positiva, .modulo_divisa li.ultimo .positiva, .modulo_tipo li.ultimo .positiva {
+	background:url(http://estaticos.elmundo.es/mundodinero/iconos/v3.0/bullet_sube.gif) no-repeat center right;
+	padding-right:25px;
+}
+.modulo_indice li.ultimo .negativa, .modulo_divisa li.ultimo .negativa, .modulo_tipo li.ultimo .negativa {
+	background:url(http://estaticos.elmundo.es/mundodinero/iconos/v3.0/bullet_baja.gif) no-repeat center right;
+	padding-right:25px;
+}
+.modulo_indice li.negativa {
+	color:#B30505;
+}
+.modulo_indice li.positiva {
+	color:#5F8E04;
+}
+/* fin la bolsa*/
+
+/* módulo multinoticias */
+#bloque_multinoticias {
+	background:#363D46 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_multinoticias.jpg) repeat-y scroll 0 0;
+	display:inline;
+	float:left;
+	height:329px;
+	overflow:hidden;
+	padding:28px 0 17px;
+	position:relative;
+	width:675px;
+}
+#bloque_multinoticias h4 {
+	background:transparent none repeat scroll 0 0;
+	color:#FFFFFF;
+	font-family:georgia;
+	font-weight:normal;
+	left:17px;
+	margin:0;
+	position:absolute;
+	text-indent:0;
+	top:4px;
+	width:auto;
+	z-index:2;
+}
+#bloque_multinoticias h4 a {
+	background:transparent none repeat scroll 0 0;
+	color:#FFFFFF;
+	font-family:georgia;
+	font-weight:normal;
+	left:17px;
+	margin:0;
+	position:absolute;
+	text-indent:0;
+	top:4px;
+	width:auto;
+	z-index:2;
+}
+#contenido_secundario .bloque_miscelanea .wrap {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_bloque_02.png) repeat scroll -13px 0 !important;
+	padding:0 4px 10px;
+	width:992px;
+}
+#modulo_multinoticias {
+	background:#AEA499 none repeat scroll 0 0;
+	border-color:#25292E #3A3D40 #3A3D40;
+	border-style:solid;
+	border-width:8px 1px 1px;
+	display:inline;
+	height:320px;
+	margin:0 0 0 16px;
+	overflow:hidden;
+	position:relative;
+	width:640px;
+}
+#modulo_multinoticias .slide {
+	position:absolute;
+	top:0;
+	height:320px;
+	width:640px;
+}
+#modulo_multinoticias .nav_miniaturas {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_miniaturas.png) no-repeat scroll 0 0;
+	border-right:1px solid #3E4345;
+	display:inline;
+	float:left;
+	height:320px;
+	left:0;
+	padding:0;
+	position:absolute !important;
+	top:0;
+	width:84px;
+	z-index:3;
+}
+#modulo_multinoticias .nav_miniaturas li.nav_multinoticia_selector {
+	display:inline;
+	float:left;
+	height:47px;
+	margin:0;
+	padding:13px 11px;
+	position:absolute;
+	width:62px;
+}
+#modulo_multinoticias .nav_miniaturas li.nav_multinoticia_selector img {
+	width:60px !important;
+	height:45px !important;
+	cursor:pointer;
+	border:1px solid #FFFFFF;
+}
+#modulo_multinoticias .nav_miniaturas li.video span {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/play_miniaturas.gif) no-repeat scroll 0 0;
+	bottom:13px;
+	float:left;
+	height:16px;
+	position:absolute;
+	right:11px;
+	width:16px;
+}
+#modulo_multinoticias .nav_miniaturas li.seleccionado {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/miniatura_hover.gif) no-repeat scroll right center;
+}
+#modulo_multinoticias .noticia {
+	background-color:#AEA499;
+	float:left;
+	display:inline;
+	width:640px;
+	height:320px;
+	top:0;
+	position:absolute;
+	margin:0;
+	padding:0;
+	border:none;
+}
+#modulo_multinoticias div.foto {
+	clear:both;
+	display:inline;
+	float:left;
+	height:320px;
+	left:0;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:0;
+	width:640px;
+	z-index:1;
+}
+#modulo_multinoticias div.contenido_noticia {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/transparencia.png) no-repeat scroll 0 0;
+	border-left:1px solid #333333;
+	clear:both;
+	display:inline;
+	float:left;
+	height:290px;
+	padding:15px;
+	position:absolute;
+	right:0;
+	top:0;
+	width:200px;
+	z-index:2;
+}
+#modulo_multinoticias div.contenido_noticia .autor {
+	color:#AAAAAA;
+}
+#modulo_multinoticias div.contenido_noticia .apoyos {
+	background:transparent none repeat scroll 0 0;
+	height:auto;
+	margin:0;
+	padding:10px 0 0;
+	position:relative;
+	width:auto;
+	z-index:3;
+}
+#modulo_multinoticias div.contenido_noticia .apoyos li {
+	margin-left:0 !important;
+}
+#modulo_multinoticias h3 a, #modulo_multinoticias h3 a:visited, #modulo_multinoticias h3 a:active {
+	color:#B2C8E7;
+}
+#modulo_multinoticias div.contenido_noticia p {
+	color:#DEDEDE;
+	display:block;
+}
+#modulo_multinoticias div.contenido_noticia p.antetitulo {
+	color:#5079b0 !important;
+	font-size:11px;
+	font-weight:bold;
+}
+#modulo_multinoticias .apoyos a, #modulo_multinoticias .apoyos a:visited, #modulo_multinoticias .apoyos a:active {
+	color:#dedede;
+}
+#modulo_multinoticias .cubre_reproductor {
+	float:left;
+	height:320px !important;
+	left:0;
+	position:absolute;
+	top:0;
+	width:640px !important;
+	z-index:2;
+}
+#modulo_multinoticias.unica .cubre_reproductor object {
+	margin:13px 0 0 14px !important;
+}
+#modulo_multinoticias .cubre_reproductor img {
+	width:auto !important;
+	height:auto !important;
+}
+#modulo_multinoticias .cubre_reproductor a.boton_play {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/play.png) no-repeat scroll right bottom;
+	display:inline;
+	float:left;
+	height:320px;
+	left:84px;
+	text-indent:-9000px;
+	top:0;
+	width:380px;
+}
+#modulo_multinoticias .cubre_reproductor a.boton_play:hover {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/play_hover.png) no-repeat scroll right bottom;
+}
+#modulo_multinoticias .cubre_reproductor object {
+	margin:0 0 0 85px;
+	padding:0;
+}
+#modulo_multinoticias div.video {
+	background:#313B48 none repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:320px !important;
+	position:relative;
+	width:640px !important;
+}
+#modulo_multinoticias div.video p {
+	position:absolute;
+	bottom:3px;
+	left:95px;
+	border:0;
+	color:#ADA398;
+}
+#modulo_tira_noticias h2 {
+	background-color:#E7E7E7;
+	color:#444444;
+	font-size:15px;
+	font-style:italic;
+	height:17px;
+	left:0;
+	padding:5px 18px 6px;
+	position:absolute;
+	top:-10px;
+	width:956px;
+}
+#modulo_tira_noticias ul#carrusel_de_noticias li dl a:hover {
+	color:#E04545!important;
+}
+#modulo_multinoticias .slide .horizontal {
+	bottom:0;
+	height:auto !important;
+	left:0;
+	padding-left:99px;
+	top:auto;
+	width:530px;
+}
+#modulo_multinoticias .slide .horizontal h3 {
+	margin:0;
+}
+#modulo_multinoticias.unica .slide .horizontal {
+	bottom:0;
+	height:auto !important;
+	left:0;
+	padding-left:15px;
+	top:auto;
+	width:609px;
+}
+#modulo_multinoticias .antetitulo a {
+	color:#CCC3B2;
+}
+#modulo_multinoticias div.nav_miniaturas img {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/miniatura_hover.gif) no-repeat scroll right center;
+	height:45px;
+	padding:12px;
+	width:60px;
+}
+#modulo_multinoticias .noticia div.nav_miniaturas img {
+	width:60px!important;
+	height:45px!important;
+}
+#modulo_multinoticias a:hover {
+	color:#FFF!important;
+}
+#modulo_multinoticias_acordion_0_0 {
+	z-index:1;
+}
+#modulo_multinoticias_acordion_0_1 {
+	z-index:2;
+}
+#modulo_multinoticias_acordion_0_2 {
+	z-index:3;
+}
+#modulo_multinoticias_acordion_0_3 {
+	z-index:4;
+}
+#modulo_multinoticias_acordion_0_4 {
+	z-index:5;
+}
+ul.cont_5 #nav_multinoticia_selector_1 {
+	top:248px;
+}
+ul.cont_5 #nav_multinoticia_selector_2 {
+	top:186px;
+}
+ul.cont_5 #nav_multinoticia_selector_3 {
+	top:124px;
+}
+ul.cont_5 #nav_multinoticia_selector_4 {
+	top:62px;
+}
+ul.cont_5 #nav_multinoticia_selector_5 {
+	top:0;
+}
+ul.cont_4 #nav_multinoticia_selector_1 {
+	top:186px;
+}
+ul.cont_4 #nav_multinoticia_selector_2 {
+	top:124px;
+}
+ul.cont_4 #nav_multinoticia_selector_3 {
+	top:62px;
+}
+ul.cont_4 #nav_multinoticia_selector_4 {
+	top:0;
+}
+ul.cont_3 #nav_multinoticia_selector_1 {
+	top:124px;
+}
+ul.cont_3 #nav_multinoticia_selector_2 {
+	top:62px;
+}
+ul.cont_3 #nav_multinoticia_selector_3 {
+	top:0;
+}
+ul.cont_2 #nav_multinoticia_selector_1 {
+	top:62px;
+}
+ul.cont_2 #nav_multinoticia_selector_2 {
+	top:0;
+}
+ul.cont_1 #nav_multinoticia_selector_1 {
+	top:0;
+}
+div.tipo_video div.contenido_noticia {
+	width:145px!important;
+	height:295px!important;
+	padding:10px 15px 15px!important;
+}
+div.tipo_video div.contenido_noticia p.antetitulo {
+	display:none;
+}
+div.tipo_video div.contenido_noticia h3.defecto a {
+	font-size:22px !important;
+}
+.portadilla #contenido_secundario .bloque_miscelanea .wrap {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_bloque_02.png) repeat scroll -13px 0;
+	float:left;
+	padding:0 4px;
+	width:995px;
+}
+.portadilla #contenido_secundario .bloque_miscelanea .columna_02 .modulo {
+	margin:16px 0 0;
+}
+/* fin módulo multinoticias */
+
+/* blogs */
+.modulo_blogs {
+	padding:0;
+}
+.modulo_blogs ul {
+	width:310px;
+	margin:5px 3px 5px 0;
+	clear:both;
+	overflow:hidden;
+	float:left;
+}
+.modulo_blogs h4 {
+	padding-left:5px;
+}
+.bloque_miscelanea .modulo_blogs ul li, .bloque_miscelanea .modulo_blogs ul li.first_child {
+	padding:5px 0 5px 75px;
+	border:1px solid #eee;
+	border-width:1px 1px 0;
+	position:relative;
+	margin:1px 0 2px;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_debates.png) repeat-x scroll 0 -30px;
+	float:left;
+	width:230px;
+	height:35px;
+}
+*html .modulo_blogs ul li {
+	height:1%;
+}/*explorer*/
+.modulo_blogs li h5 {
+	font-size:12px;
+	margin-bottom:2px;
+}
+.modulo_blogs p a {
+	border:0;
+}
+.modulo_blogs p.update {
+	margin:0;
+	font-size:11px;
+	border-left:0;
+	color:#617181;
+	position:absolute;
+	top:5px;
+	left:5px;
+	font-weight:bold;
+	text-align:left;
+	width:50px;
+}
+.modulo_blogs p.antetitulo {
+	position: static;
+	padding-top:1px;
+	color:#990044;
+	font-size:11px;
+	width:220px;
+	line-height:12px;
+}
+.modulo_blogs p.antetitulo span {
+	color:#DDE1E5;
+}
+.modulo_blogs li.first_child h5 {
+	font:bold 14px/22px Arial, Helvetica, sans-serif;
+}
+/* bloque_suplemento_destacado */
+#bloque_suplemento_destacado {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_gentes.jpg) repeat-y scroll 0 0;
+	float:left;
+	height:374px;
+	padding:0 18px;
+	position:relative;
+	width:281px;
+}
+#bloque_suplemento_destacado div.noticia {
+	background:#CC2A0F url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_noticia_gentes.gif) repeat-x scroll 0 0;
+	border:1px solid #592520;
+	height:320px;
+	left:18px;
+	overflow:hidden;
+	padding-top:8px;
+	position:absolute;
+	top:22px;
+	width:280px;
+}
+#bloque_suplemento_destacado div.noticia img {
+	z-index:1
+}
+#bloque_suplemento_destacado div.noticia a {
+	bottom:0px;
+	color:#FFFFFF;
+	cursor:pointer;
+	float:left;
+	font-size:24px;
+	font-weight:normal;
+	height:308px;
+	left:0;
+	line-height:30px;
+	overflow:hidden;
+	padding:5px 10px;
+	position:absolute;
+	width:260px;
+	z-index:2;
+	background:none;
+}
+#bloque_suplemento_destacado div.noticia strong.titular {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_gentes.png) no-repeat scroll 0 0;
+	bottom:30px;
+	float:left;
+	font-weight:normal;
+	left:0;
+	padding:4px 9px;
+	position:absolute;
+	width:262px;
+}
+#bloque_suplemento_destacado div.noticia p.apoyos {
+	background:transparent none repeat scroll 0 0;
+	height:15px;
+	margin:0 !important;
+	padding:4px 10px !important;
+	width:260px !important;
+}
+#bloque_suplemento_destacado div.noticia p.apoyos a {
+	background:#000000 none repeat scroll 0 0;
+	border:medium none;
+	bottom:0;
+	color:#CCCCCC;
+	font-size:12px;
+	height:auto;
+	margin:0;
+	opacity:0.7;
+	padding:0 12px;
+}
+#bloque_suplemento_destacado div.noticia p.apoyos a:hover {
+	color:#fff;
+}
+#bloque_suplemento_destacado h5 a {
+	color:#FFFFFF;
+}
+#bloque_suplemento_destacado h5 {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	font-style:italic;
+	font-weight:bold;
+	margin:5px 0 3px;
+}
+#bloque_suplemento_destacado table {
+	bottom:-26px;
+	left:0;
+	position:absolute;
+}
+#bloque_suplemento_destacado .foto {
+	background:transparent none repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:325px;
+	margin:0;
+	padding:0;
+}
+#bloque_suplemento_destacado.ocholeguas {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_ocholeguas.jpg) repeat-y scroll 0 0;
+}
+#bloque_suplemento_destacado.ocholeguas div.noticia {
+	background:#418ac4;
+	border-color:#2d638d;
+}
+#bloque_suplemento_destacado.ocholeguas div.noticia strong.titular {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_ocholeguas.png) no-repeat scroll 0 0;
+}
+#bloque_suplemento_destacado.yodona {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_yodona.jpg) repeat-y scroll 0 0;
+}
+#bloque_suplemento_destacado.yodona div.noticia {
+	background:#a81e7a;
+	border-color:#6a164e;
+}
+#bloque_suplemento_destacado.yodona div.noticia strong.titular {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_yodona.png) no-repeat scroll 0 0;
+}
+#bloque_suplemento_destacado.metropoli {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_metropoli.jpg) repeat-y scroll 0 0;
+}
+#bloque_suplemento_destacado.metropoli div.noticia {
+	background:#96a509;
+	border-color:#626b11;
+}
+#bloque_suplemento_destacado.metropoli div.noticia strong.titular {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_metropoli.png) no-repeat scroll 0 0;
+}
+#bloque_suplemento_destacado.motor {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_motor.jpg) repeat-y scroll 0 0;
+}
+#bloque_suplemento_destacado.motor div.noticia {
+	background:#e65e00;
+	border-color:#853600;
+}
+#bloque_suplemento_destacado.motor div.noticia strong.titular {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_motor.png) no-repeat scroll 0 0;
+}
+#bloque_suplemento_destacado.vino {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_vino.jpg) repeat-y scroll 0 0;
+}
+#bloque_suplemento_destacado.vino div.noticia {
+	background:#7f1cb1;
+	border-color:#4e156b;
+}
+#bloque_suplemento_destacado.vino div.noticia strong.titular {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_vino.png) no-repeat scroll 0 0;
+}
+#bloque_suplemento_destacado.cultural {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_bloque_cultural.jpg) repeat-y scroll 0 0;
+}
+#bloque_suplemento_destacado.cultural div.noticia {
+	background:#ccddee;
+	border-color:#56718c;
+}
+#bloque_suplemento_destacado.cultural div.noticia strong.titular {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_cultural.png) no-repeat scroll 0 0;
+}
+/* fin bloque_suplemento_destacado */
+
+/* hemeroteca */
+#bloque_hemeroteca {
+	display:inline;
+	float:left;
+	margin:7px 0 15px 7px;
+	position:relative;
+	width:300px;
+}
+#bloque_hemeroteca h5, #content_cosa_cuadros h5 {
+	color:#727070;
+	font-family:georgia;
+	font-size:18px;
+	font-style:normal !important;
+	font-weight:normal;
+	margin:15px 0 4px;
+}
+#bloque_hemeroteca h5 a, #bloque_hemeroteca h5 a:visited, #bloque_hemeroteca h5 a:active, #content_cosa_cuadros h5 a, #content_cosa_cuadros h5 a:visited, #content_cosa_cuadros h5 a:active {
+	color:#727070;
+}
+#content_cosa_cuadros h5 {
+	margin-top:0;
+}
+#bloque_hemeroteca #contenido_bloque {
+	clear:both;
+	float:left;
+	margin:0;
+	overflow:hidden;
+	position:relative;
+	width:300px;
+	z-index:100;
+}
+#bloque_hemeroteca #contenido_bloque ul {
+	display:inline;
+	float:left;
+	height:80px;
+	width:300px;
+}
+#bloque_hemeroteca #contenido_bloque li {
+	float:left;
+	height:80px;
+}
+#bloque_hemeroteca #contenido_bloque li a {
+	background:#4F565E url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/botones_hemerotecas.jpg) no-repeat scroll center 0;
+	color:#D5D7D9;
+	display:inline;
+	float:left;
+	font-family:georgia;
+	font-size:50px;
+	font-style:italic;
+	height:60px;
+	line-height:60px;
+	padding-bottom:20px;
+	position:relative;
+	text-align:center;
+	width:100px;
+}
+#bloque_hemeroteca #contenido_bloque li a:hover {
+	background-position: center bottom;
+	color:#fff;
+}
+#bloque_hemeroteca #contenido_bloque li span {
+	bottom:-17px;
+	clear:none;
+	cursor:pointer;
+	float:none;
+	font-family:arial;
+	font-size:13px;
+	font-style:normal;
+	left:0;
+	position:absolute;
+	width:100%;
+}
+#bloque_hemeroteca .nav_siguenos {
+	float:right;
+	height:22px;
+	margin-top:8px;
+	position:absolute;
+	right:0;
+	top:6px;
+}
+#bloque_hemeroteca .nav_siguenos li {
+	float:left;
+}
+#bloque_hemeroteca .nav_siguenos li a {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/iconos_sigueme.gif) no-repeat 0 0;
+	float:left;
+	height:20px;
+	margin:1px;
+	text-indent:-9999px;
+	width:20px;
+}
+#bloque_hemeroteca .nav_siguenos li.siguenos {
+	margin-right:6px;
+	position:relative;
+	top:6px;
+	font-size:10px;
+}
+#bloque_hemeroteca .nav_siguenos li.youtube a {
+	background-position:0 center;
+}
+#bloque_hemeroteca .nav_siguenos li.facebook a {
+	background-position:0 bottom;
+}
+/* fin hemeroteca */
+
+/* modulo lo mejor */
+.col#modulo_lomejor {
+	padding-left:0;
+	position:relative;
+	width:304px;
+}
+#modulo_lomejor #modulo_ranking {
+	clear:both;
+	display:inline;
+	float:left;
+	margin:30px 0 0 8px !important;
+}
+#modulo_lomejor ul#pestanas_modulo_ranking_superior {
+	height:30px;
+	overflow:hidden;
+	width:305px;
+}
+#modulo_lomejor li.max {
+	border-width:0 0 1px 1px;
+	bottom:0;
+	color:#666666;
+	float:left;
+	height:22px;
+	position:absolute;
+	right:10px;
+}
+#modulo_lomejor li.min {
+	bottom:21px;
+	float:left;
+	font-family:Times, serif;
+	font-size:20px;
+	font-weight:bold;
+	height:22px;
+	line-height:normal;
+	position:absolute;
+	right:10px;
+}
+#modulo_lomejor li.ultimo {
+	border:none;
+	clear:both;
+	color:#3A78A0;
+	font-family:"Times New Roman", Times, serif;
+	font-size:30px;
+	font-weight:bold;
+	margin:0;
+	overflow:hidden;
+	padding:0 0 5px;
+	width:100%;
+}
+#modulo_lomejor .pestana_GDP form {
+	margin:5px 0;
+	padding:8px;
+}
+.bloque_noticias .col_02 #modulo_ranking {
+	background:transparent none repeat scroll 0 0;
+	clear:both;
+	float:left;
+	margin:30px 0 15px !important;
+	padding:0;
+	position:relative;
+	width:300px;
+}
+#modulo_ranking ol {
+	background:url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_listado_noticias.gif") repeat scroll 0 0 #FFFFFF;
+	height:180px;
+	margin-left:0;
+	padding-left:23px;
+	width:267px;
+}
+#modulo_ranking ul li.numero_activa a {
+	padding:5px 6px 1px;
+	height:19px;
+}
+#modulo_ranking ul li.numero_activa {
+	border:1px solid #DDE1E5;
+	border-bottom:1px solid #FFFFFF;
+}
+#modulo_ranking li.item_pestana a {
+	background:#7C9EB3 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/pestanas_lomas_normal.gif) repeat-x scroll left center;
+	color:#FFFFFF;
+	display:inline;
+	float:left;
+	font-weight:normal;
+	height:17px;
+	padding:3px 4px;
+}
+#modulo_ranking .nav {
+	top:-27px;
+}
+#modulo_ranking .mas {
+	margin:4px 0 -12px;
+	padding-top:4px;
+}
+/* fin lo mejor */
+
+/* servicios estrenos */
+.modulo_servicios .servicios .estrenos a {
+	background:url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/servicios/icono_estrenos_v2.png) no-repeat 10px -5px;
+}
+.modulo_servicios .servicios .estrenos a:hover {
+	background-position: 10px -62px;
+}
+/* fin servicios estrenos */
+
+/* GPD 2 */
+.modulo.el_js_esta_activo_GDP2, .modulo .pestana_GDP2 {
+	display:none;
+}
+.modulo .pestana_GDP2.activaJs_GDP2 {
+	display:block;
+}
+/* fin GPD 2 */
+
+/* servicios v2 */
+#modulo_servicios_v2 {
+	padding-left:5px;
+	position:relative;
+	width:304px;
+	padding-top:60px;
+}
+#modulo_servicios_v2 .nav_menu_pricipal {
+	position:absolute;
+	left:89px;
+	right:0;
+	top:38px;
+	width:auto;
+}
+#modulo_servicios_v2 .nav_menu_pricipal li {
+	bottom:-1px;
+	font-size:11px;
+	margin:0 0 0 1px;
+	position:relative;
+	text-transform:uppercase;
+	border:1px solid #DDE1E5;
+}
+#modulo_servicios_v2 .contenido_modulo_economia {
+	border:1px solid #DDE1E5;
+	margin:0;
+}
+#modulo_servicios_v2 .contenido {
+	clear:none;
+	display:inline;
+	float:left;
+	height:auto;
+	margin:1px;
+	overflow:visible;
+	position:relative;
+	width:300px;
+}
+#modulo_servicios_v2.opcion_a .publicidad {
+	background-color:#000000;
+	float:left;
+	height:90px;
+}
+#modulo_servicios_v2 .nav_menu_pricipal li.numero_activa {
+	border-bottom:1px solid #fff;
+}
+.modulo_servicios_v2 li a {
+	background:#FFFFFF url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/multimedia/bg_noticia.png) repeat-x scroll left center;
+	color:#035A89;
+	padding:1px 5px;
+	width:auto;
+}
+.modulo_servicios_v2 li a:hover {
+	color:#5995B1;
+}
+#modulo_servicios_v2 .pestana_GDP2 form {
+	margin:5px 0;
+	padding:8px 8px 0;
+}
+#modulo_servicios_v2 li.numero_activa a {
+	background:none repeat scroll 0 0 #fff;
+	border-bottom:1px solid #fff !important;
+	color:#990044;
+}
+#modulo_servicios_v2 a {
+	background:url("http://estaticos.elmundo.es/elmundo/iconos/v3.0/multimedia/bg_noticia.png") repeat-x scroll left center #FFFFFF;
+	color:#035A89;
+	padding:1px 3px;
+	width:auto;
+}
+#modulo_servicios_v2 .modulo_tiempo h4 a, #modulo_servicios_v2 .modulo_diccionario h4 a, #modulo_servicios_v2 .modulo_callejero h4 a {
+	color:#069 !important;
+	font: bold 12px/12px Arial, Helvetica, sans-serif;
+	padding:0;
+	margin: 0;
+}
+#modulo_servicios_v2 .modulo_tiempo h4 a:hover, #modulo_servicios_v2 .modulo_diccionario h4 a:hover, #modulo_servicios_v2 .modulo_callejero h4 a:hover {
+	color:#990044 !important;
+}
+.modulo_tiempo, .modulo_diccionario, .modulo_callejero {
+	float:left;
+	width:299px;
+	padding:0;
+	border: 1px solid #DDE1E5;
+	margin:0 0 5px;
+}
+#modulo_servicios_v2 .modulo_tiempo .enlaces, #modulo_servicios_v2 .modulo_diccionario .enlaces, #modulo_servicios_v2 .modulo_callejero .enlaces {
+	display: block;
+	border-top:1px dotted #ccc;
+}
+#modulo_servicios_v2 .modulo_tiempo .enlaces a, #modulo_servicios_v2 .modulo_diccionario .enlaces a, #modulo_servicios_v2 .modulo_callejero .enlaces a {
+	float:left;
+	background:none;
+	font-size: 11px;
+	margin: 0 0 5px 5px;
+	border: 0;
+}
+#modulo_servicios_v2 .modulo_tiempo .enlaces a:hover, #modulo_servicios_v2 .modulo_diccionario .enlaces a:hover, #modulo_servicios_v2 .modulo_callejero .enlaces a:hover {
+	color:#990044;
+}
+.modulo_diccionario select {
+	width: 90px;
+}
+#modulo_servicios_v2 .modulo_callejero .ejemplo {
+	font-size:9px;
+	display:none;
+}
+#modulo_servicios h4 {
+	display:none;
+}
+/* fin servicios v2 */
+
+/* modulo servicios */
+#carrusel_servicios h4 {
+	text-align:left !important;
+	text-indent:-9999px !important;
+	float:right;
+	width:300px !important;
+}
+#carrusel_contenido_principal {
+	border:1px solid #e5e5e5;
+	float:left;
+	padding:4px 0 0;
+	width:307px;
+	background:#FFF url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_servicios.gif) repeat-x 0 bottom;
+	height:190px;
+}
+#carrusel_servicios #nav_carrusel {
+	background:#D8DEE2 none repeat scroll 0 0;
+	display:inline;
+	float:left;
+	left:3px;
+	position:relative;
+	top:0;
+	width:300px;
+}
+#carrusel_servicios #nav_carrusel li {
+	float:left;
+}
+#carrusel_servicios #nav_carrusel li a {
+	background:#D9DFE2 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/navegacion_servicios.jpg) no-repeat scroll right top;
+	float:left;
+	height:50px;
+	margin:0;
+	padding:0;
+	text-indent:-9999px;
+	width:60px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_0 a {
+	background-position: right top;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_1 a {
+	background-position:right -50px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_2 a {
+	background-position: right -100px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_3 a {
+	background-position: right -150px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_4 a {
+	background-position: right -200px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_0 a:hover {
+	background-position:center top;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_1 a:hover {
+	background-position:center -50px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_2 a:hover {
+	background-position:center -100px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_3 a:hover {
+	background-position:center -150px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_4 a:hover {
+	background-position:center -200px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_0.numero_activa a {
+	background-position:left top;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_1.numero_activa a {
+	background-position:left -50px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_2.numero_activa a {
+	background-position:left -100px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_3.numero_activa a {
+	background-position:left -150px;
+}
+#carrusel_servicios #nav_carrusel li#item_pestana_GDP_4.numero_activa a {
+	background-position:left -200px;
+}
+#carrusel_contenido_principal .pestana_GDP {
+	float:left;
+	height:115px;
+	left:0;
+	overflow:visible;
+	padding-top:12px;
+	position:relative;
+	top:-1px;
+	width:304px;
+}
+#carrusel_contenido_principal .pestana_GDP h5 {
+	color:#7B7B7B;
+	float:left;
+	display:inline;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:17px;
+	font-weight:normal;
+	position:absolute;
+	right:6px;
+	top:-83px;
+}
+#carrusel_contenido_principal .pestana_GDP label {
+	display:inline;
+	float:left;
+	margin:0 0 0 9px;
+	width:264px;
+}
+#carrusel_contenido_principal .pestana_GDP label strong {
+	display:inline;
+	float:left;
+	font-size:11px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	width:80px;
+}
+#carrusel_contenido_principal .pestana_GDP label select {
+	float:right;
+	width:177px;
+}
+#carrusel_contenido_principal .pestana_GDP div.botones {
+	bottom:18px;
+	display:inline;
+	float:left;
+	height:18px;
+	left:9px;
+	margin-top:14px !important;
+	position:absolute !important;
+	width:264px;
+	z-index:4;
+}
+#carrusel_contenido_principal .pestana_GDP div.botones input {
+	background:#7C9EB3 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/pestanas_lomas_normal.gif) repeat-x scroll left center;
+	border:medium none;
+	color:#FFFFFF;
+	height:18px;
+	margin:0;
+	padding:1px 11px;
+	width:129px;
+}
+#carrusel_contenido_principal .pestana_GDP form {
+	overflow:hidden;
+	background-color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	display:inline;
+	float:left;
+	margin:0 0 0 12px;
+	height:112px;
+	padding-top:6px;
+	position:relative;
+	width:280px;
+}
+#servicio_tiempo p, #servicio_diccionario p, #servicio_cartelera p {
+	float:left;
+	font-size:12px;
+	left:22px;
+	position:absolute;
+	top:20px;
+	z-index:1;
+}
+#carrusel_contenido_principal #servicio_tiempo form, #carrusel_contenido_principal #servicio_diccionario form, #carrusel_contenido_principal #servicio_cartelera form {
+	height:85px;
+	padding-top:30px;
+}
+#carrusel_contenido_principal #servicio_callejero label strong {
+	width:264px !important;
+}
+#servicio_cartelera div.botones input, #servicio_diccionario div.botones input, #servicio_callejero div.botones input, #servicio_tiempo div.botones input {
+	float:right;
+}
+#servicio_trafico div.botones input.enviar {
+	float:left;
+}
+#servicio_trafico div.botones input.borrar {
+	float:right;
+}
+#servicio_diccionario input.buscar {
+	border:1px solid #7F9DB9;
+	display:inline;
+	float:right;
+	margin:1px 0 1px 4px;
+	width:175px;
+}
+#servicio_cartelera strong {
+	display:block;
+}
+#servicio_cartelera strong {
+	margin:9px 0 1px !important;
+	width:264px !important;
+}
+#servicio_cartelera select {
+	float:left !important;
+	margin-bottom:8px;
+	width:263px !important;
+}
+#servicio_callejero input {
+	width:260px;
+}
+#servicio_callejero strong {
+	margin-top:6px !important;
+}
+#servicio_callejero div.botones {
+	bottom:15px;
+	left:21px;
+	margin-top:14px !important;
+	position:absolute !important;
+}
+#servicio_callejero label {
+	margin:0;
+}
+#servicio_callejero p {
+	margin-left:9px;
+}
+#servicio_tiempo strong {
+	margin:0 0 1px !important;
+	width:264px !important;
+}
+#servicio_tiempo label input {
+	width:258px !important;
+	margin-bottom:4px;
+	display:inline;
+	float:left;
+}
+/* fin módulo servicios */
+
+#contenido_principal .col_02 .modulo h4 {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/tope_modulos_col02.gif) no-repeat scroll right 0;
+	color:#7B7B7B;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:17px;
+	font-weight:normal;
+	left:auto;
+	padding:13px 20px 0 0;
+	position:relative;
+	right:-11px;
+	text-align:right;
+	top:0;
+	width:auto;
+}
+#contenido_principal .col_02 .modulo h4 a {
+	color:#7B7B7B;
+	background:none;
+}
+#contenido_principal h4 {
+	margin-right:0;
+	/*	padding-right:6px;*/
+	width:994px;
+}
+#contenido .col_01 h4 {
+	width:auto;
+}
+#contenido_principal .col_02 {
+	clear:right;
+	display:block;
+	margin:12px 0;
+	padding-bottom:1px;
+	width:320px;
+}
+.bloque_miscelanea .contenidos {
+	float:left;
+	width:992px;
+}
+.bloque_miscelanea .contenidos .columna_02 {
+	float:right;
+	width:317px;
+	overflow:hidden;
+}
+.bloque_miscelanea .contenidos .columna_01 {
+	width:675px;
+	float:left;
+}
+.bloque_publicidad, .publicidad_entre_bloques {
+	z-index:999;
+}
+/* La bolsa */
+.nav_economia li a {
+	background:#7C9EB3 url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/pestanas_lomas_normal.gif) repeat-x scroll left center !important;
+	color:#FFFFFF !important;
+	font-weight:normal;
+	padding:3px 10px !important;
+}
+.nav_economia li a:hover {
+	color:#FFF;
+}
+.nav_economia li.numero_activa a {
+	background:#FFFFFF none repeat scroll 0 0 !important;
+	border-bottom:1px solid #FFFFFF !important;
+	color:#6D7D92 !important;
+}
+#modulo_economia .nav_economia li {
+	border:1px solid #80a7bf;
+}
+#modulo_lomejor .nav_economia {
+	position:absolute;
+	left:auto;
+	right:0;
+	top:-20px;
+	width:auto;
+}
+#modulo_lomejor .nav_economia li {
+	bottom:-1px;
+	font-size:11px;
+	margin:0 0 0 1px;
+	position:relative;
+	text-transform:uppercase;
+	border:1px solid #DDE1E5;
+}
+#modulo_lomejor .contenido_modulo_economia {
+	border:1px solid #DDE1E5;
+	margin:0;
+}
+#modulo_lomejor .contenido {
+	clear:none;
+	display:inline;
+	float:left;
+	height:auto;
+	margin:1px;
+	overflow:visible;
+	position:relative;
+	width:300px;
+}
+#modulo_lomejor.opcion_a .bolsas {
+	margin-bottom:4px;
+}
+#modulo_lomejor.opcion_a .publicidad {
+	background-color:#000000;
+	float:left;
+	height:90px;
+}
+#modulo_lomejor .nav_economia li.numero_activa {
+	border-bottom:1px solid #fff;
+}
+.modulo_indice img {
+	display:none;
+}
+.modulo_economia img {
+	display:none;
+}
+/* reemplazar */
+#contenido_secundario h3 {
+	display:inline;
+}
+#contenido_principal .col_02 {
+	clear:right;
+	display:inline !important;
+	margin:12px 0;
+	padding-bottom:1px;
+	width:320px;
+}
+.publicidad_300 {
+	float:right;
+	margin:0 0 10px !important;
+	padding:0 11px 0 0;
+	position:relative;
+	width:309px;
+	z-index:999;
+}
+.publicidad_300 table{
+	float:left;
+}
+.publicidad_300 table, 
+.publicidad_300 th, 
+.publicidad_300 td {
+	background-color: white !important;
+	padding:0px;
+}
+.wrap {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v3.0/bg_bloque_02.png) repeat scroll -13px 0;
+	float:left;
+	padding:0 4px 10px 15px;
+	width:981px;
+}
+#contenido_principal .col_02 .modulo h4 {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/tope_modulos_col02.gif) no-repeat scroll right 0;
+	color:#7B7B7B;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:17px;
+	font-weight:normal;
+	left:auto;
+	margin:0 0 10px;
+	padding:13px 20px 0 0;
+	position:relative;
+	right:0;
+	text-align:right;
+	top:0;
+	width:auto;
+}
+.portadilla #contenido_principal .col_02 .modulo h4 {
+}
+#contenido_principal .col_02 .modulo h4 a {
+	color:#7B7B7B;
+	background:none;
+}
+#contenido_principal .wrap {
+	margin-bottom:0;
+	padding-bottom:0;
+}
+.bloque_miscelanea .contenidos {
+	float:left;
+	width:992px;
+}
+.bloque_miscelanea .contenidos .columna_02 {
+	float:right;
+	width:317px;
+	overflow:hidden;
+}
+.bloque_miscelanea .contenidos .columna_01 {
+	width:675px;
+	float:left;
+}
+.bloque_publicidad, .publicidad_entre_bloques {
+	z-index:999;
+	position:relative;
+}
+.modulo_servicios .servicios li {
+	width:69px;
+}
+/* fin reemplazar */
+
+
+/* carrucel elmundo.es */
+div#carrusel_elmundoes {
+	background:#E7E9EC url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_carrusel_elmundoes.jpg) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:178px;
+	margin:0 -11px -3px;
+	width:992px;
+}
+div#carruseles_especiales {
+	background:#E7E9EC url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_carrusel_especiales.jpg) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:178px;
+	margin:0 -11px 5px;
+	width:992px;
+}
+#modulo_tira_elmundoes, #modulo_tira_noticias_especiales {
+	clear:both;
+	display:inline;
+	float:left;
+	height:178px;
+	left:0;
+	margin:0;
+	position:relative;
+	top:0;
+	width:992px;
+}
+#modulo_tira_elmundoes p, #modulo_tira_noticias_especiales p {
+	font-size:17px;
+	font-weight:bold;
+	padding:15px 0 0 35px;
+	position:relative;
+	z-index:22;
+}
+#modulo_tira_elmundoes .contenido_modulo, #modulo_tira_noticias_especiales .contenido_modulo {
+	display:inline;
+	float:left;
+	height:128px;
+	left:34px;
+	overflow:hidden;
+	position:absolute;
+	top:35px;
+	width:925px;
+	z-index:2;
+}
+#modulo_tira_elmundoes .contenido_modulo ul, #modulo_tira_noticias_especiales .contenido_modulo ul {
+	float:left;
+	display:inline;
+	width:4000px;
+	position:relative;
+	top:0;
+	left:0;
+}
+#modulo_tira_elmundoes ul li, #modulo_tira_noticias_especiales ul li {
+	background:#1F1F1F none repeat scroll 0 0;
+	border:1px solid #1D2E46;
+	display:inline;
+	float:left;
+	height:118px;
+	margin:0 5px 0 0;
+	padding:4px 8px;
+	position:relative;
+	width:163px;
+}
+#modulo_tira_elmundoes .nav_paginacion, #modulo_tira_noticias_especiales .nav_paginacion {
+	clear:both;
+	display:inline;
+	float:left;
+	height:166px;
+	left:8px;
+	margin:0 auto;
+	position:absolute;
+	text-align:center;
+	top:36px;
+	width:977px;
+	z-index:1;
+}
+/*#modulo_tira_elmundoes .nav_paginacion.fin_izq_class_elmundo, #modulo_tira_noticias_especiales .nav_paginacion,.fin_izq_class_elmundo {
+	display:none;
+}
+#modulo_tira_elmundoes .nav_paginacion.fin_der_class_elmundo, #modulo_tira_noticias_especiales .nav_paginacion,.fin_der_class_elmundo {
+	display:none;
+}*/
+#modulo_tira_elmundoes .nav_paginacion li, #modulo_tira_noticias_especiales .nav_paginacion li {
+	background:transparent none repeat scroll 0 0;
+	border:medium none;
+	display:inline;
+	float:left;
+	margin:0;
+	padding:0;
+	position:absolute;
+	text-indent:-9999px;
+	top:0;
+	width:26px;
+}
+#modulo_tira_elmundoes .nav_paginacion li.anterior, #modulo_tira_noticias_especiales .nav_paginacion li.anterior {
+	left:0;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente, #modulo_tira_noticias_especiales .nav_paginacion li.siguiente {
+	right:0;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente a, #modulo_tira_elmundoes .nav_paginacion li.anterior a {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/btns_carrucel_elmundoes.gif) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:126px;
+	width:26px;
+}
+#modulo_tira_noticias_especiales .nav_paginacion li.siguiente a, #modulo_tira_noticias_especiales .nav_paginacion li.anterior a {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/btns_carrucel_especiales.gif) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:126px;
+	width:26px;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente a, #modulo_tira_noticias_especiales .nav_paginacion li.siguiente a {
+	background-position: left bottom;
+}
+#modulo_tira_elmundoes .nav_paginacion li.anterior a:hover, #modulo_tira_noticias_especiales .nav_paginacion li.anterior a:hover {
+	background-position: right top;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente a:hover, #modulo_tira_noticias_especiales .nav_paginacion li.siguiente a:hover {
+	background-position: right bottom;
+}
+#modulo_tira_elmundoes img, #modulo_tira_noticias_especiales img {
+	height:126px;
+	width:179px;
+}
+#modulo_tira_elmundoes ul#carrusel_de_noticias_elmundo li a, #modulo_tira_noticias_especiales ul#carrusel_de_noticias_elmundo_especial li a {
+	height:126px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:179px;
+	z-index:1
+}
+#modulo_tira_elmundoes ul#carrusel_de_noticias_elmundo li dl a, #modulo_tira_noticias_especiales ul#carrusel_de_noticias_elmundo_especial li dl a {
+	width:auto;
+	height:auto;
+	position:static;
+	color:#fff;
+}
+#modulo_tira_elmundoes ul#carrusel_de_noticias_elmundo li dl, #modulo_tira_noticias_especiales ul#carrusel_de_noticias_elmundo_especial li dl {
+	background:#1d2e46 none no-repeat scroll 0 0;
+	bottom:0;
+	left:0;
+	opacity:0.9;
+	padding-bottom:3px;
+	position:absolute;
+	width:179px;
+	z-index:2;
+}
+#modulo_tira_elmundoes dt.antetitulo, #modulo_tira_noticias_especiales dt.antetitulo {
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:normal;
+	padding:4px 8px 0;
+}
+#modulo_tira_elmundoes dd.defecto, #modulo_tira_noticias_especiales dd.defecto {
+	font-size:14px;
+	font-weight:bold;
+	height:15px;
+	overflow:hidden;
+	padding:0 8px 4px;
+}
+#modulo_tira_elmundoes ul#carrusel_de_noticias_elmundo li dl a:hover, #modulo_tira_noticias_especiales ul#carrusel_de_noticias_elmundo_especial li dl a:hover {
+	color:#748fab;
+}
+#carruseles p {
+	font-size:17px;
+	font-weight:bold;
+	padding:6px 0 0 33px;
+	position:relative;
+	z-index:22;
+}
+#modulo_tira_noticias_especiales p a {
+	color:#555555;
+}
+
+/*estilos especiales carrusel ELECCIONES*/
+.carrusel-elecciones-generales #modulo_tira_elmundoes  p, .carrusel-elecciones-generales #modulo_tira_noticias_especiales  p {
+	font: 140% Georgia,"Times New Roman",Times,serif;
+    padding: 12px 0 0 35px;
+    position: relative;
+    z-index: 22;
+	color: #D93434;
+}
+.carrusel-elecciones-generales #modulo_tira_elmundoes  p a, .carrusel-elecciones-generales #modulo_tira_noticias_especiales  p a { color: #D93434; }
+#carruseles_especiales.carrusel-elecciones-generales {
+    background: url("http://estaticos.elmundo.es/elecciones/elecciones-generales/2011/img/carrusel/fondo-carrusel.png") no-repeat scroll 0 0 #EDEDED!important;
+}
+.carrusel-elecciones-generales #modulo_tira_elmundoes ul#carrusel_de_noticias_elmundo li dl, .carrusel-elecciones-generales #modulo_tira_noticias_especiales ul#carrusel_de_noticias_elmundo_especial li dl {
+    background: #373737;
+}
+
+/* fin carrucel elmundo.es */
+
+/* modulo_noticia_dia */
+.modulo_individual .dia_hoy {
+	padding-bottom:13px;
+}
+/* fin modulo_noticia_dia */
+
+/* inicio blogs */
+.modulo_blogs300 {
+	clear:both;
+	float:left;
+	display:inline;
+	position:relative;
+	width:320px;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/bajo_modulos_col02.gif) no-repeat scroll right bottom;
+}
+.modulo_blogs300 h4 {
+	position:static !important;
+	width:300px !important;
+}
+.modulo_blogs300 ul {
+	display:inline;
+	float:left;
+	width:300px;
+	position:relative;
+}
+.modulo_blogs300 .contenido {
+	display:inline;
+	float:left;
+	height:168px;
+	margin:0 0 20px 8px;
+	overflow:hidden !important;
+	position:relative;
+}
+.modulo_blogs300 ul li {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_lista_blogs.gif) no-repeat scroll right bottom;
+	border-top:1px solid #D3D3D3;
+	display:inline;
+	float:left;
+	height:33px;
+	margin-bottom:1px;
+	padding:2px 80px 5px 6px;
+	position:relative;
+	width:214px;
+}
+.modulo_blogs300 p.update {
+	border:medium none;
+	font-family:georgia;
+	font-size:15px;
+	line-height:30px;
+	position:absolute;
+	right:9px;
+	top:4px;
+}
+.modulo_blogs300 .antetitulo {
+	font-size:11px;
+}
+.modulo_blogs300 h5 {
+	font-size:12px;
+	line-height:18px;
+	margin:0;
+}
+.modulo_blogs300 div.mas a {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/link_mas_info.gif) no-repeat scroll 0 bottom;
+	bottom:0;
+	clear:none;
+	float:none;
+	height:25px;
+	position:absolute;
+	right:2px;
+	text-align:left;
+	text-indent:-9999px;
+	width:21px;
+}
+.modulo_blogs300 h5 a {
+	color:#7b7b7b;
+	margin:0;
+	padding:0;
+}
+/* fin blogs */
+
+
+/* estilos para minieditores y editores */
+body.minieditores #carruseles {
+	background:transparent none repeat scroll 0 0;
+	float:left;
+	padding:0 45px;
+}
+body.minieditores ul.carrusel_de_noticias_elmundo {
+	position:static !important;
+}
+body.minieditores #modulo_tira_noticias {
+	float:left;
+	display:inline;
+}
+body.minieditores #modulo_tira_noticias .contenido_modulo ul {
+	display:inline;
+	float:left;
+	left:0;
+	position:relative;
+	top:0;
+	margin:0;
+	padding:0;
+}
+body.minieditores #modulo_tira_noticias ul {
+	list-style:none;
+	float:left;
+	display:inline;
+}
+body.minieditores #modulo_tira_noticias ul li {
+	float:left;
+	height:130px;
+	width:182px;
+	position:relative;
+	padding-bottom:32px;
+}
+body.minieditores #modulo_tira_noticias ul#carrusel_de_noticias_elmundo li dl {
+	background:transparent url(http://estaticos.elmundo.es/elmundodeporte/iconos/v4.x/v4.01/transparencia2.png) no-repeat scroll 0 0;
+	bottom:36px;
+	left:0;
+	padding-bottom:3px;
+	position:absolute;
+	width:179px;
+	z-index:2;
+}
+body.minieditores #modulo_tira_noticias ul#carrusel_de_noticias_elmundo li a {
+	height:126px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:179px;
+	z-index:1;
+}
+body.minieditores #modulo_tira_noticias ul#carrusel_de_noticias_elmundo table a {
+	height:auto!important;
+	left:auto!important;
+	position:static!important;
+	top:auto!important;
+	width:auto!important;
+}
+body.minieditores #modulo_tira_noticias dt.antetitulo {
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:normal;
+	padding:4px 8px 0;
+}
+body.minieditores #modulo_tira_noticias dd.defecto {
+	font-size:15px;
+	font-weight:bold;
+	height:15px;
+	margin:0;
+	overflow:hidden;
+	padding:0 8px 4px;
+}
+body.minieditores #modulo_tira_noticias ul#carrusel_de_noticias_elmundo li dl a {
+	color:#fff;
+	height:auto;
+	position:static;
+	width:auto;
+	text-decoration:none;
+}
+body.minieditores div.contenido_modulo {
+	float:left;
+	display:inline;
+	margin-top:40px;
+}
+body.minieditores ul#carrusel_de_noticias_elmundo li a img {
+	width:179px;
+	height:126px;
+}
+body.minieditores ul#carrusel_de_noticias_elmundo li table {
+	bottom:11px;
+	position:absolute;
+}
+body.minieditores ul#carrusel_de_noticias_elmundo table img {
+	width:auto !important;
+	height:auto !important;
+}
+body.minieditores ul.nav_paginacion, ul.nav_paginacion * {
+	display:none;
+}
+body.minieditores .menuseditor {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+body.minieditores #wrap {
+	float:left;
+	left:50%;
+	margin-left:-500px;
+	position:absolute;
+	top:0;
+	width:1000px;
+}
+body.minieditores #wrap h4 {
+	background:none;
+}
+body.minieditores #bloque_suplementos li table {
+	position:absolute;
+	bottom:-30px;
+}
+body.minieditores #bloque_suplementos li table img {
+	border:none;
+}
+body.minieditores #bloque_suplementos li table a {
+	width:auto;
+	height:auto;
+	background-color:transparent;
+}
+body.minieditores #bloque_suplementos ul li {
+	margin:8px 8px 36px;
+	overflow:visible;
+}
+body.minieditores #bloque_suplemento_destacado {
+	margin-bottom:32px;
+}
+body.minieditores .modulo_especiales_encuentros li.first_child {
+	margin-bottom:32px;
+	overflow:visible;
+}
+body.minieditores .modulo_especiales_encuentros li.first_child table {
+	bottom:-30px;
+	position:absolute;
+}
+body.minieditores .modulo_especiales_encuentros .contenido {
+	height:auto;
+	overflow:visible;
+}
+body.minieditores .modulo_especiales_encuentros li.first_child table img {
+	border:none;
+}
+body.minieditores #bloque_noticias_externas li {
+	position:relative;
+}
+body.minieditores #bloque_noticias_externas li table {
+	position:absolute;
+	right:-117px;
+	top:1px;
+}
+body.minieditores #bloque_noticias_externas div.externa, body.minieditores #bloque_noticias_externas {
+	overflow:visible;
+}
+body.minieditores table, td, tr {
+	border-collapse:separate;
+	color:#FFFFFF;
+	border-spacing:0;
+}
+body.minieditores .modulo_especiales_encuentros {
+	float:left;
+	position:relative;
+	width:153px;
+}
+body.minieditores .modulo_especiales_encuentros .especiales {
+	position:relative;
+	right:4px;
+}
+body.minieditores #bloque_multinoticias {
+	height:auto;
+	padding:0;
+}
+body.minieditores #bloque_multinoticias .slide {
+	height:320px;
+	position:static;
+	width:640px;
+	border-color:#25292E #3A3D40 #3A3D40;
+	border-style:solid;
+	border-width:8px 1px 1px;
+}
+body.minieditores #bloque_multinoticias .noticia {
+	position:relative;
+}
+body.minieditores #bloque_multinoticias table {
+	margin-bottom:22px;
+}
+body.minieditores #bloque_multinoticias h4 {
+	margin-bottom:3px;
+	position:static;
+}
+body.minieditores #bloque_multinoticias #modulo_multinoticias {
+	border:medium none;
+	left:16px;
+	top:0;
+}
+body.minieditores .modulo_individual li.first_child {
+	overflow:visible;
+}
+body.minieditores .modulo_individual table {
+	bottom:-30px;
+	position:absolute;
+}
+/* fin estilos para minieditores y editores */
+
+/* cambios cabecera 04 marzo 2010 */
+#nav_miscelanea #nav_clasificados a.titular {
+	color:#fff;
+	cursor:pointer;
+	padding-right:20px;
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_menu_clasificados.gif) no-repeat scroll 74px center;
+}
+#nav_sub_clasificados {
+	background-color:#93ABBC;
+	display:none;
+	float:left;
+	left:0;
+	position:absolute;
+	top:20px;
+	width:88px;
+}
+#nav_sub_clasificados li {
+	border-top:1px solid #63859d;
+	border-bottom:1px solid #b6c6d1;
+	padding:0;
+	margin:0;
+}
+#nav_sub_clasificados li a {
+	color:#fff;
+	font-weight:bold;
+	float:left;
+	display:inline;
+	width:78px;
+	padding:3px 5px;
+	margin:0;
+	border:0;
+	background:none;
+}
+#nav_sub_clasificados li a:hover {
+	background-color:#b6c6d1;
+	color:#fff;
+}
+#nav_sub_clasificados.desplegado {
+	display:inline;
+}
+#nav_principal li#nav_siguenos {
+	display:inline;
+	float:right;
+	height:22px;
+	margin-top:3px;
+	overflow:hidden;
+	width:48px;
+}
+#nav_principal li#nav_siguenos li a, #nav_principal li#nav_siguenos li a:hover {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/iconos_sigueme.gif) no-repeat scroll 0 0;
+	float:left;
+	height:20px;
+	margin:1px;
+	padding:0;
+	text-indent:-9999px;
+	width:20px;
+}
+#nav_principal li#nav_siguenos li.facebook a {
+	background-position:0 bottom;
+}
+li#nav_orbyt {
+	text-indent:-9999px;
+}
+li#nav_orbyt a {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/logo_orbyt.gif) no-repeat scroll left top;
+	height:12px;
+	padding:0;
+	width:163px;
+}
+.portadilla .col_02 {/*width:315px !important;*/}
+#contenido_principal #bloque_multinoticias {
+	background:transparent none repeat scroll 0 0;
+	margin:0;
+	padding:0;
+	width:640px;
+}
+#contenido_principal #bloque_multinoticias h4 {
+	display:none;
+}
+#contenido_principal #bloque_multinoticias #modulo_multinoticias {
+	border:0 none;
+	margin:0;
+}
+/* fin cambios cabecera */
+
+/*NUEVO SALUD*/
+#nav_salud .nav_sub {
+	display:block !important;
+}
+/* ****activos**** */
+.portada #nav_principal #nav_index_salud a, .oncologia #nav_principal #nav_cancer a, .hepatitissida #nav_principal #nav_sida a, .neurociencia #nav_principal #nav_neurociencia a, .mujer #nav_principal #nav_mujer a, .biociencia #nav_principal #nav_biociencia a, .corazon #nav_principal #nav_corazon a, .tecnologiamedica #nav_principal #nav_tecnologiamedica a, .nutricion #nav_principal #nav_nutricion a, .codigosalud #nav_principal #nav_codigo a, .pielsana #nav_principal #nav_piel a, .psiquiatriainfantil #nav_principal #nav_infantil a, .sexualidad #nav_principal #nav_sexualidad a {
+	background:#1F5B5C!important;
+	color:#fff!important;
+	font-weight:bold;
+	cursor:default;
+}
+#salud #nav_edicion_espana p.label {
+	top:144px;
+	display:none;
+}
+#salud #contenido {
+	clear:both;
+	float:left;
+	overflow:hidden;
+	padding:0;
+	position:relative;
+	width:100%;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .modulo {
+	clear:both;
+	display:inline;
+	float:left;
+	margin:20px 0 0;
+	padding:0;
+	position:relative;
+	width:320px;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .modulo h4 {
+	left:0;
+	right:auto;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .modulo h4 {
+	background:url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/tope_modulos_col02.gif") no-repeat scroll right 0 transparent;
+	color:#7B7B7B;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:17px;
+	font-weight:normal;
+	left:auto;
+	margin:0 0 10px;
+	padding:13px 17px 0 0;
+	position:relative;
+	right:0;
+	text-align:right;
+	top:0;
+	width:auto;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .modulo_individual .contenido {
+	display:inline;
+	float:left;
+	margin:0;
+	position:relative;
+	top:0;
+	width:320px;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .modulo_individual .contenido a.mas {
+	background:url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/link_mas_info.gif") no-repeat scroll 0 bottom transparent;
+	bottom:0 !important;
+	clear:none;
+	float:none;
+	height:25px;
+	position:absolute;
+	right:2px;
+	text-align:left;
+	text-indent:-9999px;
+	width:21px;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .bloque_miscelanea .mas {
+	line-height:24px;
+	position:absolute;
+	right:0;
+	bottom:0px;
+	white-space:nowrap;
+	width:auto;
+	z-index:150;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_lomejor #modulo_ranking {
+	clear:both;
+	display:inline;
+	float:left;
+	margin:30px 0 0 8px !important;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking {
+	margin-top:25px !important;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking {
+	background:none repeat scroll 0 0 transparent;
+	clear:both;
+	float:left;
+	margin:30px 0 0 !important;
+	padding:0;
+	position:relative;
+	width:300px;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_lomejor ul#pestanas_modulo_ranking_superior {
+	height:30px;
+	overflow:hidden;
+	width:305px;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking .nav {
+	top:-27px;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking .pestana_GDP {
+	border:1px solid #DDE1E5;
+	font:12px/18px Arial, Helvetica, sans-serif;
+	padding:10px;
+	position:relative;
+	z-index:1;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .modulo .pestana_GDP.activa_GDP, #contenido_secundario .bloque_miscelanea .columna_02 .modulo .pestana_GDP.activaJs_GDP {
+	display:block;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .modulo .pestana_GDP {
+	clear:both;
+	display:none;
+	overflow:hidden;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking ol {
+	background:url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_listado_noticias.gif") repeat scroll 0 0 #FFFFFF;
+	height:180px;
+	margin-left:0;
+	padding-left:27px;
+	width:250px;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking ol, #modulo_ranking ol li {
+	color:#035A89;
+	list-style:decimal outside none;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 .publicidad_patrocinio_ranking img {
+	display:inline;
+	line-height:15px;
+	vertical-align:middle;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking .mas {
+	border-color:#E0E0E0;
+	border-right:0 none;
+	border-style:dotted none none;
+	border-width:1px 0 0;
+	margin:8px 0 -5px !important;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_lomejor .nav {
+	top:-24px;
+	left:0;
+	z-index:100;
+	clear:both;
+	position:static;
+}
+#contenido_secundario .bloque_miscelanea .columna_02 #modulo_ranking ul li.numero_activa a {
+	height:19px;
+	padding:5px 6px 1px;
+}
+/*GRAFICOS INTERACTIVOS*/
+
+#graficos #contenido_principal {
+	display:inline;
+	margin-left:-20px;
+	width:990px;
+}
+#graficos .contenido_noticia_01 p.antetitulo {
+	margin-left:20px;
+	padding:0;
+}
+#graficos .metadata_noticia .update {
+	font-size:11px;
+	line-height:15px;
+	margin-left:10px;
+	width:300px;
+}
+.portadilla #bloque_hemeroteca h5, #content_cosa_cuadros h5 {
+	margin-top:0;
+}
+.portadilla #bloque_hemeroteca {
+	margin-top:0;
+}
+.portadilla #bloque_hemeroteca .nav_siguenos {
+	margin-top:-7px;
+}
+/*Modulo Estrenos*/
+.contenido.estrenos dl {
+	float:left;
+	font-size:11px;
+	margin:0 0 4px 10px;
+	padding:0;
+	text-align:left;
+}
+.contenido.estrenos dd {
+	border-bottom:1px dotted #CCCCCC;
+	float:left;
+	font-size:12px;
+	margin:0 0 4px;
+	padding:0 20px 3px 5px;
+	width:275px;
+}
+/*Modulo FHM*/ 
+
+.columna.tresymedio h2 {
+	padding: 0 0 0 75px;
+}
+/**/
+#bloque_suplemento_destacado.generico {
+	background:#394756;
+	float:left;
+	height:374px;
+	padding:0 18px;
+	position:relative;
+	width:281px;
+}
+#bloque_suplemento_destacado.generico h5 {
+	color:#FFFFFF;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	font-style:normal;
+	font-weight:bold;
+	margin:5px 0 3px;
+}
+#bloque_suplemento_destacado.generico div.noticia {
+	border-top:6px solid #1F2E3E;
+	border-right:1px solid #1F2E3E;
+	border-bottom:1px solid #1F2E3E;
+	border-left:1px solid #1F2E3E;
+	height:320px;
+	left:18px;
+	overflow:hidden;
+	padding-top:0;
+	position:absolute;
+	top:22px;
+	width:280px;
+}
+#bloque_suplemento_destacado.generico div.noticia strong.titular {
+	background:url("http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_titulo_generico.png") no-repeat scroll 0 0 transparent;
+	bottom:30px;
+	float:left;
+	font-weight:normal;
+	left:0;
+	padding:4px 9px;
+	position:absolute;
+	width:262px;
+}
+/*Bloque Seo */
+.bloque_pie_enlaces.elementos_recomendados {
+	margin-bottom:10px;
+	background:none;
+}
+/*SubNavegacion Cultura*/
+#cultura #nav_cultura .nav_sub {
+	display:block !important;
+}
+#cultura #nav_edicion_espana p.label {
+	display:none;
+}
+/*SubNavegacion Comic*/
+#comic #nav_cultura .nav_sub {
+	display:block !important;
+}
+#comic #nav_edicion_espana p.label {
+	display:none;
+}
+
+
+/* Adios explorer 6.0 y 7.0 */
+.opcion_ie6 {
+	margin:10px auto;
+	padding:10px;
+	width:970px;
+	background: #FFC;
+	border:1px solid #FFED00;
+	height:30px;
+	position:relative;
+}
+.opcion_ie6 p {
+	font-size:14px;
+	float:left;
+	width:900px;
+}
+.opcion_ie6 a.cerrar {
+	background:#333;
+	color:#FFF;
+	border: 1px solid #000;
+	padding: 0 5px;
+	float:right;
+	margin-right:5px;
+	font-size:11px;
+	font-weight: bold;
+}
+.opcion_ie6 .descargar_ie8 {
+	position:absolute;
+	right:70px;
+	top:5px;
+}
+/*Publicidad Multinoticias*/
+.publicidad_multinoticias {
+	display:block;
+	float:left;
+	position:absolute;
+	right:5px;
+	top:5px;
+}
+/**/
+/*publicidad textlinkespeciales*/
+.publicidad_textlink_especial a {
+	background:#FFFFFF;
+	border:1px solid #DDE1E5;
+	display:block;
+	float:left;
+	font-family:georgia;
+	font-weight:bold;
+	margin:-11px 0 10px 8px;
+	padding:7px;
+	text-decoration:none;
+	width:284px;
+}
+/**/
+/*agenda*/
+#economia .modulo_agenda {
+	font-weight:bold;
+	width:308px;
+	clear:both;
+	margin:0 0 15px;
+	padding:0 0 10px;
+	overflow:hidden;
+	background:#f8f8f8;
+	border:1px solid #E7EAEA;
+}
+#economia .modulo_agenda h4 {
+	padding:5px 10px 5px 20px;
+	margin:0;
+	text-transform:uppercase;
+	color:#fff;
+	font-size:12px;
+	text-align:left;
+	background:#C8CED0 url(http://estaticos.elmundo.es/mundodinero/iconos/v3.0/bg_panel_nav.gif) repeat-x top left;
+}
+#economia .modulo_agenda p {
+	text-align:center;
+	font-weight:bold;
+	color:#B1BBBE;
+	text-transform:uppercase;
+	font-size:12px;
+	padding:10px 0 7px 0;
+	margin:0;
+	background:#fff url(http://estaticos.elmundo.es/mundodinero/iconos/v3.0/bg_panel_activo.gif) repeat-x bottom center;
+	border:0;
+}
+#economia .modulo_agenda p .dia_numero {
+	font:36px/20px Georgia, "Times New Roman", Times, serif;
+	padding:0 2px 8px 0;
+	letter-spacing:-0.05em;
+	color:#3A78A0;
+}
+#economia .modulo_agenda ol {
+	font-weight:normal;
+	margin:0 0 0;
+	padding:10px 0 0 0;
+	border-top:1px solid #e0e0e0;
+	list-style:none;
+	clear:both;
+}
+#economia  .modulo_agenda li {
+	line-height:1.5em;
+	list-style:none;
+	padding:2px 0 2px 20px;
+	margin:0;
+	font-size:11px;
+	border-bottom:1px solid #fff;
+	text-align:left;
+}
+#economia .modulo_agenda, #bloqueprincipal .modulo_agenda a {
+	font-weight:normal;
+	color:#666;
+}
+#economia .modulo_agenda a:hover {
+	color:#DA9208;
+}
+#economia .modulo_agenda a.ampliar_info {
+	color:#DA9208;
+	display:block;
+	text-align:right;
+	padding:5px 10px 0 35px;
+	font-size:11px;
+	font-weight:bold;
+	clear:both;
+}
+#economia .modulo_agenda ul {
+	padding-top:5px;
+	position:relative;
+	left:-1px;
+}
+#economia .modulo_agenda ul li {
+	border:0;
+	padding:0;
+	line-height:normal;
+	display:inline;
+	border-left:1px solid #e0e0e0;
+}
+#economia .modulo_agenda ul li a.ampliar_info {
+	padding:0 10px 0 20px;
+	display:inline;
+	text-align:left;
+	color:#3A78A0;
+}
+/* fin economia/portadilla.css */
+/*renta fija*/
+#economia .renta-fija table {
+	font-weight:bold;
+	width:308px;
+	clear:both;
+	margin:0 0 15px;
+	padding:0 0 10px;
+	overflow:hidden;
+	background:#f8f8f8;
+	border:1px solid #C8CED0;
+}
+#economia .renta-fija caption {
+background: #C8CED0 url(http://estaticos02.elmundo.es/mundodinero/iconos/v3.0/bg_panel_nav.gif) repeat-x 0% 0%;
+color: white;
+font-size: 12px;
+margin: 0px;
+padding: 5px 10px 5px 20px;
+text-align: left;
+text-transform: uppercase;
+}
+#economia .renta-fija th {
+background: white url(http://estaticos01.elmundo.es/mundodinero/iconos/v3.0/bg_panel_activo.gif) repeat-x 50% 100%;
+border: 0px;
+color: #666;
+font-size: 12px;
+font-weight: bold;
+margin: 0px;
+padding: 10px 0px 7px;
+text-align: center;
+text-transform: uppercase;
+}
+#economia .renta-fija tr {
+border-bottom: 1px solid #C8CED0;
+font-size: 11px;
+line-height: 1.5em;
+list-style: none;
+margin: 0px;
+padding: 2px 0px 2px 20px;
+text-align: left;
+}
+#economia .renta-fija td {
+border-right: 1px solid #C8CED0;
+font-size: 11px;
+line-height: 1.5em;
+list-style: none;
+margin: 0px;
+padding: 4px;
+text-align: left;
+color:#666;
+font-weight:normal;
+}
+#economia .renta-fija tr.par { background:#fff;
+}
+/*Modulo bolsa nikei*/
+.modulo_bolsas {float:left;  }
+.col_02 .modulo_bolsas{width: 300px;margin: 0 0 20px;border-bottom: 3px solid #CCC;padding: 0 0 5px;}
+.modulo_bolsas h4 {border-bottom:1px solid #E7EAEA;color:#DA9208;font:bold 14px Arial,Helvetica,sans-serif;margin:0;padding:8px 0 3px;text-transform:uppercase; width:100% !important; float:left}
+
+
+.modulo_bolsas dd.cotizacion.sube {background:url("http://estaticos.elmundo.es/mundodinero/iconos/v3.0/bullet_sube.gif") no-repeat scroll right center transparent;
+padding-right:25px;}
+.modulo_bolsas dd.cotizacion.baja {background:url("http://estaticos.elmundo.es/mundodinero/iconos/v3.0/bullet_baja.gif") no-repeat scroll right center transparent;
+padding-right:25px;}
+.modulo_bolsas dt.indice{display:none}
+.modulo_bolsas dd.cotizacion{color:#116999; font:bold 28px "Times New Roman",Times,serif; text-decoration:none; width:auto; float:left}
+.modulo_bolsas dd.var-porcentual {float:left; font-family:times New Roman; font-size:18px; font-weight:bold; margin:14px 5px 0;}
+.modulo_bolsas dd.variacion {float:left; font-size:13px; font-weight:normal; margin-top:15px; color:#999}
+.modulo_bolsas dd.variacion:before {content: "Var."; font-weight:bold;}
+.modulo_bolsas dd.sube, .col_02 #indices-mundo td.sube {color:#5F8E04 }
+.modulo_bolsas dd.baja, .col_02 #indices-mundo td.baja {color:#B30505 }
+
+/* NUEVO CARRUSEL DE COMPRAS */
+/* carrucel elmundo.es */
+div#carrusel_elmundoes {
+	background:#E7E9EC url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_carrusel_elmundoes.jpg) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:178px;
+	margin:0 -11px -3px;
+	width:992px;
+}
+div#carruseles_especiales {
+	background:#E7E9EC url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/fondo_carrusel_especiales.jpg) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:178px;
+	margin:0 -11px 5px;
+	width:992px;
+}
+#modulo_tira_elmundoes, #modulo_tira_noticias_especiales {
+	clear:both;
+	display:inline;
+	float:left;
+	height:178px;
+	left:0;
+	margin:0;
+	position:relative;
+	top:0;
+	width:992px;
+}
+#modulo_tira_elmundoes p, #modulo_tira_noticias_especiales p {
+	font-size:17px;
+	font-weight:bold;
+	padding:15px 0 0 35px;
+	position:relative;
+	z-index:22;
+}
+#modulo_tira_elmundoes .contenido_modulo, #modulo_tira_noticias_especiales .contenido_modulo {
+	display:inline;
+	float:left;
+	height:128px;
+	left:34px;
+	overflow:hidden;
+	position:absolute;
+	top:35px;
+	width:925px;
+	z-index:2;
+}
+#modulo_tira_elmundoes .contenido_modulo ul, #modulo_tira_noticias_especiales .contenido_modulo ul {
+	float:left;
+	display:inline;
+	width:4000px;
+	position:relative;
+	top:0;
+	left:0;
+}
+#modulo_tira_elmundoes ul li, #modulo_tira_noticias_especiales ul li {
+	background:#1F1F1F none repeat scroll 0 0;
+	border:1px solid #1D2E46;
+	display:inline;
+	float:left;
+	height:118px;
+	margin:0 5px 0 0;
+	padding:4px 8px;
+	position:relative;
+	width:163px;
+}
+#modulo_tira_elmundoes .nav_paginacion, #modulo_tira_noticias_especiales .nav_paginacion {
+	clear:both;
+	display:inline;
+	float:left;
+	height:166px;
+	left:8px;
+	margin:0 auto;
+	position:absolute;
+	text-align:center;
+	top:36px;
+	width:977px;
+	z-index:1;
+}
+/*#modulo_tira_elmundoes .nav_paginacion.fin_izq_class_elmundo, #modulo_tira_noticias_especiales .nav_paginacion,.fin_izq_class_elmundo {
+	display:none;
+}
+#modulo_tira_elmundoes .nav_paginacion.fin_der_class_elmundo, #modulo_tira_noticias_especiales .nav_paginacion,.fin_der_class_elmundo {
+	display:none;
+}*/
+#modulo_tira_elmundoes .nav_paginacion li, #modulo_tira_noticias_especiales .nav_paginacion li {
+	background:transparent none repeat scroll 0 0;
+	border:medium none;
+	display:inline;
+	float:left;
+	margin:0;
+	padding:0;
+	position:absolute;
+	text-indent:-9999px;
+	top:0;
+	width:26px;
+}
+#modulo_tira_elmundoes .nav_paginacion li.anterior, #modulo_tira_noticias_especiales .nav_paginacion li.anterior {
+	left:0;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente, #modulo_tira_noticias_especiales .nav_paginacion li.siguiente {
+	right:0;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente a, #modulo_tira_elmundoes .nav_paginacion li.anterior a {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/btns_carrucel_elmundoes.gif) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:126px;
+	width:26px;
+}
+#modulo_tira_noticias_especiales .nav_paginacion li.siguiente a, #modulo_tira_noticias_especiales .nav_paginacion li.anterior a {
+	background:transparent url(http://estaticos.elmundo.es/elmundo/iconos/v4.x/v4.02/btns_carrucel_especiales.gif) no-repeat scroll 0 0;
+	display:inline;
+	float:left;
+	height:126px;
+	width:26px;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente a, #modulo_tira_noticias_especiales .nav_paginacion li.siguiente a {
+	background-position: left bottom;
+}
+#modulo_tira_elmundoes .nav_paginacion li.anterior a:hover, #modulo_tira_noticias_especiales .nav_paginacion li.anterior a:hover {
+	background-position: right top;
+}
+#modulo_tira_elmundoes .nav_paginacion li.siguiente a:hover, #modulo_tira_noticias_especiales .nav_paginacion li.siguiente a:hover {
+	background-position: right bottom;
+}
+#modulo_tira_elmundoes img, #modulo_tira_noticias_especiales img {
+	height:126px;
+	width:179px;
+}
+#modulo_tira_elmundoes ul.carrusel_de_noticias_elmundo li a, #modulo_tira_noticias_especiales ul.carrusel_de_noticias_elmundo_especial li a {
+	height:126px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:179px;
+	z-index:1
+}
+#modulo_tira_elmundoes ul.carrusel_de_noticias_elmundo li dl a, #modulo_tira_noticias_especiales ul.carrusel_de_noticias_elmundo_especial li dl a {
+	width:auto;
+	height:auto;
+	position:static;
+	color:#fff;
+}
+#modulo_tira_elmundoes ul.carrusel_de_noticias_elmundo li dl, #modulo_tira_noticias_especiales ul.carrusel_de_noticias_elmundo_especial li dl {
+	background:#1d2e46 none no-repeat scroll 0 0;
+	bottom:0;
+	left:0;
+	opacity:0.9;
+	padding-bottom:3px;
+	position:absolute;
+	width:179px;
+	z-index:2;
+}
+#modulo_tira_elmundoes dt.antetitulo, #modulo_tira_noticias_especiales dt.antetitulo {
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:normal;
+	padding:4px 8px 0;
+}
+#modulo_tira_elmundoes dd.defecto, #modulo_tira_noticias_especiales dd.defecto {
+	font-size:14px;
+	font-weight:bold;
+	height:15px;
+	overflow:hidden;
+	padding:0 8px 4px;
+}
+#modulo_tira_elmundoes ul.carrusel_de_noticias_elmundo li dl a:hover, #modulo_tira_noticias_especiales ul.carrusel_de_noticias_elmundo_especial li dl a:hover {
+	color:#748fab;
+}
+#carruseles p {
+	font-size:17px;
+	font-weight:bold;
+	padding:6px 0 0 33px;
+	position:relative;
+	z-index:22;
+}
+#modulo_tira_noticias_especiales p a {
+	color:#555555;
+}
+
+/* PATROCINIOS DE SECCIÓN
+
+/* CASTILLA Y LEÓN. Hasta que se quite BIOTRAN
+#castillayleon #patrocinio_seccion {
+	border: 0 none;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: -7px;
+    width: 140px;
+	z-index: 999;
+}
+#castillayleon #patrocinio_seccion acronym, #castillayleon #patrocinio_seccion a {
+	cursor:pointer;
+	display:block;
+	float:right;
+	height:24px;
+	width:140px;
+}
+#castillayleon #nav_meteo {
+	right:150px;
+}
+
+#castillayleon #nav_busqueda {
+    right: 142px;
+}
+#castillayleon #nav_secundaria {
+    width: 560px;
+	}*/
+/*ECONOMÍA (HASTA QUE SE QUITE MULTIOPTICAS)
+#economia #patrocinio_seccion {
+	border: 0 none;
+    position: absolute;
+    right: 0;
+    top: -7px;
+    width: 140px;
+	z-index: 999;
+}
+#economia #patrocinio_seccion acronym, #economia #patrocinio_seccion a {
+	cursor:pointer;
+	display:block;
+	float:right;
+	width:140px;
+}
+#economia #nav_meteo {
+	right:150px;
+}
+
+#economia #nav_busqueda {
+    right: 142px;
+}
+#economia #nav_secundaria {
+    width: 560px;
+	}*/
+
+/* ESPAÑA. Quitar cuando se vaya multiopticas 
+#espana #patrocinio_seccion {
+	border: 0 none;
+    position: absolute;
+    right: 0;
+    top: -7px;
+    width: 140px;
+	z-index: 999;
+}
+#espana #patrocinio_seccion acronym, #espana #patrocinio_seccion a {
+	cursor:pointer;
+	display:block;
+	float:right;
+	width:140px;
+}
+#espana #nav_meteo {
+	right:150px;
+}
+#espana #nav_busqueda {
+    right: 142px;
+}
+#espana #nav_secundaria {
+    width: 560px;
+	}*/
+
+
+
+
+
+
+
+
